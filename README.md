@@ -15,6 +15,16 @@ majd: http://localhost:5173
 - `site/assets/img/` – 9 fotó + 4 városkép + 9 matrica (11 OpenAI-generálásból, duotone utófeldolgozással)
 - `_eredeti-kepek/` – a generált nyers PNG-k (nem kell feltölteni)
 
+## Mobil PWA app (`site/app/`)
+Mobilon (≤760 px szélesség) a weboldal automatikusan az appba irányít; a `?full=1` paraméter (vagy az app Több → Teljes weboldal menüje) visszaállítja a teljes oldalt.
+
+- 5 alsó fül: Főoldal · Tudás · Kísérletek · Cselekvés · Több; többszintű, hash-alapú navigáció (lista → téma → részlet), Android vissza gomb támogatással
+- végtelen görgetés helyett lapozható kártyák (`site/app/content.js`)
+- telepíthető (manifest, ikonok), offline is működik (service worker)
+- a részletszövegek, források, levélkérdések a weboldalból generálódnak: `node tools/build-app-data.mjs` → `site/app/data.gen.js` (a deploy ezt automatikusan lefuttatja)
+- a kvíz kérdései közösek: `site/js/data.js`
+- helyben (localhost) a service worker szándékosan nem fut; tesztelni `?sw=1`-gyel lehet
+
 ## Hivatkozások
 Minden szövegközi szám a „Források” lista egy elemére mutat (`<li id="s-…">`). Új forrás: adj hozzá egy `<li id="s-kulcs" data-t="…">` elemet, és a szövegben `<sup class="c" data-s="kulcs"></sup>`.
 

@@ -18,6 +18,13 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: App-adatok generálása a weboldalból
+        run: node tools/build-app-data.mjs
+      - name: Service worker verzió (offline cache frissítése)
+        run: sed -i "s/__BUILD__/${GITHUB_SHA::8}/" site/app/sw.js
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

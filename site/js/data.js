@@ -1,0 +1,23 @@
+/* Közös adatok a weboldalhoz és az apphoz */
+window.QUIZ = [
+  { q: 'Svédország betiltotta az iPadeket az iskolákban.', o: ['Igaz, teljes tilalom van', 'Hamis, semmi nem változott', 'Részben: tudatosan visszafordította a digitalizációt'], a: 2,
+    e: 'Svédország nem tiltott be minden képernyőt, de milliárdokat költ újra nyomtatott tankönyvekre, elvetette az országos digitalizációs stratégiát, az alsós országos teszteket nem digitalizálja, és mobilmentes iskolát vezet be. Az elv: digitális eszköz csak dokumentált pedagógiai többletérték esetén.' },
+  { q: 'A gamifikáció a kutatások szerint átlagosan rontja a tanulást.', o: ['Igaz', 'Hamis'], a: 1,
+    e: 'Hamis – és ezt egy hiteles oldalnak ki kell mondania. A metaanalízisek átlagosan kis–közepes pozitív hatást találnak (pl. g = 0,49 kognitív eredményekre). A valódi kérdés az, hogy <b>milyen motivációt</b> épít: a feladat szeretetét, vagy a következő jutalom hajszolását.' },
+  { q: 'A híres „filctollas kísérletben” mi történt azokkal az óvodásokkal, akik előre tudták, hogy jutalmat kapnak a rajzolásért?', o: ['Később többet rajzoltak szabadidejükben', 'Később kb. feleannyit rajzoltak szabadidejükben', 'Nem volt különbség'], a: 1,
+    e: 'Lepper, Greene és Nisbett (1973): a várt jutalomért rajzoló gyerekek két héttel később szabad játékidőben kb. feleannyi időt töltöttek rajzolással, mint a jutalom nélküli vagy váratlan jutalmat kapó társaik. Ez a „túligazolási hatás”.' },
+  { q: 'Hosszabb, információs szövegeket a diákok átlagosan hol értenek meg jobban?', o: ['Papíron', 'Képernyőn', 'Nincs különbség'], a: 0,
+    e: 'Több metaanalízis kis, de ismételten kimutatható papírelőnyt talál – különösen időnyomás alatt és ismeretterjesztő szövegeknél. A hátrány az évek során nem tűnt el, pedig a gyerekek egyre több képernyőt használnak.' },
+  { q: 'Egy 2025-ös nagy metaanalízisben minden további napi képernyőóra kb. mennyivel magasabb rövidlátás-eséllyel társult?', o: ['kb. 5%', 'kb. 21%', 'kb. 80%'], a: 1,
+    e: 'Kb. 21%, több mint 335 000 résztvevő adatai alapján. Fontos: ez összefüggés, a szerzők az oksági bizonyosságot alacsonynak ítélték. A szabadban töltött idő védő tényező.' },
+  { q: 'UNESCO szerint 2024 végére hány oktatási rendszerben volt valamilyen iskolai okostelefon-korlátozás?', o: ['kb. 12', 'kb. 79', 'kb. 150'], a: 1,
+    e: '79 rendszer – az országok mintegy 40%-a. UNESCO elve: technológiát akkor használjunk, ha az egyértelműen segíti a tanulást – nem azért, mert rendelkezésre áll.' },
+  { q: 'Bizonyított-e, hogy egy gamifikált matekapp később videojáték-függőséget okoz?', o: ['Igen, ez bizonyított', 'Nem, erre nincs közvetlen bizonyíték'], a: 1,
+    e: 'Nincs közvetlen bizonyíték – ezért nem is állítjuk. Amit viszont tudunk: ezek az appok a játékokból ismert mechanikákat (csillag, láda, avatar, achievement) használják. A jogos kérdés: <b>szükség van-e az iskolában arra, hogy ezekhez szoktassuk a gyereket</b>, ha a motiváció tanári visszajelzésből és a megértés öröméből is felépíthető?' },
+  { q: 'Mit jelent a „kiszorítási hatás” (opportunity cost) az iskolai tablet kapcsán?', o: ['A tablet kiszorítja a régi tankönyveket a piacról', 'Ami a tableten történik, az az idő elvész a kézírásos munkától, tárgyi manipulációtól, tanári és társas gondolkodástól', 'A tablet több helyet foglal a padon'], a: 1,
+    e: 'Ez a legerősebb, legnehezebben vitatható érv: a figyelem és a tanítási idő véges. A kérdés nem csak az, hogy árt-e a tablet, hanem hogy <b>mit nem csinál közben a gyerek</b>.' },
+  { q: 'Mi a „változó arányú jutalmazás”?', o: ['Minden helyes válasz után ugyanannyi pont jár', 'A jutalom kiszámíthatatlan: néha jön, néha nem, néha nagy – ez tartja fenn a legerősebben a viselkedést', 'A tanár osztályzata hétről hétre változik'], a: 1,
+    e: 'Ez a nyerőgépek és a játékbeli „loot boxok” működési elve. Ha egy app „ládát” ad, amelyből véletlenszerű jutalom jön ki, ugyanazt a mechanikát alkalmazza – ezen az oldalon is kipróbálhattad a bal alsó sarokban.' },
+  { q: 'Melyik állítás a legjobban alátámasztott?', o: ['A tablet csökkenti a gyerekek IQ-ját', 'Az órai digitális figyelemelvonás rosszabb teljesítménnyel társul', 'A kék fény tönkreteszi a gyerekek szemét'], a: 1,
+    e: 'A figyelemelvonás a legerősebben dokumentált probléma (OECD PISA). Az IQ-csökkenésre és a kékfény-károsodásra nincs megbízható bizonyíték – aki ilyet állít, gyengíti az ügyet.' },
+];

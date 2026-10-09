@@ -12,7 +12,21 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#2340f5">
 <script>document.documentElement.classList.add("js")</script>
-<link rel="icon" href="assets/img/st-pencil.webp">
+<script>
+/* Mobilon az app nyílik (a ?full=1 paraméterrel a teljes weboldal marad) */
+(function(){try{
+  var q=location.search;
+  if(q.indexOf('full=1')>-1){localStorage.setItem('nmek:preferFull','1');return;}
+  if(q.indexOf('full=0')>-1){localStorage.removeItem('nmek:preferFull');}
+  if(localStorage.getItem('nmek:preferFull')==='1')return;
+  if(!matchMedia('(max-width: 760px)').matches)return;
+  var map={'#lenyeg':'learn/lenyeg','#csapda':'learn/csapda','#kez':'learn/kez','#figyelem':'learn/figyelem','#egeszseg':'learn/egeszseg','#merleg':'lab/calc','#vilag':'learn/vilag','#teszt':'lab/quiz','#tegyel':'act','#vita':'learn/vita','#forrasok':'more/sources'};
+  location.replace('app/#/'+(map[location.hash]||'home'));
+}catch(e){}})();
+</script>
+<link rel="manifest" href="app/manifest.webmanifest">
+<link rel="apple-touch-icon" href="app/icons/apple-touch-icon.png">
+<link rel="icon" href="app/icons/favicon-64.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
@@ -573,6 +587,7 @@
     <div>
       <p>Független, nem kereskedelmi szülői kezdeményezés. Célunk a tájékoztatás: szülők, pedagógusok és oktatáspolitikai döntéshozók számára, forrásokkal alátámasztva. Az oldal nem orvosi tanács, és nem egy konkrét iskola vagy cég elleni kampány; a termékekre vonatkozó leírások a gyártók saját nyilvános dokumentációján alapulnak.</p>
       <p>Az oldal képei mesterséges intelligenciával készültek, illusztrációs céllal. Utolsó frissítés: 2026. október. Hibát találtál egy forrásban? Írd meg nekünk – javítjuk.</p>
+      <p><a href="app/?">📱 Mobilapp (telepíthető, offline is működik)</a></p>
       <p>Az oldal nem használ sütiket és nem követ. A „jutalomréteg” beállítása csak a saját böngésződben tárolódik.</p>
     </div>
   </div>
@@ -774,6 +789,7 @@
   <p>A UNESCO nem technológiaellenes. Pont ezért erős ez az elv: <b>a technológiának kell igazolnia magát.</b></p>
 </template>
 
+<script src="js/data.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
