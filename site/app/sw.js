@@ -2,7 +2,7 @@
 const VERSION = 'nmek-__BUILD__';
 const CORE = [
   './', './index.html', './app.css', './app.js', './content.js', './data.gen.js', '../js/data.js', './manifest.webmanifest',
-  './icons/icon-192.png', './icons/icon-512.png', './icons/favicon-64.png', './icons/apple-touch-icon.png',
+  '../osszefoglalo.pdf', './icons/icon-192.png', './icons/icon-512.png', './icons/favicon-64.png', './icons/apple-touch-icon.png',
   ...['hero', 'handwriting', 'manipulatives', 'reading', 'tablet', 'teacher', 'outdoor', 'classroom', 'homework',
     'city-stockholm', 'city-copenhagen', 'city-oslo', 'city-losangeles',
     'st-star', 'st-chest', 'st-trophy', 'st-avatar', 'st-pencil', 'st-book', 'st-brain', 'st-eye', 'st-moon',

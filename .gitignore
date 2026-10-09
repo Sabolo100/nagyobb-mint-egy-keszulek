@@ -9,3 +9,6 @@ ReportDeep.md
 .claude/launch.json
 .claude/settings*.json
 node_modules/
+
+# a site/osszefoglalo.pdf helyi másolata
+Nagyobb-mint-egy-keszulek_osszefoglalo.pdf

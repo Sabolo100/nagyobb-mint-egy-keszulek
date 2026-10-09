@@ -23,6 +23,8 @@
   const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   const APP_URL = location.href.split('#')[0];
   const SITE_URL = new URL('../', APP_URL).href;
+  const PDF_URL = new URL('../osszefoglalo.pdf', APP_URL).href;
+  const pdfTile = (tone = 'ink') => `<a class="tile t-${tone}" href="${PDF_URL}" target="_blank" rel="noopener"><span class="ti" style="font-family:var(--f-display);font-weight:800;color:var(--ink)">PDF</span><span><span class="who">Nyomtatható</span><h3>Kétoldalas összefoglaló</h3><p>A lényeg 8 pontban, forrásokkal</p></span>${ICON.chev}</a>`;
 
   const app = $('#app'), view = $('#view'), backBtn = $('#back'), titleEl = $('#title');
   const xpChip = $('#xp'), chestBtn = $('#chest'), toastEl = $('#toast');
@@ -303,6 +305,7 @@
           <p>Analóg az alap, digitális a kivétel. Kutatásokkal, forrásokkal – 5 perc alatt.</p>
           <button class="btn btn-pink" data-go="learn/lenyeg">A lényeg 60 mp alatt →</button></div>
         <div id="install-slot">${installCard()}</div>
+        <div class="tiles" style="margin-top:14px">${pdfTile()}</div>
         <div class="section-h">A fő üzenet</div>
         <div class="tiles">${tile('learn/csapda', 'st-chest', 'A jutalomcsapda', 'Ne az iskola szoktassa rá a gyereket a játékmechanikára.', 'blue')}</div>
         <div class="section-h">Próbáld ki <button data-go="lab">Mind</button></div>
@@ -809,7 +812,7 @@
     return {
       root: true,
       html: `<h1 class="big-title">Cselekvés</h1><p class="lead">Ne tiltást kérj – kérdezz jól. Az iskola meg tudja mondani, <b>mit vált ki, mennyi ideig, milyen céllal és milyen bizonyíték alapján</b>.</p>
-        <div class="tiles">${C.acts.map(a => tile('act/' + a.id, a.icon, a.title, a.sub, a.tone === 'cream' ? '' : a.tone, `<span class="who">${a.who}</span>`)).join('')}</div>`,
+        <div class="tiles">${C.acts.map(a => tile('act/' + a.id, a.icon, a.title, a.sub, a.tone === 'cream' ? '' : a.tone, `<span class="who">${a.who}</span>`)).join('')}${pdfTile('pink')}</div>`,
     };
   }
 
@@ -903,11 +906,13 @@ ${f.school || '[iskola neve]'}`;
         <div class="tiles" style="margin-top:14px">
           <button class="tile t-pink" id="sh-parent"><span class="ti"><img src="${IMG}st-book.webp" alt=""></span><span><h3>Szülőtársnak</h3><p>Rövid, barátságos üzenet</p></span>${ICON.chev}</button>
           <button class="tile" id="sh-teacher"><span class="ti"><img src="${IMG}st-pencil.webp" alt=""></span><span><h3>Pedagógusnak</h3><p>Tiszteletteljes, szakmai hangon</p></span>${ICON.chev}</button>
+          <button class="tile" id="sh-pdf"><span class="ti" style="font-family:var(--f-display);font-weight:800;color:var(--ink)">PDF</span><span><h3>A PDF linkje</h3><p>Kétoldalas, nyomtatható összefoglaló</p></span>${ICON.chev}</button>
           <button class="tile" id="sh-copy"><span class="ti"><img src="${IMG}st-eye.webp" alt=""></span><span><h3>Link másolása</h3><p>${esc(APP_URL.replace(/^https?:\/\//, ''))}</p></span>${ICON.chev}</button>
         </div>`,
       mount(el) {
         $('#sh-parent', el).onclick = () => shareApp('Szia! Ezt érdemes megnézni, mielőtt tabletes matekot vezetnek be az osztályban – rövid, forrásokkal, és van benne egy meglepő kísérlet is:');
         $('#sh-teacher', el).onclick = () => shareApp('Tisztelt Tanárnő/Tanár Úr! Egy forrásokkal alátámasztott összefoglalót küldök arról, hogyan gondolkodnak ma Svédországban, Dániában és Norvégiában az alsó tagozatos digitális eszközhasználatról. Kíváncsi lennék a véleményére:');
+        $('#sh-pdf', el).onclick = async () => { const data = { title: 'Nagyobb, mint egy készülék – összefoglaló (PDF)', text: 'Kétoldalas, forrásolt összefoglaló a tabletes és gamifikált iskolai oktatásról:', url: PDF_URL }; if (navigator.share) { try { await navigator.share(data); } catch {} } else { try { await navigator.clipboard.writeText(PDF_URL); toast(null, 'PDF link kimásolva'); } catch {} } };
         $('#sh-copy', el).onclick = async () => { try { await navigator.clipboard.writeText(APP_URL); toast('st-pencil', 'Link kimásolva'); } catch {} };
       },
     };
@@ -931,6 +936,7 @@ ${f.school || '[iskola neve]'}`;
           <button class="menu-item" id="reset-all"><span class="mi">↺</span><span><b>Haladás törlése</b><small>Témák, pontok, beállítások</small></span></button>
         </div>
         <div class="menu">
+          <a class="menu-item" href="${PDF_URL}" target="_blank" rel="noopener"><span class="mi">📄</span><span><b>PDF összefoglaló</b><small>2 oldal, nyomtatható</small></span><span class="end">↓</span></a>
           <a class="menu-item" href="${SITE_URL}?full=1"><span class="mi">🖥️</span><span><b>Teljes weboldal</b><small>Asztali nézet, egy oldalon</small></span><span class="end">↗</span></a>
           <button class="menu-item" data-share><span class="mi">💌</span><span><b>Megosztás</b><small>Küldd el valakinek</small></span><span class="end">→</span></button>
           <button class="menu-item" data-go="more/about"><span class="mi">ℹ️</span><span><b>Rólunk és adatkezelés</b><small>Független szülői kezdeményezés</small></span><span class="end">→</span></button>

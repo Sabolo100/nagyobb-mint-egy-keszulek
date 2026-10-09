@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Nagyobb, mint egy készülék – összefoglaló</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Figtree:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --blue: #2340f5; --ink: #18208f; --pink: #ff6fb5; --pink-soft: #ffe1ef; --muted: #4b52a8; --line: #d9dcf3; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { font-family: "Source Serif 4", Georgia, serif; color: #1a1f4d; font-size: 9.2pt; line-height: 1.33; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; padding: 11mm 14mm 10mm; position: relative; overflow: hidden; page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+  h1, h2, .sans { font-family: "Bricolage Grotesque", "Figtree", sans-serif; }
+
+  /* fejléc */
+  .top { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.5pt solid var(--blue); padding-bottom: 3mm; margin-bottom: 4mm; }
+  .top h1 { margin: 0; font-size: 25pt; line-height: .95; letter-spacing: -.03em; color: var(--blue); font-weight: 800; }
+  .top h1 span { color: var(--pink); }
+  .top .meta { text-align: right; font-family: "Figtree", sans-serif; font-size: 8pt; color: var(--muted); line-height: 1.35; }
+  .top .meta b { color: var(--ink); font-size: 9pt; }
+
+  .thesis { background: var(--blue); color: #fff; border-radius: 4mm; padding: 3.2mm 5mm; margin-bottom: 3.8mm; }
+  .thesis .k { font-family: "Figtree", sans-serif; font-size: 7.5pt; letter-spacing: .14em; text-transform: uppercase; font-weight: 800; color: #ffb3d7; }
+  .thesis p { margin: 1mm 0 0; font-size: 11.4pt; line-height: 1.3; font-weight: 600; }
+  .thesis p b { color: #ffd2e8; }
+
+  /* pontok */
+  .pt { margin-bottom: 3mm; break-inside: avoid; }
+  .pt h2 { display: flex; gap: 3mm; align-items: baseline; margin: 0 0 1.2mm; font-size: 12.6pt; line-height: 1.15; color: var(--ink); font-weight: 800; letter-spacing: -.01em; }
+  .pt h2 .n { flex: none; width: 7mm; height: 7mm; border-radius: 50%; background: var(--pink); color: #fff; font-size: 10pt; display: inline-grid; place-items: center; position: relative; top: -.4mm; }
+  .pt .claim { margin: 0 0 1.1mm 10mm; font-weight: 700; color: var(--blue); font-size: 9.8pt; }
+  ul { margin: 0 0 0 10mm; padding: 0 0 0 4mm; }
+  li { margin: 0 0 .6mm; padding-left: .5mm; }
+  li::marker { color: var(--pink); font-size: 1.05em; }
+  li b { color: var(--ink); }
+  .src { font-family: "Figtree", sans-serif; font-size: 6.8pt; color: #7a80b8; font-weight: 600; white-space: nowrap; }
+
+  .main-pt { background: var(--pink-soft); border-left: 2mm solid var(--pink); border-radius: 0 3mm 3mm 0; padding: 3mm 4mm 2.4mm 3mm; }
+  .main-pt .tag { font-family: "Figtree", sans-serif; font-size: 7pt; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--pink); margin: 0 0 1mm 10mm; }
+
+  /* 2. oldal elemei */
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+  .box { border: 1pt solid var(--line); border-radius: 3mm; padding: 3mm 4mm; break-inside: avoid; }
+  .box h3 { font-family: "Bricolage Grotesque", sans-serif; margin: 0 0 1.5mm; font-size: 11pt; color: var(--ink); }
+  .box ul { margin-left: 0; }
+  .avoid li { color: #555a85; }
+  .avoid li s { text-decoration-color: var(--pink); text-decoration-thickness: 1.2pt; color: #8a8fb8; }
+  .avoid li span { display: block; color: #1a1f4d; }
+  ol.ask { margin: 0; padding-left: 5mm; }
+  ol.ask li { margin-bottom: .9mm; }
+  ol.ask li::marker { color: var(--blue); font-family: "Figtree", sans-serif; font-weight: 800; }
+
+  .end { position: absolute; left: 14mm; right: 14mm; bottom: 10mm; display: grid; grid-template-columns: 1fr auto; gap: 5mm; align-items: end; }
+  .end .quote { background: var(--blue); color: #fff; border-radius: 4mm; padding: 3.5mm 5mm; font-size: 10.8pt; line-height: 1.3; font-weight: 600; }
+  .end .quote span { display: block; margin-top: 1.5mm; font-family: "Figtree", sans-serif; font-size: 7.5pt; font-weight: 600; color: #ffb3d7; }
+  .qr { text-align: center; font-family: "Figtree", sans-serif; font-size: 6.8pt; color: var(--muted); font-weight: 700; width: 30mm; }
+  .qr svg { width: 22mm; height: 22mm; display: block; margin: 0 auto 1.2mm; }
+  .sources { font-family: "Figtree", sans-serif; font-size: 6.6pt; color: #6a70a8; line-height: 1.35; margin-top: 3mm; columns: 2; column-gap: 6mm; }
+  .sources b { color: var(--ink); }
+  .pg { position: absolute; right: 15mm; top: 6mm; font-family: "Figtree", sans-serif; font-size: 7pt; color: #a0a5d0; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- ===================== 1. OLDAL ===================== -->
+<section class="page">
+  <span class="pg">1 / 2</span>
+  <header class="top">
+    <h1>Nagyobb, mint<br>egy <span>készülék.</span></h1>
+    <div class="meta"><b>Képernyő, tablet és gamifikáció az általános iskolában</b><br>Összefoglaló szülőknek, pedagógusoknak és döntéshozóknak<br>7–14 éves kor · 2026. október · minden állítás forrással</div>
+  </header>
+
+  <div class="thesis">
+    <div class="k">Az alapállás</div>
+    <p>Az általános iskolában <b>a könyv, a papír, a kézírás, a tárgyi tapasztalat és a tanár az alap.</b> Nem az analóg tanulásnak kell igazolnia magát – <b>a képernyőnek kell bizonyítania</b>, hogy egy konkrét feladatban többet ad.</p>
+  </div>
+
+  <div class="pt main-pt">
+    <div class="tag">A fő üzenet</div>
+    <h2><span class="n">1</span>Ne az iskola szoktassa rá a gyereket a játékmechanikára.</h2>
+    <p class="claim">A gamifikált matekapp nem csak feladatot ad: csillagot, ládát, avatár-tárgyat, ranglistát. A kérdés nem az, hogy ez működik-e – hanem, hogy mire tanít.</p>
+    <ul>
+      <li><b>A jutalom átírja, miért tanul a gyerek.</b> 128 kísérlet szerint a várt jutalmak gyerekeknél csökkentik a belső motivációt – és a <b>szimbolikus jutalmak (oklevél, jelvény) ugyanúgy</b>, mint a tárgyiak. <span class="src">Deci, Koestner &amp; Ryan 1999</span></li>
+      <li><b>Klasszikus bizonyíték:</b> a jutalmat előre ígért, rajzolni szerető óvodások két hét múlva szabad időben <b>kb. feleannyit rajzoltak</b>. <span class="src">Lepper et al. 1973</span></li>
+      <li><b>A „láda” a nyerőgép logikája:</b> kiszámíthatatlan jutalom, amely a legerősebben tartja fenn a viselkedést. Ezt a mintát nem az iskolának kell begyakoroltatnia.</li>
+      <li><b>A figurák és animációk elviszik a figyelmet:</b> a tananyaghoz nem tartozó „csábító részletek” átlagosan rontják a tanulást. <span class="src">58 vizsgálat, g = −0,33</span></li>
+      <li><b>Az iskola mintát ad:</b> amit a tanár oszt ki, azt a gyerek a tanulás természetes részének tekinti – a pontgyűjtést is.</li>
+    </ul>
+  </div>
+
+  <div class="pt">
+    <h2><span class="n">2</span>A kéz tanítja a fejet – és a papír jobban tanít.</h2>
+    <p class="claim">A kézírás nem lassabb billentyűzet, hanem tanulási mechanizmus.</p>
+    <ul>
+      <li><b>Minden betű egyedi mozdulat,</b> amelyet az agy a látott formához köt; a billentyűn minden betű ugyanaz a koppintás. A kézzel gyakorolt betűket a gyerekek jobban ismerik fel. <span class="src">Longcamp 2005; James &amp; Engelhardt 2012</span></li>
+      <li><b>Papíron jobban értünk:</b> 54 vizsgálat, 171 055 résztvevő – különösen ismeretterjesztő szövegnél és időnyomás alatt. A különbség az évek alatt nem csökkent. <span class="src">Delgado et al. 2018</span></li>
+      <li><b>A matek a kézben kezdődik:</b> tárgyi eszközökkel jobb a tanulás, főleg a megtartásban és a törteknél. <span class="src">55 vizsgálat, d = 0,37</span></li>
+    </ul>
+  </div>
+
+  <div class="pt">
+    <h2><span class="n">3</span>A figyelem a legdrágább tananyag.</h2>
+    <p class="claim">A legjobban dokumentált probléma nem „agykárosodás”, hanem az elvesző figyelem.</p>
+    <ul>
+      <li><b>A diákok 59%-ának</b> eltereli a figyelmét a társak eszköze matekórán; akiket gyakran, azok <b>15 ponttal gyengébbek</b>. <span class="src">OECD PISA 2022</span></li>
+      <li><b>Már a dekoráció is számít:</b> díszes teremben az óvodások többet figyeltek máshová, és gyengébben teljesítettek (55% → 42%). Egy villogó, jutalmazó felület ennél erősebb inger. <span class="src">Fisher et al. 2014</span></li>
+      <li><b>A mennyiség és a cél dönt:</b> a mérsékelt, célzott tanulási használat nem azonos a túlzott vagy szabadidős használattal – ezért a digitális eszköz <b>adagolt kivétel</b> legyen, ne alapállapot.</li>
+    </ul>
+  </div>
+
+  <div class="pt">
+    <h2><span class="n">4</span>Minden képernyőperc valami más helyett van.</h2>
+    <p class="claim">A legerősebb, legnehezebben vitatható érv a kiszorítás – és a teljes napi összeg.</p>
+    <ul>
+      <li><b>Ami a tableten történik, az nem</b> kézzel írt levezetés, nem tárgyi tapasztalat, nem tanári magyarázat, nem közös gondolkodás.</li>
+      <li><b>Az iskolai percek összeadódnak</b> az otthoni képernyőidővel. Minden további napi képernyőóra kb. <b>21%-kal magasabb rövidlátás-eséllyel</b> társul; az esti eszközhasználat <b>kétszeres eséllyel</b> rontja az alvást. <span class="src">Ha et al. 2025; Carter et al. 2016</span></li>
+      <li><b>Több gép ≠ több tudás:</b> ahol sokat fektettek az iskolai IKT-ba, nem javultak érdemben az eredmények. <span class="src">OECD 2015</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== 2. OLDAL ===================== -->
+<section class="page">
+  <span class="pg">2 / 2</span>
+
+  <div class="pt">
+    <h2><span class="n">5</span>A világ már fordul – a bizonyítási teher megfordult.</h2>
+    <p class="claim">A leggyorsabban digitalizáló országok ma tudatosan lépnek vissza – nem tiltással, hanem szigorú indoklási kötelezettséggel.</p>
+    <ul>
+      <li><b>Svédország:</b> 2023–24-ben 1,3 milliárd korona nyomtatott tankönyvekre; a digitalizációs stratégia leállítva; az alsós országos tesztek papíron maradnak; az óvoda alapvetően képernyőmentes; 2026-tól mobilmentes iskola. Elv: digitális eszköz csak <b>dokumentált többletértékkel</b>.</li>
+      <li><b>Karolinska Intézet (2023):</b> egyértelmű tudományos alátámasztása van, hogy a digitális eszközök a tanulást <b>inkább ronthatják, mint javíthatják</b>.</li>
+      <li><b>Dánia:</b> 540 millió korona fizikai könyvekre „a képernyő ellensúlyaként”; hivatalos ajánlás: <b>„tegyék el a tableteket, amikor nem használják őket”</b>.</li>
+      <li><b>Norvégia, Hollandia, Los Angeles (LAUSD):</b> több papíralapú olvasás, telefonmentes órák, osztálytermi képernyőidő-korlát.</li>
+      <li><b>UNESCO:</b> 79 oktatási rendszerben van telefonkorlátozás; technológia csak akkor, ha <b>egyértelműen segíti a tanulást</b>.</li>
+      <li><b>Magyarország:</b> a 245/2024. Korm. rendelet szerint okoseszköz csak engedéllyel, <b>rögzített céllal és időtartammal</b> használható – az elv itthon is adott.</li>
+    </ul>
+  </div>
+
+  <div class="two" style="margin-top:4mm">
+    <div class="box">
+      <h3>6 · Mit kérdezz az iskolától?</h3>
+      <ol class="ask">
+        <li><b>Hány perc hetente</b>, és lesz-e otthoni használat is?</li>
+        <li><b>Mit vált ki</b> ez az idő – kevesebb lesz-e a kézírásos munka?</li>
+        <li>Milyen <b>mérhető eredményt</b> várnak, és hogyan mérik?</li>
+        <li>Van-e <b>független, kontrollcsoportos</b> bizonyíték, hogy jobb a jól vezetett papíralapú gyakorlásnál?</li>
+        <li><b>Kikapcsolhatók-e</b> az avatárok, ládák, ranglisták?</li>
+        <li>Mennyi a gyerek <b>teljes heti iskolai képernyőideje</b>?</li>
+        <li>Milyen <b>adatokat</b> kap a szolgáltató, és van-e <b>papíralapú alternatíva</b>?</li>
+      </ol>
+    </div>
+    <div class="box avoid">
+      <h3>7 · Amit nem állítunk – és amit igen</h3>
+      <ul>
+        <li><s>„A tablet károsítja az agyat.”</s><span>A kézírás más folyamatokat mozgósít; nincs alap a kiváltására.</span></li>
+        <li><s>„A gamifikált app függőséget okoz.”</s><span>Játékmechanikát alkalmaz; a kérdés, kell-e ez az iskolában.</span></li>
+        <li><s>„A gamifikáció rossz.”</s><span>Rövid távon hathat – de külső motivációt épít.</span></li>
+        <li><s>„Svédország betiltotta az iPadet.”</s><span>Visszafordította a túlzott digitalizációt.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pt" style="margin-top:4.5mm">
+    <h2><span class="n">8</span>A javaslat: analóg először – digitális kivételként.</h2>
+    <ul>
+      <li><b>Alapértelmezés:</b> könyv, füzet, ceruza, fejszámolás, tárgyi eszköz, tanár és társas munka.</li>
+      <li><b>Digitális eszköz csak akkor,</b> ha olyat ad, amit az analóg módszer nem tud – rövid, előre rögzített időkeretben.</li>
+      <li><b>Nem válthatja ki</b> a kézírást, a hosszabb papíralapú olvasást, az önálló számolást és a közös gondolkodást.</li>
+      <li><b>Jutalomréteg nélkül:</b> se avatár, se láda, se ranglista – csak a fogalmat segítő interakció.</li>
+      <li><b>Kiértékelt próbaidőszak</b> visszafordíthatatlan döntés helyett, átlátható adatkezeléssel és papíralapú választási lehetőséggel.</li>
+    </ul>
+  </div>
+
+  <div class="sources"><b>Főbb források:</b> Svéd kormány (regeringen.se, 2023–2026) · Karolinska Institutet, remissvar 2023 · Dán Oktatási Minisztérium, 2024 · UNESCO GEM Report 2023 és GEM blog 2025 · OECD: Students, Computers and Learning (2015), PISA 2022 Vol. II · Delgado et al., Educational Research Review 2018 · Longcamp et al., Acta Psychologica 2005 · James &amp; Engelhardt, Trends in Neuroscience and Education 2012 · Carbonneau et al., J. Educational Psychology 2013 · Deci, Koestner &amp; Ryan, Psychological Bulletin 1999 · Lepper, Greene &amp; Nisbett, JPSP 1973 · Sundararajan &amp; Adesope, Educational Psychology Review 2020 · Fisher et al., Psychological Science 2014 · Ha et al., JAMA Network Open 2025 · Carter et al., JAMA Pediatrics 2016 · 245/2024. (VIII. 8.) Korm. rendelet. A teljes, linkelt forráslista (45 tétel) az appban és a weboldalon.<br><b style="color:#2340f5;font-size:8pt">📱 Az app: sabolo100.github.io/nagyobb-mint-egy-keszulek/app</b></div>
+
+  <div class="end">
+    <div class="quote">„A gyerekkor nem technológiai tesztlabor. Képernyő csak akkor vegyen el időt a könyvtől, a papírtól és a tanártól, ha bizonyíthatóan többet ad.”<span>Ez nem technológiaellenesség, hanem bizonyítékalapú óvatosság.</span></div>
+    <div class="qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" shape-rendering="crispEdges"><path stroke="#1b2bc9" d="M0 0.5h7m1 0h1m4 0h1m2 0h5m2 0h1m2 0h7M0 1.5h1m5 0h1m1 0h4m1 0h1m6 0h1m1 0h2m2 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h1m1 0h2m2 0h1m2 0h3m3 0h1m1 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m4 0h1m1 0h3m3 0h3m1 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m3 0h1m1 0h1m1 0h1m4 0h1m1 0h1m4 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m3 0h4m5 0h3m2 0h1m1 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h2m2 0h1m4 0h1m4 0h2M0 8.5h1m1 0h2m1 0h3m1 0h1m1 0h2m1 0h1m1 0h8m2 0h1m2 0h1m1 0h2M0 9.5h1m1 0h3m5 0h1m1 0h1m3 0h2m1 0h2m1 0h2m2 0h2m1 0h2m1 0h1M0 10.5h1m1 0h1m1 0h3m2 0h2m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h3m1 0h3m1 0h2M2 11.5h1m1 0h2m2 0h1m4 0h3m2 0h2m3 0h5m1 0h1m2 0h1M0 12.5h3m1 0h3m5 0h1m4 0h1m1 0h1m2 0h2m1 0h1m1 0h3m1 0h2M2 13.5h3m3 0h2m6 0h2m1 0h1m4 0h2m1 0h1m1 0h1m1 0h1M2 14.5h5m3 0h1m2 0h1m1 0h2m1 0h2m2 0h1m1 0h1m1 0h3m1 0h1M1 15.5h1m5 0h1m4 0h2m2 0h1m3 0h4m1 0h6M3 16.5h1m1 0h2m1 0h1m5 0h2m2 0h4m1 0h1m1 0h2m1 0h3M0 17.5h1m1 0h3m3 0h1m2 0h2m1 0h3m3 0h1m2 0h2m1 0h1m1 0h2m1 0h2M2 18.5h1m2 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m1 0h3m1 0h2m1 0h2m1 0h2M0 19.5h1m1 0h4m2 0h3m3 0h6m2 0h1m3 0h1m1 0h1m2 0h2M3 20.5h1m1 0h3m2 0h2m1 0h7m1 0h1m3 0h1m3 0h4M0 21.5h2m1 0h1m3 0h2m1 0h2m3 0h1m3 0h5m2 0h1m3 0h1m1 0h1M3 22.5h2m1 0h2m1 0h2m3 0h1m1 0h1m6 0h2m1 0h2m1 0h4M1 23.5h5m1 0h1m2 0h1m1 0h2m1 0h1m3 0h2m1 0h1m1 0h1m1 0h2m3 0h2M0 24.5h1m1 0h1m1 0h5m4 0h1m3 0h2m5 0h5m3 0h1M8 25.5h1m1 0h2m1 0h1m1 0h3m1 0h1m2 0h3m3 0h2m1 0h1M0 26.5h7m1 0h2m1 0h1m2 0h1m4 0h1m1 0h4m1 0h1m1 0h1M0 27.5h1m5 0h1m1 0h8m2 0h7m3 0h5M0 28.5h1m1 0h3m1 0h1m4 0h1m1 0h3m2 0h2m1 0h8m1 0h3M0 29.5h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h5m1 0h1m2 0h1m3 0h1m1 0h2m1 0h1M0 30.5h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h2m1 0h1m3 0h1m2 0h1m1 0h2m1 0h2M0 31.5h1m5 0h1m2 0h2m1 0h1m1 0h1m2 0h1m1 0h2m2 0h3m1 0h2m3 0h1M0 32.5h7m1 0h1m3 0h3m1 0h3m2 0h3m4 0h1m1 0h1"/></svg>
+<b style="color:#2340f5">Mobilapp</b><br>kvíz, kísérletek,<br>levélgenerátor</div>
+  </div>
+</section>
+</body>
+</html>
