@@ -10,6 +10,28 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Készülék">
+<script>
+/* Laptopon / asztali gépen a teljes weboldal nyílik (egér + széles képernyő).
+   Kivétel: telepített app (standalone), vagy ?app=1 (megjegyzi). */
+(function () {
+  try {
+    var q = location.search;
+    if (q.indexOf('app=1') > -1) { localStorage.setItem('nmek:preferApp', '1'); return; }
+    if (q.indexOf('app=0') > -1) localStorage.removeItem('nmek:preferApp');
+    if (localStorage.getItem('nmek:preferApp') === '1') return;
+    var standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+    var desktop = matchMedia('(min-width: 900px) and (hover: hover) and (pointer: fine)').matches;
+    if (standalone || !desktop) return;
+    var map = { 'learn/lenyeg': '#lenyeg', 'learn/csapda': '#csapda', 'learn/kez': '#kez', 'learn/figyelem': '#figyelem',
+      'learn/egeszseg': '#egeszseg', 'learn/vilag': '#vilag', 'learn/vita': '#vita', 'lab/calc': '#merleg', 'lab/quiz': '#teszt',
+      'lab/focus': '#figyelem', 'lab/pad': '#kez', 'lab/jutalom': '#csapda', 'act': '#tegyel', 'more/sources': '#forrasok' };
+    var path = location.hash.replace(/^#\/?/, ''), anchor = '';
+    for (var k in map) if (path === k || path.indexOf(k + '/') === 0) anchor = map[k];
+    if (!anchor && path.indexOf('act/') === 0) anchor = '#tegyel';
+    location.replace('../' + anchor);
+  } catch (e) {}
+})();
+</script>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/favicon-64.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
