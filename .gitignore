@@ -1,0 +1,11 @@
+# titkos kulcs – soha ne kerüljön fel
+openai.txt
+*.key
+.env
+# nyers / belső anyagok
+_eredeti-kepek/
+Design/
+ReportDeep.md
+.claude/launch.json
+.claude/settings*.json
+node_modules/
