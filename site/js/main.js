@@ -1,4 +1,4 @@
-/* Nagyobb, mint egy készülék — interakciók */
+/* A papír jobb, mint a tablet — interakciók */
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -480,7 +480,7 @@
 
 ${kid} (${cls}) szülőjeként azzal a kéréssel fordulok Önökhöz, hogy a tervezett tabletes / gamifikált digitális matematikai alkalmazás bevezetése előtt segítsenek megérteni a döntés pedagógiai hátterét.
 
-Nem a technológia ellen érvelek: elismerem, hogy jól megválasztott, rövid, célzott digitális feladatoknak lehet helyük. Ugyanakkor több európai ország – különösen Svédország és Dánia – oktatáspolitikája az utóbbi években az „analóg az alap, digitális a kivétel” elv felé mozdult el: digitális eszköz akkor kerüljön be, ha dokumentált pedagógiai többletértéket ad, és nem szorítja ki a kézírást, a könyvet, a tárgyi tevékenységet és a tanári, társas gondolkodást.
+Nem a technológia ellen érvelek: elismerem, hogy jól megválasztott, rövid, célzott digitális feladatoknak lehet helyük. Ugyanakkor több európai ország – különösen Svédország és Dánia – oktatáspolitikája az utóbbi években az „az analóg az alap, a digitális a kivétel” elv felé mozdult el: digitális eszköz akkor kerüljön be, ha dokumentált pedagógiai többletértéket ad, és nem szorítja ki a kézírást, a könyvet, a tárgyi tevékenységet és a tanári, társas gondolkodást.
 
 Ezért tisztelettel az alábbi kérdésekre kérnék választ:
 
@@ -514,7 +514,7 @@ ${school}`;
   document.addEventListener('click', async e => {
     const b = e.target.closest('[data-share]');
     if (!b) return;
-    const data = { title: 'Nagyobb, mint egy készülék', text: 'Miért legyen az általános iskolában a könyv, a papír és a tanár az alap – és miért ne szoktassa az iskola a gyereket csillagokra, ládákra és avatárokra?', url: location.href.split('#')[0] };
+    const data = { title: 'A papír jobb, mint a tablet', text: 'Miért legyen az általános iskolában a könyv, a papír és a tanár az alap – és miért ne szoktassa az iskola a gyereket csillagokra, ládákra és avatárokra?', url: location.href.split('#')[0] };
     if (navigator.share) { try { await navigator.share(data); } catch {} }
     else { try { await navigator.clipboard.writeText(data.url); b.innerHTML = 'Link kimásolva ✓'; } catch {} }
   });

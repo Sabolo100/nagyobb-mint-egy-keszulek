@@ -1,4 +1,4 @@
-# Nagyobb, mint egy készülék – weboldal
+# A papír jobb, mint a tablet – weboldal
 
 Statikus, egyoldalas weboldal (HTML + CSS + JS, build nélkül). A `site/` mappa tartalma bárhova feltölthető (Netlify, GitHub Pages, Vercel, saját tárhely).
 

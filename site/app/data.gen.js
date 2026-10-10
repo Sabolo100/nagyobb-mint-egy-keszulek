@@ -3,7 +3,7 @@ window.APPDATA = {
  "details": {
   "analog": {
    "title": "Nem tiltás – bizonyítási teher.",
-   "eyebrow": "1 · Analóg az alap",
+   "eyebrow": "1 · Az analóg az alap",
    "html": "<p>A svéd kormány 2023 óta azt az elvet követi, hogy az alapkészségek elsajátításának alapját analóg tevékenységek adják, és digitális taneszköz csak ott jelenjen meg, ahol dokumentáltan segíti a tanulást.<sup class=\"c\" data-s=\"swe1\"></sup></p>\n  <ul><li>2023-ban 685 millió, 2024-ben 658 millió SEK nyomtatott tankönyvekre (kb. 1,3 millió könyv 2024-ben).<sup class=\"c\" data-s=\"swe1,swe2\"></sup></li><li>Az alsós országos teszteket nem digitalizálják; a tervezett digitalizációs stratégiát nem viszik tovább.<sup class=\"c\" data-s=\"swe1\"></sup></li><li>2025. július 1-jétől az óvodában nincs követelmény a digitális eszközök használatára; az óvoda alapvetően képernyőmentes.<sup class=\"c\" data-s=\"swe3\"></sup></li></ul>\n  <div class=\"k-box\">Dánia iskoláknak szóló ajánlásai: „Tegyék el a tableteket és számítógépeket, amikor nem használják őket a tanításban”, „Csak akkor használjanak képernyőt, ha didaktikailag indokolt”, „Adjanak teret az analóg tanulásnak”.<sup class=\"c\" data-s=\"dk2\"></sup></div>\n  <p>Ez a szemlélet <b>megfordítja a bizonyítási terhet</b>: nem a könyvnek kell igazolnia, miért marad – hanem a képernyőnek, miért jön.</p>"
   },
   "figyelem": {

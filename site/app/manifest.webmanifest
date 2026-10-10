@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Nagyobb, mint egy készülék",
-  "short_name": "Készülék",
-  "description": "Analóg az alap, digitális a kivétel – interaktív, forrásolt app szülőknek, tanároknak és döntéshozóknak.",
+  "name": "A papír jobb, mint a tablet",
+  "short_name": "Papír–tablet",
+  "description": "Az analóg az alap, a digitális a kivétel – interaktív, forrásolt app szülőknek, tanároknak és döntéshozóknak.",
   "lang": "hu",
   "dir": "ltr",
   "start_url": "./#/home",

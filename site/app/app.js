@@ -1,4 +1,4 @@
-/* Nagyobb, mint egy készülék — mobil PWA */
+/* A papír jobb, mint a tablet — mobil PWA */
 (() => {
   'use strict';
   const $ = (s, r = document) => r.querySelector(s);
@@ -220,7 +220,7 @@
   }
 
   async function shareApp(text) {
-    const data = { title: 'Nagyobb, mint egy készülék', text: text || 'Miért legyen az általános iskolában a könyv, a papír és a tanár az alap – és miért ne szoktassa az iskola a gyereket csillagokra, ládákra és avatárokra?', url: APP_URL };
+    const data = { title: 'A papír jobb, mint a tablet', text: text || 'Miért legyen az általános iskolában a könyv, a papír és a tanár az alap – és miért ne szoktassa az iskola a gyereket csillagokra, ládákra és avatárokra?', url: APP_URL };
     if (navigator.share) { try { await navigator.share(data); } catch {} }
     else { try { await navigator.clipboard.writeText(data.url); toast('st-pencil', 'Link kimásolva', 'Illeszd be bárhová'); } catch {} }
   }
@@ -238,7 +238,7 @@
     // fejléc
     backBtn.hidden = segs.length <= 1;
     $('#share-top').hidden = !hud.off && !xpChip.hidden && segs.length > 1;
-    titleEl.innerHTML = s.root ? '<span class="brand">Nagyobb, mint egy készülék.</span>' : `<span class="crumb">${esc(s.crumb || '')}</span>${esc(s.title || '')}`;
+    titleEl.innerHTML = s.root ? '<span class="brand">A papír jobb, mint a tablet.</span>' : `<span class="crumb">${esc(s.crumb || '')}</span>${esc(s.title || '')}`;
     $$('.tab').forEach(t => t.classList.toggle('on', t.dataset.tab === segs[0]));
     // átmenet
     const anim = reduce ? '' : dir === 'fwd' ? 'in-fwd' : dir === 'back' ? 'in-back' : 'in-fade';
@@ -301,13 +301,13 @@
       root: true,
       html: `<div class="home-hero"><img src="${IMG}hero.webp" alt=""><div class="sticker">A gyerekkor nem tesztlabor.</div>
           <span class="eyebrow" style="color:#fff">Szülőknek · tanároknak</span>
-          <h1>Nagyobb, mint egy készülék.</h1>
-          <p>Analóg az alap, digitális a kivétel. Kutatásokkal, forrásokkal – 5 perc alatt.</p>
+          <h1>A papír jobb, mint a tablet.</h1>
+          <p>Az analóg az alap, a digitális a kivétel. Kutatásokkal, forrásokkal – 5 perc alatt.</p>
           <button class="btn btn-pink" data-go="learn/lenyeg">A lényeg 60 mp alatt →</button></div>
         <div id="install-slot">${installCard()}</div>
         <div class="tiles" style="margin-top:14px">${pdfTile()}</div>
         <div class="section-h">A fő üzenet</div>
-        <div class="tiles">${tile('learn/csapda', 'st-chest', 'A jutalomcsapda', 'Ne az iskola szoktassa rá a gyereket a játékmechanikára.', 'blue')}</div>
+        <div class="tiles">${tile('learn/csapda', 'st-chest', 'A jutalomcsapda', 'Ne az iskola szoktassa rá a gyereket a gamingre.', 'blue')}</div>
         <div class="section-h">Próbáld ki <button data-go="lab">Mind</button></div>
         <div class="tiles two">
           <button class="tile square t-pink" data-go="lab/focus"><span class="ti"><img src="${IMG}st-star.webp" alt=""></span><span><h3>Fókusz-teszt</h3><p>Csendes vs. csillogó</p></span>${ICON.chev}</button>
@@ -326,7 +326,7 @@
     const done = store.get('done', []);
     return {
       root: true,
-      html: `<h1 class="big-title">Tudás</h1><p class="lead">Hét téma, lapozható kártyákon. Minden állítás mögött forrás – koppints a kis számokra.</p>
+      html: `<h1 class="big-title">Tudás</h1><p class="lead">Hét téma, lapozható kártyákon. Forrásmegjelölt állítások – koppints a kis számokra.</p>
         <div class="tiles">${C.topics.map(t => {
           const pos = store.get('deckpos:' + t.id, 0);
           const prog = done.includes(t.id) ? '<span class="prog">✓ kész</span>' : pos > 0 ? `<span class="prog" style="color:var(--pink-hot)">${pos + 1}/${t.cards.length}</span>` : '';
@@ -795,7 +795,7 @@
           const msg = score >= 9 ? 'Kiváló! Pontosan tudod, hol húzódik a bizonyítékok határa.' : score >= 6 ? 'Jó eredmény! Néhány árnyalat meglepett – pont ezek teszik hitelessé az érvelést.' : 'Érdemes átlapozni a Tudás témáit – tele vannak féligazságokkal mindkét oldalon.';
           box.innerHTML = `<div class="qscroll" style="justify-content:center;text-align:center"><div class="note">Az eredményed</div><div class="score">${score}<span>/${QUIZ.length}</span></div><p>${msg}</p><p class="note">Észrevetted? Ehhez a kvízhez nem kellett jelvény, hogy végigcsináld. 😉</p></div>
             <button class="btn btn-pink btn-block" id="q-share">Küldd tovább egy szülőtársnak</button><button class="btn btn-ghost btn-block" id="q-re">Újra</button>`;
-          $('#q-share', box).onclick = () => shareApp(`${score}/${QUIZ.length} pontot értem el a „Nagyobb, mint egy készülék” kvízében. Neked mennyi lesz?`);
+          $('#q-share', box).onclick = () => shareApp(`${score}/${QUIZ.length} pontot értem el a „A papír jobb, mint a tablet” kvízében. Neked mennyi lesz?`);
           $('#q-re', box).onclick = () => { qi = 0; score = 0; show(); };
           const r = box.getBoundingClientRect(); confetti(r.left + r.width / 2, r.top + 120, 50);
           hud.visit('quiz:done', 30, 'Kvíz teljesítve!');
@@ -823,7 +823,7 @@
 
 ${f.kid || '[gyermek neve]'} (${f.cls || '[osztály]'}) szülőjeként azzal a kéréssel fordulok Önökhöz, hogy a tervezett tabletes / gamifikált digitális matematikai alkalmazás bevezetése előtt segítsenek megérteni a döntés pedagógiai hátterét.
 
-Nem a technológia ellen érvelek: elismerem, hogy jól megválasztott, rövid, célzott digitális feladatoknak lehet helyük. Ugyanakkor több európai ország – különösen Svédország és Dánia – oktatáspolitikája az utóbbi években az „analóg az alap, digitális a kivétel” elv felé mozdult el: digitális eszköz akkor kerüljön be, ha dokumentált pedagógiai többletértéket ad, és nem szorítja ki a kézírást, a könyvet, a tárgyi tevékenységet és a tanári, társas gondolkodást.
+Nem a technológia ellen érvelek: elismerem, hogy jól megválasztott, rövid, célzott digitális feladatoknak lehet helyük. Ugyanakkor több európai ország – különösen Svédország és Dánia – oktatáspolitikája az utóbbi években az „az analóg az alap, a digitális a kivétel” elv felé mozdult el: digitális eszköz akkor kerüljön be, ha dokumentált pedagógiai többletértéket ad, és nem szorítja ki a kézírást, a könyvet, a tárgyi tevékenységet és a tanári, társas gondolkodást.
 
 Ezért tisztelettel az alábbi kérdésekre kérnék választ:
 
@@ -912,7 +912,7 @@ ${f.school || '[iskola neve]'}`;
       mount(el) {
         $('#sh-parent', el).onclick = () => shareApp('Szia! Ezt érdemes megnézni, mielőtt tabletes matekot vezetnek be az osztályban – rövid, forrásokkal, és van benne egy meglepő kísérlet is:');
         $('#sh-teacher', el).onclick = () => shareApp('Tisztelt Tanárnő/Tanár Úr! Egy forrásokkal alátámasztott összefoglalót küldök arról, hogyan gondolkodnak ma Svédországban, Dániában és Norvégiában az alsó tagozatos digitális eszközhasználatról. Kíváncsi lennék a véleményére:');
-        $('#sh-pdf', el).onclick = async () => { const data = { title: 'Nagyobb, mint egy készülék – összefoglaló (PDF)', text: 'Kétoldalas, forrásolt összefoglaló a tabletes és gamifikált iskolai oktatásról:', url: PDF_URL }; if (navigator.share) { try { await navigator.share(data); } catch {} } else { try { await navigator.clipboard.writeText(PDF_URL); toast(null, 'PDF link kimásolva'); } catch {} } };
+        $('#sh-pdf', el).onclick = async () => { const data = { title: 'A papír jobb, mint a tablet – összefoglaló (PDF)', text: 'Kétoldalas, forrásolt összefoglaló a tabletes és gamifikált iskolai oktatásról:', url: PDF_URL }; if (navigator.share) { try { await navigator.share(data); } catch {} } else { try { await navigator.clipboard.writeText(PDF_URL); toast(null, 'PDF link kimásolva'); } catch {} } };
         $('#sh-copy', el).onclick = async () => { try { await navigator.clipboard.writeText(APP_URL); toast('st-pencil', 'Link kimásolva'); } catch {} };
       },
     };
