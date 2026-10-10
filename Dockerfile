@@ -1,6 +1,5 @@
 FROM nginx:alpine
-ARG SOURCE_COMMIT=dev
 COPY site /usr/share/nginx/html
-# service worker cache-verzió (a GitHub Pages workflow ugyanezt csinálja)
-RUN sed -i "s/__BUILD__/$(echo ${SOURCE_COMMIT} | cut -c1-8)/" /usr/share/nginx/html/app/sw.js
+# service worker cache-verzió: az app fájljainak tartalom-hash-éből (a GitHub Pages workflow a commit azonosítóját használja)
+RUN cd /usr/share/nginx/html && V=$(cat app/*.js app/*.css app/index.html js/*.js css/*.css index.html | md5sum | cut -c1-8) && sed -i "s/__BUILD__/$V/" app/sw.js
 EXPOSE 80
