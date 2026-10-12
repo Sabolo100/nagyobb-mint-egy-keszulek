@@ -1,0 +1,22 @@
+<section class="slide slide--soft" data-id="lab" data-title="Kézírás-labor" data-chap="c" data-k="C — Kéz &amp; papír · próbáld ki">
+  <div class="s-k rv">C — Kéz &amp; papír · próbáld ki</div>
+  <h2 class="s-h2 s-h2--md rv" style="--d:1">Írj le egy számot vagy a neved –<br><span class="pink">aztán „gépeld” be.</span></h2>
+  <div class="lab-grid">
+    <div class="lab-pad rv-pop" style="--d:2">
+      <div class="pad-wrap"><canvas id="pad" class="pad" width="1056" height="760" aria-label="Rajzfelület: írj ide egérrel vagy ujjal"></canvas><div class="pad-hint" id="padHint">írj ide ujjal<br>vagy egérrel ✎</div></div>
+      <button class="btn btn--ghost btn--sm" id="pad-clear" type="button">Törlés</button>
+    </div>
+    <div class="lab-side rv" style="--d:3">
+      <div class="meter-list">
+        <div class="meter"><span>✎ Kézírás – vonások</span><b id="m-strokes">0</b></div>
+        <div class="meter"><span>✎ Irányváltások (finommotoros döntések)</span><b id="m-turns">0</b><div class="t"><i id="t-hand"></i></div></div>
+        <div class="meter"><span>✎ Megtett út a „papíron”</span><b id="m-dist">0 cm*</b></div>
+      </div>
+      <p class="lab-sub">⌨ Most „gépelj” – kattints a billentyűkre:</p>
+      <div class="keys"><button class="key" type="button">A</button><button class="key" type="button">N</button><button class="key" type="button">Y</button><button class="key" type="button">A</button><button class="key" type="button">7</button><button class="key" type="button">3</button><button class="key" type="button">+</button></div>
+      <div class="typed" id="typed" aria-live="polite"></div>
+      <div class="meter meter--kb"><span>⌨ Koppintások – mind ugyanaz a mozdulat</span><b id="m-taps">0</b><div class="t"><i id="t-key"></i></div></div>
+      <p class="s-note">Szemléltetés, nem mérés. *A távolság képernyőpontokból becsült. A lényeg: a kézírásnál minden jelhez saját mozgásprogram kell, gépelésnél a mozdulat egyforma.</p>
+    </div>
+  </div>
+</section>

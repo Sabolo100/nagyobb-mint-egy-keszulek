@@ -25,6 +25,12 @@ Mobilon (≤760 px szélesség) a weboldal automatikusan az appba irányít; a `
 - a kvíz kérdései közösek: `site/js/data.js`
 - helyben (localhost) a service worker szándékosan nem fut; tesztelni `?sw=1`-gyel lehet
 
+## Prezentáció (`site/prezentacio.html`)
+Vezetett, balra–jobbra lapozható, kivetíthető bemutató (30 dia), amely a weboldal teljes tartalmát végigvezeti; a weboldal hero-ján a „▶ Prezentáció indítása” gomb nyitja. 1280×720-as vásznon készül (minden képernyőn és kivetítőn azonos), van indítókapu (teljes képernyő / ablak), fejezetsáv, áttekintő nézet (`O`), `F` teljes képernyő, `B` üres kép, mélylink (`#7`), és nyomtatásban egy dia = egy oldal.
+- a diák HTML-je: `tools/deck/slides/NN-*.html`, a keret: `tools/deck/shell.html`; a stílus és a kód: `site/prezentacio/` (`deck.css`, `slides-a.css`, `slides-b.css`; `deck.js` – keret, `demos.js` – animációk és interaktív részek)
+- a felugró ablakok, a forráslista, a levélkérdések, az „amit nem állítunk” sorok és az ellenérvek a weboldalból (`site/index.html`) generálódnak, a kvíz kérdései a `site/js/data.js`-ből jönnek – egy helyen kell karbantartani őket
+- újragenerálás: `node tools/build-deck.mjs` (a deploy is lefuttatja); a kimenet: `site/prezentacio.html`
+
 ## Hivatkozások
 Minden szövegközi szám a „Források” lista egy elemére mutat (`<li id="s-…">`). Új forrás: adj hozzá egy `<li id="s-kulcs" data-t="…">` elemet, és a szövegben `<sup class="c" data-s="kulcs"></sup>`.
 

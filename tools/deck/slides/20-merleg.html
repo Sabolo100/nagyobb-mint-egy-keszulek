@@ -1,0 +1,26 @@
+<section class="slide slide--soft" data-id="merleg" data-title="Heti képernyő-mérleg" data-chap="f" data-chapname="Mérleg" data-k="F — Heti mérleg · interaktív kalkulátor">
+  <div class="s-k rv">F — Heti mérleg · interaktív kalkulátor</div>
+  <div class="cl-head">
+    <h2 class="s-h2 rv" style="--d:1">Heti képernyő-<span class="pink">mérleg.</span></h2>
+    <p class="cl-lead rv" style="--d:2">Az iskola általában egy tantárgy perceit mondja meg. A gyerek szemének, alvásának és figyelmének viszont a <b>teljes összeg</b> számít. Állítsd be a saját gyereked hetét.</p>
+  </div>
+  <div class="calc rv-pop" style="--d:3" id="calc">
+    <div class="calc-in">
+      <div class="sl"><label for="c-app">Matekapp az iskolában <output id="o-app">30 perc/hét</output></label><input type="range" id="c-app" min="0" max="225" step="15" value="30"></div>
+      <div class="sl"><label for="c-dig">Egyéb digitális óra (tankönyv, angol, infó…) <output id="o-dig">60 perc/hét</output></label><input type="range" id="c-dig" min="0" max="600" step="15" value="60"></div>
+      <div class="sl"><label for="c-hw">Digitális házi feladat <output id="o-hw">10 perc/nap</output></label><input type="range" id="c-hw" min="0" max="60" step="5" value="10"></div>
+      <div class="sl"><label for="c-wd">Szabadidős képernyő hétköznap <output id="o-wd">1,5 óra/nap</output></label><input type="range" id="c-wd" min="0" max="6" step="0.5" value="1.5"></div>
+      <div class="sl"><label for="c-we">Szabadidős képernyő hétvégén <output id="o-we">3 óra/nap</output></label><input type="range" id="c-we" min="0" max="8" step="0.5" value="3"></div>
+      <p class="calc-sub">A gyártó heti 15–30 percet említ – a gyakorlatban ez lehet több.</p>
+    </div>
+    <div class="calc-out">
+      <div class="total"><span id="tot-week">15,8</span> óra<small>képernyő egy héten</small></div>
+      <div class="week" id="week">
+        <div><i class="f"></i><i class="h"></i><i class="s"></i><span>H</span></div><div><i class="f"></i><i class="h"></i><i class="s"></i><span>K</span></div><div><i class="f"></i><i class="h"></i><i class="s"></i><span>Sze</span></div><div><i class="f"></i><i class="h"></i><i class="s"></i><span>Cs</span></div><div><i class="f"></i><i class="h"></i><i class="s"></i><span>P</span></div><div><i class="f"></i><i class="h"></i><i class="s"></i><span>Szo</span></div><div><i class="f"></i><i class="h"></i><i class="s"></i><span>V</span></div>
+      </div>
+      <div class="legend"><span><i style="background:var(--pink)"></i>iskola</span><span><i style="background:#ffd36e"></i>házi</span><span><i style="background:#8fa0ff"></i>szabadidő</span></div>
+      <div class="verdict">Egy évben kb. <b><span id="tot-year">786</span> óra</b> – ez <b><span id="tot-days">33</span> teljes nap</b> éjjel-nappal. Ebből iskolai eredetű: <b><span id="tot-school">2 óra 20 perc</span></b> hetente.</div>
+      <div class="verdict" id="verdict"></div>
+    </div>
+  </div>
+</section>

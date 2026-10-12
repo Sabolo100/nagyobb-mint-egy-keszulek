@@ -1,0 +1,967 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A papír jobb, mint a tablet – prezentáció</title>
+<meta name="description" content="Vezetett, lapozható bemutató: miért legyen az általános iskolában a könyv, a papír, a kézírás és a tanár az alap – kutatásokkal alátámasztva.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#121a7a">
+<link rel="icon" href="app/icons/favicon-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="prezentacio/deck.css">
+<link rel="stylesheet" href="prezentacio/slides-a.css">
+<link rel="stylesheet" href="prezentacio/slides-b.css">
+</head>
+<body class="deck-body">
+
+<div class="deck-topbar">
+  <a class="deck-brand" href="index.html" title="Vissza a weboldalra">A papír <b>jobb, mint</b> a tablet.</a>
+  <nav class="deck-chap" id="deckChap" aria-label="Fejezetek"></nav>
+  <div class="deck-topbar__actions">
+    <button class="deck-btn" id="ovBtn" type="button" title="Áttekintő nézet (O)">Áttekintés</button>
+    <button class="deck-btn" id="fsBtn" type="button" title="Teljes képernyő (F)">Teljes képernyő</button>
+    <a class="deck-btn deck-btn--accent" href="index.html">Weboldal</a>
+  </div>
+</div>
+<div class="deck-progress"><div class="deck-progress__bar" id="deckBar"></div></div>
+
+<main class="deck" id="deck">
+  <button id="edgePrev" class="deck-edge deck-edge--left" type="button" aria-label="Előző dia"></button>
+  <button id="edgeNext" class="deck-edge deck-edge--right" type="button" aria-label="Következő dia"></button>
+  <div class="stage" id="stage">
+<section id="slide-cover" data-n="1" class="slide slide--cover" data-id="cover" data-title="A papír jobb, mint a tablet" data-chap="0" data-nofoot>
+  <div class="cv-img"><img src="assets/img/hero.webp" alt="Ceruzát tartó gyerek felnéz a füzete fölött"></div>
+  <svg class="cv-rays cv-rays--1" viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" aria-hidden="true"><path pathLength="1" d="M10 60 L30 52"/><path pathLength="1" d="M28 20 L40 40"/><path pathLength="1" d="M62 8 L60 32"/></svg>
+  <svg class="cv-rays cv-rays--2" viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" aria-hidden="true"><path pathLength="1" d="M10 60 L30 52"/><path pathLength="1" d="M28 20 L40 40"/><path pathLength="1" d="M62 8 L60 32"/></svg>
+  <div class="cv-blob">A gyerekkor nem tesztlabor.</div>
+  <div class="cv-copy">
+    <h1 class="cv-h1"><span class="ln"><span>A papír</span></span><span class="ln"><span>jobb, mint</span></span><span class="ln"><span>a tablet.</span></span></h1>
+    <p class="cv-sub">Miért legyen az általános iskolában a <b>könyv, a papír, a ceruza és a tanár</b> az alap – és miért nem az iskola dolga, hogy csillagokra, ládákra és avatárokra szoktassa a gyereket?</p>
+    <p class="cv-hint">Vezetett bemutató · lapozz a nyilakkal <span aria-hidden="true">→</span></p>
+  </div>
+  <div class="cv-ticker" aria-hidden="true"><div class="cv-ticker__track">
+    <span>Az analóg az alap, a digitális a kivétel</span><span>A figyelem a legértékesebb kincs</span><span>A jutalom nem azonos a tanulással</span><span>Ceruza. Papír. Kíváncsiság.</span><span>A gyerekkor nem technológiai tesztlabor</span><span>Mit szorít ki a képernyő?</span>
+    <span>Az analóg az alap, a digitális a kivétel</span><span>A figyelem a legértékesebb kincs</span><span>A jutalom nem azonos a tanulással</span><span>Ceruza. Papír. Kíváncsiság.</span><span>A gyerekkor nem technológiai tesztlabor</span><span>Mit szorít ki a képernyő?</span>
+  </div></div>
+</section>
+
+<section id="slide-utiterv" data-n="2" class="slide" data-id="utiterv" data-title="Útiterv" data-chap="0" data-k="Bevezetés — útiterv">
+  <div class="s-k rv">Bevezetés — útiterv</div>
+  <div class="rt-head">
+    <h2 class="s-h2 rv" style="--d:1">Tíz megálló,<br><span class="pink">egy gondolat.</span></h2>
+    <p class="s-lead rv" style="--d:2">Végigmegyünk a kutatásokon, megnézzük, mit léptek a többi országok, és a végén kézbe adjuk, mit tehetsz. <b>Bármelyik megállóra rákattinthatsz.</b></p>
+  </div>
+  <div class="rt-grid">
+    <button class="rt rv-pop" style="--d:3" data-goto="alapelv" type="button"><span class="rt-l">A</span><img src="assets/img/st-book.webp" alt=""><b>Alapelv</b><em>Nem tiltás, hanem bizonyítási teher.</em></button>
+    <button class="rt rv-pop" style="--d:4" data-goto="band-kerdes" type="button"><span class="rt-l">B</span><img src="assets/img/st-chest.webp" alt=""><b>Jutalomcsapda</b><em>Csillag, láda, avatár – mire tanítanak?</em></button>
+    <button class="rt rv-pop" style="--d:5" data-goto="kez" type="button"><span class="rt-l">C</span><img src="assets/img/st-pencil.webp" alt=""><b>Kéz &amp; papír</b><em>A kézírás és a lap mást tud, mint a koppintás.</em></button>
+    <button class="rt rv-pop" style="--d:6" data-goto="fokusz" type="button"><span class="rt-l">D</span><img src="assets/img/st-eye.webp" alt=""><b>Figyelem</b><em>Próbáld ki magadon a fókusz-tesztet.</em></button>
+    <button class="rt rv-pop" style="--d:7" data-goto="egeszseg" type="button"><span class="rt-l">E</span><img src="assets/img/st-moon.webp" alt=""><b>Egészség</b><em>Szem, alvás, hosszú táv.</em></button>
+    <button class="rt rv-pop" style="--d:8" data-goto="merleg" type="button"><span class="rt-l">F</span><img src="assets/img/st-brain.webp" alt=""><b>Heti mérleg</b><em>Mennyi a teljes képernyő? Számold ki.</em></button>
+    <button class="rt rv-pop" style="--d:9" data-goto="idovonal" type="button"><span class="rt-l">G</span><img class="rt-round" src="assets/img/city-stockholm.webp" alt=""><b>A világ</b><em>Ki lépett vissza, és miért?</em></button>
+    <button class="rt rv-pop" style="--d:10" data-goto="teszt" type="button"><span class="rt-l">H</span><img src="assets/img/st-star.webp" alt=""><b>Teszt</b><em>10 kérdés, 0 jelvény.</em></button>
+    <button class="rt rv-pop" style="--d:11" data-goto="tegyel" type="button"><span class="rt-l">I</span><img class="rt-round" src="assets/img/teacher.webp" alt=""><b>Mit tehetsz?</b><em>Ne tiltást kérj – kérdezz jól.</em></button>
+    <button class="rt rv-pop" style="--d:12" data-goto="vita" type="button"><span class="rt-l">J</span><img src="assets/img/st-trophy.webp" alt=""><b>Vita &amp; források</b><em>Amit nem állítunk, és ami mögötte van.</em></button>
+  </div>
+  <div class="s-foot"><span>Bevezetés — útiterv</span><span class="s-num">02 / 30</span></div>
+</section>
+
+<section id="slide-alapelv" data-n="3" class="slide" data-id="alapelv" data-title="Az alapelv" data-chap="a" data-chapname="Alapelv" data-k="A — Alapelv">
+  <div class="s-k rv">A — Alapelv</div>
+  <div class="al-top">
+    <h2 class="s-h2 rv" style="--d:1">Nem tiltás –<br><span class="pink">bizonyítási teher.</span></h2>
+    <p class="s-lead rv" style="--d:2">Nem azt állítjuk, hogy minden képernyő mérgező. Azt állítjuk, hogy 7–14 éves korban <b>a digitális eszköznek kell bizonyítania</b>, hogy egy konkrét feladatban többet ad a könyvnél, a füzetnél és a tanárnál – nem fordítva.</p>
+  </div>
+  <div class="al-block rv-pop" style="--d:4">
+    <div class="al-stamp" aria-hidden="true"><i></i><span>ANALÓG<br>ELŐSZÖR ✺<br>DIGITÁLIS<br>KIVÉTELKÉNT</span></div>
+    <blockquote>„Az alapkészségek – figyelem, koncentráció, olvasás, írás, számolás – elsajátításának <em>alapját analóg tevékenységek</em> képezzék. Digitális taneszközt csak ott, ahol <em>bizonyítottan segíti</em> a tanulást.”<cite>— a svéd kormány 2023 óta követett oktatáspolitikai elve, összefoglalva <sup class="c" data-s="swe1"></sup></cite></blockquote>
+    <button class="btn btn--pink btn--sm" data-open="analog" type="button">Részletek <span class="arr">→</span></button>
+  </div>
+  <div class="s-foot"><span>A — Alapelv</span><span class="s-num">03 / 30</span></div>
+</section>
+
+<section id="slide-otmondat" data-n="4" class="slide slide--soft" data-id="otmondat" data-title="Öt mondat" data-chap="a" data-k="A — Alapelv · a lényeg 60 másodpercben">
+  <div class="s-k rv">A — Alapelv · a lényeg 60 másodpercben</div>
+  <h2 class="s-h2 rv" style="--d:1">Öt mondat,<br><span class="pink">amit érdemes megjegyezni.</span></h2>
+  <div class="core-grid">
+    <button class="core rv-pop" style="--d:3" data-open="analog" type="button"><span class="num">1</span><img src="assets/img/st-book.webp" alt=""><h3>Az analóg az alap, a digitális a kivétel.</h3><p>Svédország, Dánia és Norvégia is ebbe az irányba fordult: vissza a tankönyvhöz, az íráshoz, az olvasáshoz.</p><span class="more">Részletek</span></button>
+    <button class="core rv-pop" style="--d:4" data-open="figyelem" type="button"><span class="num">2</span><img src="assets/img/st-eye.webp" alt=""><h3>A figyelem a legértékesebb kincs.</h3><p>A digitális figyelemelvonás az egyik legjobban dokumentált iskolai probléma – és rosszabb teljesítménnyel jár együtt.</p><span class="more">Részletek</span></button>
+    <button class="core rv-pop" style="--d:5" data-open="jutalom" type="button"><span class="num">3</span><img src="assets/img/st-chest.webp" alt=""><h3>A jutalom kiszoríthatja a kíváncsiságot.</h3><p>A várt jutalmak gyerekeknél átlagosan csökkentik a belső motivációt – a szimbolikus jutalmak, oklevelek is.</p><span class="more">Részletek</span></button>
+    <button class="core rv-pop" style="--d:6" data-open="kez" type="button"><span class="num">4</span><img src="assets/img/st-pencil.webp" alt=""><h3>A kéz tanítja az agyat.</h3><p>A kézírás olyan mozgásos és észlelési folyamatokat mozgósít, amelyeket a koppintás nem. Hosszabb szöveget papíron átlagosan jobban értünk.</p><span class="more">Részletek</span></button>
+    <button class="core rv-pop" style="--d:7" data-open="kiszoritas" type="button"><span class="num">5</span><img src="assets/img/st-brain.webp" alt=""><h3>Minden képernyőperc csak pótlék.</h3><p>A legerősebb érv a kiszorítás: ami a tableten történik, az nem kézzel írt munka, nem tárgyi tapasztalat, nem közös gondolkodás.</p><span class="more">Részletek</span></button>
+  </div>
+  <div class="s-foot"><span>A — Alapelv · a lényeg 60 másodpercben</span><span class="s-num">04 / 30</span></div>
+</section>
+
+<section id="slide-szamok" data-n="5" class="slide" data-id="szamok" data-title="Négy szám" data-chap="a" data-k="A — Alapelv · számokban">
+  <div class="s-k rv">A — Alapelv · számokban</div>
+  <h2 class="s-h2 rv" style="--d:1">Négy szám,<br><span class="pink">ami elgondolkodtat.</span></h2>
+  <div class="st-grid">
+    <article class="st rv-pop" style="--d:3">
+      <div class="pg pg-dots" aria-hidden="true"><div class="pg-dots__base"></div><div class="pg-dots__lit"><i></i></div></div>
+      <b class="st-n"><span data-count="79">79</span></b>
+      <p>oktatási rendszerben volt iskolai okostelefon-korlátozás 2024 végére (UNESCO) <sup class="c" data-s="unesco-blog"></sup></p>
+    </article>
+    <article class="st rv-pop" style="--d:4">
+      <div class="pg pg-books" aria-hidden="true"><i style="--h:84px;--w:22px;--c:var(--blue);--i:0"></i><i style="--h:104px;--w:28px;--c:var(--hot);--i:1"></i><i style="--h:92px;--w:20px;--c:var(--yellow);--i:2"></i><i style="--h:116px;--w:26px;--c:var(--peri);--i:3"></i><i style="--h:98px;--w:24px;--c:var(--pink);--i:4"></i><i style="--h:110px;--w:20px;--c:var(--ink);--i:5"></i><i style="--h:88px;--w:28px;--c:var(--hot);--i:6"></i></div>
+      <b class="st-n"><span data-count="540">540</span><small> M DKK</small></b>
+      <p>különített el Dánia nyomtatott könyvekre, „a képernyő ellensúlyaként” <sup class="c" data-s="dk1"></sup></p>
+    </article>
+    <article class="st rv-pop" style="--d:5">
+      <div class="pg pg-ring" aria-hidden="true"><svg viewBox="0 0 120 120"><circle class="pg-ring__bg" cx="60" cy="60" r="48"/><circle class="pg-ring__fg" cx="60" cy="60" r="48" pathLength="100"/></svg></div>
+      <b class="st-n"><span data-count="59">59</span><small>%</small></b>
+      <p>a diákoknak eltereli a figyelmét a társak eszköze matekórán (PISA 2022) <sup class="c" data-s="pisa22"></sup></p>
+    </article>
+    <article class="st rv-pop" style="--d:6">
+      <div class="pg pg-bars" aria-hidden="true"><div><i style="--h:50px"></i><span>1 óra</span><em>OR 1,05</em></div><div><i style="--h:98px"></i><span>4 óra</span><em>OR 1,97</em></div></div>
+      <b class="st-n">+<span data-count="21">21</span><small>%</small></b>
+      <p>rövidlátás-esély minden további napi képernyőóránként (összefüggés, nem bizonyított ok) <sup class="c" data-s="ha2025"></sup></p>
+    </article>
+  </div>
+  <div class="s-foot"><span>A — Alapelv · számokban</span><span class="s-num">05 / 30</span></div>
+</section>
+
+<section id="slide-band-kerdes" data-n="6" class="slide slide--photo" data-id="band-kerdes" data-title="Egy kérdés" data-chap="b" data-chapname="Jutalom" data-k="B — Jutalomcsapda">
+  <div class="bd-img"><img src="assets/img/tablet.webp" alt="Tabletet néző gyerek arcát a képernyő fénye világítja meg"></div>
+  <div class="bd-shade" aria-hidden="true"></div>
+  <img class="bd-fly bd-fly--1" src="assets/img/st-star.webp" alt="">
+  <img class="bd-fly bd-fly--2" src="assets/img/st-chest.webp" alt="">
+  <img class="bd-fly bd-fly--3" src="assets/img/st-avatar.webp" alt="">
+  <div class="bd-copy">
+    <div class="s-k s-k--pink rv">B — Jutalomcsapda</div>
+    <span class="hand bd-hand">Egy kérdés:</span>
+    <h2 class="bd-q">Mire tanít a matekóra, ha jutalmat oszt?</h2>
+    <p class="bd-p rv" style="--d:5">Csillag a helyes válaszért, láda a sorozatért, új sapka az avatárnak. Működik – a gyerek kattint. De vajon mit tanul meg arról, <b>miért</b> érdemes gondolkodni?</p>
+  </div>
+  <div class="s-foot"><span>B — Jutalomcsapda</span><span class="s-num">06 / 30</span></div>
+</section>
+
+<section id="slide-hurkok" data-n="7" class="slide slide--soft" data-id="hurkok" data-title="Két hurok" data-chap="b" data-k="B — Jutalomcsapda · a fő üzenet">
+  <div class="s-k rv">B — Jutalomcsapda · a fő üzenet</div>
+  <div class="lp-head">
+    <h2 class="s-h2 rv" style="--d:1">Ne az iskola szoktassa rá<br><span class="pink">a gyereket a gamingre.</span></h2>
+    <p class="lp-lead rv" style="--d:2">Egy gamifikált matekapp nem csak feladatokat ad. Csillagot, ládát, avatár-tárgyat, célokat és ranglistát is – ugyanazokat az eszközöket, amelyekkel a játékipar a visszatérést optimalizálja. <b>A kérdés nem az, hogy ez működik-e. Hanem, hogy mire tanít.</b></p>
+  </div>
+  <div class="lp-grid">
+    <div class="lp lp--ext rv-pop" style="--d:3">
+      <div class="lp-top"><span class="tag">Külső jutalomhurok</span><h3>„Még kettő, és jön a láda.”</h3></div>
+      <svg class="lp-svg" id="loop-ext" role="img" aria-label="Animált kör: feladat, csillag, láda, avatar-tárgy, még egyet – egyre gyorsul"></svg>
+      <p>A motor a következő jutalom. A kör egyre gyorsul, a tananyag pedig lassan <b>eszközzé</b> válik a gyűjtögetéshez.</p>
+      <div class="lp-meter">Begyűjtött jutalom: <b id="ext-count">14</b><span class="bar"><i id="ext-bar" style="width:42%"></i></span></div>
+    </div>
+    <div class="lp lp--int rv-pop" style="--d:4">
+      <div class="lp-top"><span class="tag">Belső tanulási hurok</span><h3>„Rájöttem valamire!”</h3></div>
+      <svg class="lp-svg" id="loop-int" role="img" aria-label="Animált kör: kérdés, próbálkozás, elakadás, aha-élmény, új kérdés – egyenletes tempó"></svg>
+      <p>A motor maga a megértés. Lassabb, van benne elakadás – de <b>a gyereké</b> marad, és nem kell hozzá egyre nagyobb adag külső inger.</p>
+      <div class="lp-meter">Aha-élmény: <b id="int-count">4</b><span class="bar"><i id="int-bar" style="width:48%"></i></span></div>
+    </div>
+  </div>
+  <div class="s-foot"><span>B — Jutalomcsapda · a fő üzenet</span><span class="s-num">07 / 30</span></div>
+</section>
+
+<section id="slide-mechanizmus" data-n="8" class="slide" data-id="mechanizmus" data-title="Négy mechanizmus" data-chap="b" data-k="B — Jutalomcsapda · mechanizmusok">
+  <div class="s-k rv">B — Jutalomcsapda · mechanizmusok</div>
+  <h2 class="s-h2 rv" style="--d:1">Négy mechanizmus,<br><span class="pink">amely a háttérben dolgozik.</span></h2>
+  <div class="mc-grid">
+    <button class="mc rv-pop" style="--d:3" data-open="varratio" type="button"><img class="mc-ico mc-ico--chest" src="assets/img/st-chest.webp" alt=""><h3>Kiszámíthatatlan jutalom</h3><p>A „láda” logikája: néha kicsi, néha nagy, néha semmi. Ez a nyerőgépek és a loot boxok elve.</p><span class="more">Hogyan működik?</span></button>
+    <button class="mc rv-pop" style="--d:4" data-open="overjust" type="button"><img class="mc-ico mc-ico--star" src="assets/img/st-star.webp" alt=""><h3>Túligazolási hatás</h3><p>Ha valamit jutalomért csinálunk, idővel kevésbé csináljuk magáért. Gyerekeknél erősebb.</p><span class="more">A kutatás</span></button>
+    <button class="mc rv-pop" style="--d:5" data-open="seductive" type="button"><img class="mc-ico mc-ico--avatar" src="assets/img/st-avatar.webp" alt=""><h3>Csábító részletek</h3><p>A tananyaghoz nem tartozó figurák, animációk elviszik a figyelmet a lényegről.</p><span class="more">Metaanalízis</span></button>
+    <button class="mc rv-pop" style="--d:6" data-open="habit" type="button"><img class="mc-ico mc-ico--trophy" src="assets/img/st-trophy.webp" alt=""><h3>Szokásformálás</h3><p>Jel → rutin → jutalom. Napi célok, sorozatok, szintek: a visszatérés megtervezett.</p><span class="more">Miért számít?</span></button>
+  </div>
+  <p class="s-hint rv" style="--d:8">Kattints egy csempére – kutatás, számok, források.</p>
+  <div class="s-foot"><span>B — Jutalomcsapda · mechanizmusok</span><span class="s-num">08 / 30</span></div>
+</section>
+
+<section id="slide-lepper" data-n="9" class="slide slide--soft" data-id="lepper" data-title="A filctollas óvodások" data-chap="b" data-k="B — Jutalomcsapda · klasszikus kísérlet, 1973">
+  <div class="s-k rv">B — Jutalomcsapda · klasszikus kísérlet, 1973</div>
+  <div class="lc-grid">
+    <div class="lc-copy">
+      <h2 class="s-h2 rv" style="--d:1">A filctollas<br><span class="pink">óvodások.</span></h2>
+      <p class="lc-p rv" style="--d:2">Stanfordi óvodásokat, akik <b>szerettek rajzolni</b>, három csoportra osztottak. Az egyik előre tudta: aki rajzol, oklevelet kap. Két héttel később, szabad játékidőben megfigyelték, ki nyúl magától a filctollakhoz.<sup class="c" data-s="lepper"></sup></p>
+      <p class="lc-p rv" style="--d:3">Az előre megígért jutalomért rajzolók <b>kb. feleannyi időt töltöttek</b> rajzolással, mint a többiek. A jutalom átírta, <i>miért</i> csinálják.</p>
+      <p class="s-note rv" style="--d:4">Egy 128 vizsgálatot összesítő metaanalízis szerint gyerekeknél a várt jutalmak átlagosan csökkentették a belső motivációt (d = −0,39) – és a <b>szimbolikus jutalmak, például oklevelek</b> ugyanúgy (d = −0,42), mint a játékok vagy édességek.<sup class="c" data-s="deci"></sup></p>
+      <div class="s-actions rv" style="--d:5"><button class="btn btn--blue btn--sm" data-open="overjust" type="button">Túligazolás – részletek <span class="arr">→</span></button></div>
+    </div>
+    <div class="lc-bars rv-pop" style="--d:3" role="img" aria-label="Szabad rajzolással töltött idő aránya három csoportban">
+      <div class="lc-bars__h">A szabad játékidő hány százalékában rajzoltak két héttel később?</div>
+      <div class="lb"><span>Nem kapott jutalmat</span><div class="lb-track"><i style="--w:83%;--i:0"></i></div><b>≈17%</b></div>
+      <div class="lb"><span>Váratlan jutalmat kapott</span><div class="lb-track"><i style="--w:90%;--i:1"></i></div><b>≈18%</b></div>
+      <div class="lb lb--hl"><span>Előre megígért jutalom</span><div class="lb-track"><i style="--w:43%;--i:2"></i></div><b>≈9%</b></div>
+      <p class="lc-src">Lepper, Greene &amp; Nisbett (1973) alapján, kerekítve.</p>
+    </div>
+  </div>
+  <div class="s-foot"><span>B — Jutalomcsapda · klasszikus kísérlet, 1973</span><span class="s-num">09 / 30</span></div>
+</section>
+
+<section id="slide-tukor" data-n="10" class="slide slide--navy" data-id="tukor" data-title="Észrevetted, mit csináltunk veled?" data-chap="b" data-k="B — Jutalomcsapda · egy pillanat">
+  <div class="s-k s-k--pink rv">B — Jutalomcsapda · egy pillanat</div>
+  <div class="mr-grid">
+    <div class="mr-copy">
+      <h2 class="s-h2 rv" style="--d:1">Észrevetted, mit <span class="pink">csináltunk veled?</span></h2>
+      <p class="mr-p rv" style="--d:2">A weboldal olvasása közben pontokat, szinteket, jelvényeket és ládát kapsz. <b>Semmit nem tanulsz tőlük.</b> Mégis odanézel. Talán rá is kattintasz a ládára – csak hogy lásd, mi van benne.</p>
+      <p class="mr-p rv" style="--d:3">Te felnőtt vagy, és tudtad, hogy ez egy weboldal. Egy 10 éves gyerek <b>hétről hétre, éveken át</b>, az iskola jóváhagyásával kapná ugyanezt.</p>
+      <div class="s-actions rv" style="--d:4"><button class="btn btn--pink" id="mrOff" type="button">Kapcsold ki a jutalomréteget</button></div>
+      <p class="mr-off hand" id="mrOffMsg" hidden>Kikapcsolva. Hiányzik egy kicsit? Na, pont erről beszélünk.</p>
+    </div>
+    <div class="mr-stage rv-pop" style="--d:3" aria-hidden="true">
+      <div class="mr-page"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="mr-toast" id="mrToast"><img src="assets/img/st-star.webp" alt=""><div><span id="mrToastT">+25 XP</span><small id="mrToastS">Új fejezetet fedeztél fel!</small></div></div>
+      <div class="mr-hud" id="mrHud">
+        <div class="mr-hud__row"><span class="lvl" id="mrLvl">Szint 2</span><span class="xp" id="mrXp">135 XP</span><span class="streak" id="mrStreak">🔥 5</span></div>
+        <div class="mr-xpbar"><i id="mrBar" style="width:35%"></i></div>
+        <div class="mr-badges" id="mrBadges"><img src="assets/img/st-star.webp" alt=""><img src="assets/img/st-book.webp" alt=""></div>
+        <div class="mr-chest"><img src="assets/img/st-chest.webp" alt="">Nyisd ki a ládát!</div>
+      </div>
+      <span class="mr-cap">szemléltetés – az oldalon élőben is kipróbálható</span>
+    </div>
+  </div>
+  <div class="s-foot"><span>B — Jutalomcsapda · egy pillanat</span><span class="s-num">10 / 30</span></div>
+</section>
+
+<section id="slide-oszinten" data-n="11" class="slide" data-id="oszinten" data-title="Őszintén" data-chap="b" data-k="B — Jutalomcsapda · őszintén">
+  <div class="s-k rv">B — Jutalomcsapda · őszintén</div>
+  <h2 class="s-h2 rv" style="--d:1">Mit nem állítunk –<br><span class="pink">és mit igen.</span></h2>
+  <div class="hn-grid">
+    <div class="hn hn--no rv-pop" style="--d:3">
+      <span class="hn-h hand">Nem állítjuk:</span>
+      <p><b>hogy egy gamifikált matekapp bizonyítottan játékfüggőséget okoz</b> – erre nincs közvetlen bizonyíték.</p>
+      <p>A gamifikáció metaanalízisei átlagosan kis–közepes pozitív tanulási hatást is találnak.<sup class="c" data-s="sailer"></sup></p>
+    </div>
+    <div class="hn hn--yes rv-pop" style="--d:4">
+      <span class="hn-h hand">Állítjuk:</span>
+      <p><b>az iskola mintát ad.</b> Ha a matematikát pontokba, ládákba és avatár-tárgyakba csomagolja, akkor azt tanítja, hogy <b>a tanulás valami más megszerzésének eszköze</b> – és ezt a mechanikát normalizálja egy olyan életkorban, amikor az önszabályozás még épül.</p>
+    </div>
+  </div>
+  <div class="hn-stats rv" style="--d:5">
+    <div class="hn-stats__h"><span><b>A gamifikáció metaanalízisének átlagos hatása</b> (Sailer &amp; Homner): kis–közepes. A szigorúbb módszertanú vizsgálatokban csak a kognitív hatás maradt stabil.<sup class="c" data-s="sailer"></sup></span></div>
+    <div class="tgs"><b>0,49</b><span>kognitív eredmény (g)</span></div>
+    <div class="tgs"><b>0,36</b><span>motivációs hatás (g)</span></div>
+    <div class="tgs"><b>0,25</b><span>viselkedéses hatás (g)</span></div>
+  </div>
+  <div class="hn-act rv" style="--d:6">
+    <button class="btn btn--blue" data-open="matific" type="button">Példa: mit tartalmaz egy tipikus gamifikált matekapp? <span class="arr">→</span></button>
+    <span class="s-hint">A gyártó saját leírásai alapján – a kritika nem a „rossz termék”, hanem a szándékosan épített játékmechanika.</span>
+  </div>
+  <div class="s-foot"><span>B — Jutalomcsapda · őszintén</span><span class="s-num">11 / 30</span></div>
+</section>
+
+<section id="slide-kez" data-n="12" class="slide" data-id="kez" data-title="A kéz tanítja az agyat" data-chap="c" data-chapname="Kéz" data-k="C — Kéz &amp; papír · kézírás, papír, tárgyak">
+  <div class="s-k rv">C — Kéz &amp; papír · kézírás, papír, tárgyak</div>
+  <div class="kz-grid">
+    <div class="kz-copy">
+      <h2 class="s-h2 rv" style="--d:1">A kéz tanítja<br><span class="pink">az agyat.</span></h2>
+      <p class="s-lead rv" style="--d:2">Egy betű kézzel leírva egyedi mozdulatsor, amelyet az agy összekapcsol a látott formával. A billentyűn minden betű ugyanaz a koppintás. A különbség nem nosztalgia – hanem <b>tanulási mechanizmus</b>.</p>
+      <ul class="ev rv" style="--d:3">
+        <li><b>3–5 évesek</b> a kézzel gyakorolt betűket jobban ismerték fel, mint a gépelve gyakoroltakat.<sup class="c" data-s="longcamp"></sup></li>
+        <li><b>Ötéveseknél</b> az olvasáshoz kapcsolódó agyi hálózat csak kézírásos gyakorlás után aktiválódott.<sup class="c" data-s="james"></sup></li>
+      </ul>
+      <div class="s-actions rv" style="--d:4"><button class="btn btn--blue btn--sm" data-open="kez" type="button">Részletek</button><button class="btn btn--ghost btn--sm" data-open="eeg" type="button">És a sokat idézett EEG-kutatás? (árnyalat)</button></div>
+    </div>
+    <div class="kz-vis">
+      <figure class="photo kz-photo rv-pop" style="--d:2"><img src="assets/img/handwriting.webp" alt="Gyerekkéz törteket ír ceruzával kockás füzetbe"><figcaption class="cap">egyedi mozdulat minden jelhez</figcaption></figure>
+      <div class="gl rv" style="--d:5" aria-hidden="true">
+        <div class="gl-box gl-box--hand">
+          <span class="gl-h">✎ Kézírás – minden jel más mozdulat</span>
+          <div class="gl-row">
+            <svg viewBox="0 0 40 40"><path pathLength="1" style="--i:0" d="M6 36 L20 6 L34 36 M11 26 L29 26"/></svg>
+            <svg viewBox="0 0 40 40"><path pathLength="1" style="--i:1" d="M8 36 L8 6 L32 36 L32 6"/></svg>
+            <svg viewBox="0 0 40 40"><path pathLength="1" style="--i:2" d="M7 6 L20 22 L33 6 M20 22 L20 36"/></svg>
+            <svg viewBox="0 0 40 40"><path pathLength="1" style="--i:3" d="M8 8 L32 8 L16 36"/></svg>
+            <svg viewBox="0 0 40 40"><path pathLength="1" style="--i:4" d="M9 9 Q30 2 28 16 Q26 23 16 21 Q34 22 30 31 Q26 40 8 32"/></svg>
+          </div>
+        </div>
+        <div class="gl-box gl-box--keys">
+          <span class="gl-h">⌨ Gépelés – minden koppintás ugyanaz</span>
+          <div class="gl-row">
+            <span class="gl-key" style="--i:0">A</span><span class="gl-key" style="--i:1">N</span><span class="gl-key" style="--i:2">Y</span><span class="gl-key" style="--i:3">7</span><span class="gl-key" style="--i:4">3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="s-foot"><span>C — Kéz &amp; papír · kézírás, papír, tárgyak</span><span class="s-num">12 / 30</span></div>
+</section>
+
+<section id="slide-lab" data-n="13" class="slide slide--soft" data-id="lab" data-title="Kézírás-labor" data-chap="c" data-k="C — Kéz &amp; papír · próbáld ki">
+  <div class="s-k rv">C — Kéz &amp; papír · próbáld ki</div>
+  <h2 class="s-h2 s-h2--md rv" style="--d:1">Írj le egy számot vagy a neved –<br><span class="pink">aztán „gépeld” be.</span></h2>
+  <div class="lab-grid">
+    <div class="lab-pad rv-pop" style="--d:2">
+      <div class="pad-wrap"><canvas id="pad" class="pad" width="1056" height="760" aria-label="Rajzfelület: írj ide egérrel vagy ujjal"></canvas><div class="pad-hint" id="padHint">írj ide ujjal<br>vagy egérrel ✎</div></div>
+      <button class="btn btn--ghost btn--sm" id="pad-clear" type="button">Törlés</button>
+    </div>
+    <div class="lab-side rv" style="--d:3">
+      <div class="meter-list">
+        <div class="meter"><span>✎ Kézírás – vonások</span><b id="m-strokes">0</b></div>
+        <div class="meter"><span>✎ Irányváltások (finommotoros döntések)</span><b id="m-turns">0</b><div class="t"><i id="t-hand"></i></div></div>
+        <div class="meter"><span>✎ Megtett út a „papíron”</span><b id="m-dist">0 cm*</b></div>
+      </div>
+      <p class="lab-sub">⌨ Most „gépelj” – kattints a billentyűkre:</p>
+      <div class="keys"><button class="key" type="button">A</button><button class="key" type="button">N</button><button class="key" type="button">Y</button><button class="key" type="button">A</button><button class="key" type="button">7</button><button class="key" type="button">3</button><button class="key" type="button">+</button></div>
+      <div class="typed" id="typed" aria-live="polite"></div>
+      <div class="meter meter--kb"><span>⌨ Koppintások – mind ugyanaz a mozdulat</span><b id="m-taps">0</b><div class="t"><i id="t-key"></i></div></div>
+      <p class="s-note">Szemléltetés, nem mérés. *A távolság képernyőpontokból becsült. A lényeg: a kézírásnál minden jelhez saját mozgásprogram kell, gépelésnél a mozdulat egyforma.</p>
+    </div>
+  </div>
+  <div class="s-foot"><span>C — Kéz &amp; papír · próbáld ki</span><span class="s-num">13 / 30</span></div>
+</section>
+
+<section id="slide-papir" data-n="14" class="slide" data-id="papir" data-title="Papír vs. képernyő" data-chap="c" data-k="C — Kéz &amp; papír · papír vs. képernyő">
+  <div class="s-k rv">C — Kéz &amp; papír · papír vs. képernyő</div>
+  <div class="pp-grid">
+    <div class="pp-copy">
+      <h2 class="s-h2 rv" style="--d:1">A lapnak van helye.<br><span class="pink">A görgetésnek nincs.</span></h2>
+      <div class="pp-stats rv" style="--d:2">
+        <div><b><span data-count="54">54</span></b><span>vizsgálat</span></div>
+        <div><b><span data-count="171055" data-sep="1">171 055</span></b><span>résztvevő</span></div>
+        <div><b>g = −0,21</b><span>a képernyő rovására</span></div>
+      </div>
+      <p class="pp-p rv" style="--d:3">A nyomtatott szöveget átlagosan jobban értették meg. A különbség <b>időnyomás alatt és ismeretterjesztő szövegeknél</b> nagyobb – és az évek során nem csökkent, hanem nőtt.<sup class="c" data-s="delgado"></sup> Papíron az olvasók azt is pontosabban ítélik meg, mennyit értettek.<sup class="c" data-s="clinton"></sup></p>
+      <p class="s-note rv" style="--d:4">Ez nem jelenti, hogy minden képernyős olvasás rossz – kis, de ismételten kimutatható hatásról van szó. A felső tagozaton viszont a gyerek már <b>olvasással tanul</b>: matekot, történelmet, biológiát.</p>
+      <div class="s-actions rv" style="--d:5"><button class="btn btn--blue btn--sm" data-open="reading" type="button">Mi lehet az oka? <span class="arr">→</span></button></div>
+    </div>
+    <div class="pp-vis rv-pop" style="--d:2">
+      <div class="pp-photo"><img src="assets/img/reading.webp" alt="Könyvbe mélyedt gyerek ül a polc előtt"></div>
+      <div class="read-demo" aria-hidden="true">
+        <div class="rd paper"><h5>Papír</h5><div class="pages"><div class="lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><span class="mark"></span><small>Az emlék „helyhez kötődik”: bal oldal, lap alja.</small></div>
+        <div class="rd screen"><h5>Képernyő</h5><div class="lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="mark"></span><small>Görgetéskor a fogódzó elcsúszik.</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="s-foot"><span>C — Kéz &amp; papír · papír vs. képernyő</span><span class="s-num">14 / 30</span></div>
+</section>
+
+<section id="slide-targyak" data-n="15" class="slide slide--soft" data-id="targyak" data-title="Megfogható matematika" data-chap="c" data-k="C — Kéz &amp; papír · megfogható matematika">
+  <div class="s-k rv">C — Kéz &amp; papír · megfogható matematika</div>
+  <div class="tg-grid">
+    <figure class="photo tg-photo rv-pop" style="--d:1"><img src="assets/img/manipulatives.webp" alt="Gyerekkezek fa számolórudakkal és kockákkal dolgoznak"><figcaption class="cap">a matek a kézben kezdődik</figcaption></figure>
+    <div class="tg-copy">
+      <h2 class="s-h2 rv" style="--d:1">Rudak, kockák,<br><span class="pink">törtkorongok.</span></h2>
+      <p class="tg-p rv" style="--d:2">55 vizsgálat metaanalízise szerint a tárgyi eszközökkel tanított matematika jobb eredményt hozott, mint a csak szimbólumokkal tanított.<sup class="c" data-s="carbonneau"></sup></p>
+      <div class="tg-stats">
+        <div class="tgs rv-pop" style="--d:3"><b>0,37</b><span>összesen (d)</span></div>
+        <div class="tgs tgs--hl rv-pop" style="--d:4"><b>0,59</b><span>megtartásban</span></div>
+        <div class="tgs tgs--hl rv-pop" style="--d:5"><b>0,69</b><span>a törteknél</span></div>
+        <div class="tgs rv-pop" style="--d:6"><b>0,45</b><span>általános iskolásoknál</span></div>
+      </div>
+      <p class="s-note rv" style="--d:7">Egy képernyőn is lehet kockát húzogatni. De a fa súlya, a rúd hossza, a kéz mozdulata és a padtárs keze mellette – az más tapasztalat.</p>
+    </div>
+  </div>
+  <div class="s-foot"><span>C — Kéz &amp; papír · megfogható matematika</span><span class="s-num">15 / 30</span></div>
+</section>
+
+<section id="slide-fokusz" data-n="16" class="slide slide--blue" data-id="fokusz" data-title="Fókusz-teszt" data-chap="d" data-chapname="Figyelem" data-k="D — Figyelem · próbáld ki">
+  <div class="s-k s-k--pink rv">D — Figyelem · próbáld ki</div>
+  <div class="fk-head">
+    <h2 class="s-h2 rv" style="--d:1">A figyelem<br>a legértékesebb kincs.</h2>
+    <p class="fk-lead rv" style="--d:2">Próbáld ki magadon, mit tesz a fókusszal egy „gamifikált” felület. Két kör egyszerű fejszámolás – <b>az egyik csendes, a másik csillogó.</b></p>
+  </div>
+  <div class="game rv-pop" style="--d:3" id="game">
+    <div class="game-top"></div>
+    <div class="noise-layer" aria-hidden="true"></div>
+    <div class="game-stage" aria-live="polite"></div>
+  </div>
+  <div class="s-foot"><span>D — Figyelem · próbáld ki</span><span class="s-num">16 / 30</span></div>
+</section>
+
+<section id="slide-fig-szamok" data-n="17" class="slide" data-id="fig-szamok" data-title="Figyelem – számokban" data-chap="d" data-k="D — Figyelem · számokban">
+  <div class="s-k rv">D — Figyelem · számokban</div>
+  <div class="ff-grid">
+    <div class="ff-col">
+      <article class="ff rv" style="--d:1"><b><span data-count="59">59</span><small> %</small></b><p>a 15 éveseknek legalább néhány matekórán eltereli a figyelmét a társak digitális eszköze. Akiket gyakran, azok átlagosan <b>15 ponttal</b> gyengébben teljesítettek.<sup class="c" data-s="pisa22"></sup> A PISA 2025-ben minden negyedik diák szerint a társak a legtöbb vagy minden természettudományos órán az eszközükkel foglalkoznak.<sup class="c" data-s="pisa25"></sup></p><button class="more" data-open="pisa" type="button">Részletek</button></article>
+      <article class="ff rv" style="--d:2"><b>38,6 → 28,4%</b><p>Ennyi volt az óvodások figyelmen kívüli ideje dúsan dekorált vs. visszafogott teremben – és a tesztpontosság 42% → 55%. Ha a falon lévő képek ennyit számítanak, mit tesz egy mozgó, csilingelő felület?<sup class="c" data-s="fisher"></sup></p></article>
+      <article class="ff rv" style="--d:3"><b>g = −0,33</b><p>A „csábító részletek” hatása: a tananyaghoz nem tartozó érdekes képek, történetek, animációk átlagosan rontják a tanulást (58 vizsgálat, 7500+ diák).<sup class="c" data-s="sundararajan"></sup></p><button class="more" data-open="seductive" type="button">Részletek</button></article>
+    </div>
+    <div class="cb rv-pop" style="--d:2">
+      <svg viewBox="0 0 520 300" role="img" aria-label="Fogalmi ábra: a mérsékelt, tanulási célú használat jár a legjobb eredménnyel, a szabadidős használat egy óra felett romló eredménnyel">
+        <line x1="50" y1="250" x2="500" y2="250" stroke="#ffb3d7" stroke-width="2"/><line x1="50" y1="30" x2="50" y2="250" stroke="#ffb3d7" stroke-width="2"/>
+        <text x="275" y="285" fill="#fff" font-size="13" text-anchor="middle" font-family="Figtree">napi digitális eszközhasználat az iskolában →</text>
+        <text x="20" y="140" fill="#fff" font-size="13" text-anchor="middle" font-family="Figtree" transform="rotate(-90 20 140)">teljesítmény →</text>
+        <path class="draw" pathLength="1" d="M50 170 C 110 110, 150 90, 190 92 S 300 140, 360 190 S 450 230, 500 236" fill="none" stroke="#ffb3d7" stroke-width="5" stroke-linecap="round"/>
+        <path class="draw draw--2" pathLength="1" d="M50 150 C 100 146, 140 150, 180 170 S 300 220, 500 246" fill="none" stroke="#ffd36e" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+        <circle class="cb-dot" cx="190" cy="92" r="7" fill="#ffb3d7"/><text x="200" y="74" fill="#ffb3d7" font-size="14" font-weight="700" font-family="Figtree">mérsékelt, célzott tanulás</text>
+        <text x="370" y="176" fill="#ffb3d7" font-size="13" font-family="Figtree">túl sok</text>
+        <text x="196" y="204" fill="#ffd36e" font-size="13" font-family="Figtree">szabadidős használat</text>
+        <line x1="186" y1="40" x2="186" y2="250" stroke="#fff" stroke-dasharray="4 6" opacity=".4"/><text x="160" y="40" fill="#fff" font-size="12" opacity=".8" font-family="Figtree">~1 óra</text>
+      </svg>
+      <h3>Nem „képernyő = rossz”. Hanem: a mennyiség és a cél számít.</h3>
+      <p>A PISA-adatokban a napi legfeljebb ~1 órás, tanulási célú használat jobb eredménnyel járt együtt, mint a semmi – a szabadidős használat viszont 1 óra felett romló eredménnyel.<sup class="c" data-s="pisa22"></sup> Megfigyeléses adat, nem bizonyít okot – de azt mutatja: a digitális eszköz <b>adagolt, célhoz kötött kivétel</b> legyen.</p>
+      <button class="more" data-open="adhd" type="button">Figyelemzavar és képernyő – mit tudunk?</button>
+    </div>
+  </div>
+  <div class="s-foot"><span>D — Figyelem · számokban</span><span class="s-num">17 / 30</span></div>
+</section>
+
+<section id="slide-egeszseg" data-n="18" class="slide" data-id="egeszseg" data-title="A szervezet is károsodik" data-chap="e" data-chapname="Egészség" data-k="E — Egészség · szem, alvás, hosszú táv">
+  <div class="s-k rv">E — Egészség · szem, alvás, hosszú táv</div>
+  <div class="hl-head">
+    <h2 class="s-h2 rv" style="--d:1">A szervezet is<br><span class="pink">károsodik.</span></h2>
+    <p class="hl-lead rv" style="--d:2">Ezek a kutatások főleg a <b>teljes</b> képernyőidőről és az esti használatról szólnak, nem az iskolai tabletről. De az iskolai percek erre adódnak rá – és az iskola mintát ad.</p>
+  </div>
+  <div class="health">
+    <button class="hcard rv-pop" style="--d:3" data-open="myopia" type="button">
+      <div class="anim eye-anim"><svg viewBox="0 0 200 80" width="190" aria-hidden="true"><path d="M10 40 Q60 0 110 40 Q60 80 10 40Z" fill="#ffe1ef" stroke="#2340f5" stroke-width="3"/><g class="iris"><circle cx="60" cy="40" r="17" fill="#2340f5"/><circle cx="60" cy="40" r="7" fill="#121a7a"/></g><g class="dot"><rect x="105" y="30" width="16" height="22" rx="3" fill="#ff6fb5"/></g></svg></div>
+      <div class="big">OR <span>1,21</span></div>
+      <p><b>Rövidlátás.</b> 45 vizsgálat, 335 524 résztvevő: minden további napi képernyőóra kb. 21%-kal magasabb eséllyel társult – 4 óránál már közel kétszeres esély (OR 1,97). Az oksági bizonyosság alacsony.<sup class="c" data-s="ha2025"></sup></p>
+      <span class="more">Részletek</span>
+    </button>
+    <button class="hcard rv-pop" style="--d:4" data-open="sleep" type="button">
+      <div class="anim moon-anim"><svg viewBox="0 0 200 90" width="190" aria-hidden="true"><path d="M70 20 a30 30 0 1 0 30 45 a24 24 0 1 1 -30 -45Z" fill="#ffb3d7"/><rect class="scr" x="120" y="40" width="36" height="46" rx="5" fill="#2340f5"/><rect class="scr" x="125" y="45" width="26" height="34" rx="2" fill="#bcd0ff"/><text class="zz" x="40" y="30" fill="#2340f5" font-size="18" font-weight="800" font-family="Figtree">z</text></svg></div>
+      <div class="big">OR <span>2,17</span></div>
+      <p><b>Alvás.</b> 125 198 gyerek adatai alapján a lefekvés körüli eszközhasználat több mint kétszeres eséllyel járt elégtelen alvással; már az eszköz hálószobai jelenléte is kedvezőtlen.<sup class="c" data-s="carter"></sup></p>
+      <span class="more">Részletek</span>
+    </button>
+    <button class="hcard rv-pop" style="--d:5" data-open="phone12" type="button">
+      <div class="anim phone-anim"><svg viewBox="0 0 200 90" width="190" aria-hidden="true"><rect x="78" y="6" width="44" height="78" rx="9" fill="#2340f5"/><rect x="84" y="14" width="32" height="58" rx="3" fill="#ffe1ef"/><circle cx="100" cy="78" r="3" fill="#ffb3d7"/><g class="zz2"><circle cx="138" cy="20" r="9" fill="#ff6fb5"/><text x="134" y="25" fill="#fff" font-size="12" font-weight="800">!</text></g></svg></div>
+      <div class="big">OR <span>1,31</span></div>
+      <p><b>Saját telefon 12 évesen.</b> Több mint 10 000 gyerek (ABCD-vizsgálat): magasabb depresszió- (1,31), elhízás- (1,40) és elégtelen alvás- (1,62) esély – háttértényezők kontrollja mellett.<sup class="c" data-s="barzilay"></sup></p>
+      <span class="more">Miért fontos ez itt?</span>
+    </button>
+  </div>
+  <div class="s-foot"><span>E — Egészség · szem, alvás, hosszú táv</span><span class="s-num">18 / 30</span></div>
+</section>
+
+<section id="slide-band-szabad" data-n="19" class="slide slide--photo" data-id="band-szabad" data-title="Szabad levegő" data-chap="e" data-k="E — Egészség · az ellensúly">
+  <div class="bd-img bd-img--out"><img src="assets/img/outdoor.webp" alt="Gyerekek futnak az iskolaudvaron"></div>
+  <div class="bd-shade bd-shade--out" aria-hidden="true"></div>
+  <div class="bd-copy bd-copy--out">
+    <div class="s-k s-k--pink rv">E — Egészség · az ellensúly</div>
+    <span class="hand bd-hand">A legjobb ellensúly:</span>
+    <h2 class="bd-q bd-q--md">Szabad levegő, messzire tekintés, mozgás</h2>
+    <p class="bd-p rv" style="--d:5">A szabadban töltött idő a rövidlátás egyik legjobb ellenszere – és minden perc, amit a gyerek nem a képernyő előtt tölt, ezt segíti.</p>
+  </div>
+  <div class="fair rv" style="--d:7"><span class="hand">Fair play:</span><span>A délelőtt 10:30-kor kiosztott 20 perces matekfeladat nem azonos az este 22:30-kor ágyban nyomkodott telefonnal. Ezért nem keverjük össze a kettőt – de <b>összeadjuk</b>. Számold ki a következő dián.</span></div>
+  <div class="s-foot"><span>E — Egészség · az ellensúly</span><span class="s-num">19 / 30</span></div>
+</section>
+
+<section id="slide-merleg" data-n="20" class="slide slide--soft" data-id="merleg" data-title="Heti képernyő-mérleg" data-chap="f" data-chapname="Mérleg" data-k="F — Heti mérleg · interaktív kalkulátor">
+  <div class="s-k rv">F — Heti mérleg · interaktív kalkulátor</div>
+  <div class="cl-head">
+    <h2 class="s-h2 rv" style="--d:1">Heti képernyő-<span class="pink">mérleg.</span></h2>
+    <p class="cl-lead rv" style="--d:2">Az iskola általában egy tantárgy perceit mondja meg. A gyerek szemének, alvásának és figyelmének viszont a <b>teljes összeg</b> számít. Állítsd be a saját gyereked hetét.</p>
+  </div>
+  <div class="calc rv-pop" style="--d:3" id="calc">
+    <div class="calc-in">
+      <div class="sl"><label for="c-app">Matekapp az iskolában <output id="o-app">30 perc/hét</output></label><input type="range" id="c-app" min="0" max="225" step="15" value="30"></div>
+      <div class="sl"><label for="c-dig">Egyéb digitális óra (tankönyv, angol, infó…) <output id="o-dig">60 perc/hét</output></label><input type="range" id="c-dig" min="0" max="600" step="15" value="60"></div>
+      <div class="sl"><label for="c-hw">Digitális házi feladat <output id="o-hw">10 perc/nap</output></label><input type="range" id="c-hw" min="0" max="60" step="5" value="10"></div>
+      <div class="sl"><label for="c-wd">Szabadidős képernyő hétköznap <output id="o-wd">1,5 óra/nap</output></label><input type="range" id="c-wd" min="0" max="6" step="0.5" value="1.5"></div>
+      <div class="sl"><label for="c-we">Szabadidős képernyő hétvégén <output id="o-we">3 óra/nap</output></label><input type="range" id="c-we" min="0" max="8" step="0.5" value="3"></div>
+      <p class="calc-sub">A gyártó heti 15–30 percet említ – a gyakorlatban ez lehet több.</p>
+    </div>
+    <div class="calc-out">
+      <div class="total"><span id="tot-week">15,8</span> óra<small>képernyő egy héten</small></div>
+      <div class="week" id="week">
+        <div><i class="f"></i><i class="h"></i><i class="s"></i><span>H</span></div><div><i class="f"></i><i class="h"></i><i class="s"></i><span>K</span></div><div><i class="f"></i><i class="h"></i><i class="s"></i><span>Sze</span></div><div><i class="f"></i><i class="h"></i><i class="s"></i><span>Cs</span></div><div><i class="f"></i><i class="h"></i><i class="s"></i><span>P</span></div><div><i class="f"></i><i class="h"></i><i class="s"></i><span>Szo</span></div><div><i class="f"></i><i class="h"></i><i class="s"></i><span>V</span></div>
+      </div>
+      <div class="legend"><span><i style="background:var(--pink)"></i>iskola</span><span><i style="background:#ffd36e"></i>házi</span><span><i style="background:#8fa0ff"></i>szabadidő</span></div>
+      <div class="verdict">Egy évben kb. <b><span id="tot-year">786</span> óra</b> – ez <b><span id="tot-days">33</span> teljes nap</b> éjjel-nappal. Ebből iskolai eredetű: <b><span id="tot-school">2 óra 20 perc</span></b> hetente.</div>
+      <div class="verdict" id="verdict"></div>
+    </div>
+  </div>
+  <div class="s-foot"><span>F — Heti mérleg · interaktív kalkulátor</span><span class="s-num">20 / 30</span></div>
+</section>
+
+<section id="slide-kiszorites" data-n="21" class="slide" data-id="kiszorites" data-title="Mit szorít ki?" data-chap="f" data-k="F — Heti mérleg · kiszorítás">
+  <div class="s-k rv">F — Heti mérleg · kiszorítás</div>
+  <div class="ks-grid">
+    <figure class="photo ks-photo rv-pop" style="--d:1">
+      <img src="assets/img/classroom.webp" alt="Osztályterem, ahol minden gyerek tabletet néz">
+      <figcaption class="ks-cap"><span class="hand">2015 óta tudjuk:</span><b>Több gép nem jelent több tudást.</b><small>Az OECD elemzése szerint azokban az országokban, amelyek sokat fektettek az oktatási IKT-ba, nem volt érdemi javulás az olvasás, a matematika és a természettudomány eredményeiben.<sup class="c" data-s="oecd15"></sup></small></figcaption>
+    </figure>
+    <div class="ks-copy">
+      <h2 class="s-h2 s-h2--md rv" style="--d:1">Mit szorít ki az iskolai képernyőidő?</h2>
+      <p class="ks-lead rv" style="--d:2">Az általános iskola legszűkösebb erőforrása a gyerek figyelme és a tanítási idő. Minden fél óra, ami a tableten telik, <b>egy kiesett tevékenység</b>. Húzd a csúszkát:</p>
+      <div class="sl ks-sl rv" style="--d:3"><label for="ks-min">Iskolai képernyőidő hetente <output id="ks-out">90 perc</output></label><input type="range" id="ks-min" min="0" max="180" step="30" value="90"></div>
+      <div class="displace" id="displace">
+        <div class="dp gone"><img src="assets/img/st-pencil.webp" alt="">Kézzel írt levezetés</div>
+        <div class="dp gone"><img src="assets/img/st-brain.webp" alt="">Fejszámolás, becslés</div>
+        <div class="dp gone"><img src="assets/img/st-book.webp" alt="">Hosszú olvasás papíron</div>
+        <div class="dp"><span class="dp-e">🧱</span>Tárgyi eszközök</div>
+        <div class="dp"><span class="dp-e">🗣️</span>Tanári magyarázat</div>
+        <div class="dp"><span class="dp-e">🤝</span>Közös gondolkodás</div>
+      </div>
+      <div class="ks-foot"><span class="s-note">Szemléltetés: minden fél óra egy kiesett tevékenység – most <b id="gone-n">3</b> a 6-ból.</span><button class="btn btn--blue btn--sm" data-open="kiszoritas" type="button">A kiszorítás – részletek <span class="arr">→</span></button></div>
+    </div>
+  </div>
+  <div class="s-foot"><span>F — Heti mérleg · kiszorítás</span><span class="s-num">21 / 30</span></div>
+</section>
+
+<section id="slide-idovonal" data-n="22" class="slide" data-id="idovonal" data-title="A világ már reagált" data-chap="g" data-chapname="Világ" data-k="G — A világ · nemzetközi fordulat">
+  <div class="s-k rv">G — A világ · nemzetközi fordulat</div>
+  <div class="tm-head">
+    <h2 class="s-h2 rv" style="--d:1">A világ<br><span class="pink">már reagált.</span></h2>
+    <p class="tm-lead rv" style="--d:2">Azok az országok, amelyek a leggyorsabban digitalizálták az iskolát, ma tudatosan lépnek vissza. Nem tiltással – hanem azzal, hogy <b>a képernyőnek kell bizonyítania</b>.</p>
+  </div>
+  <div class="tm" role="list" aria-label="Idővonal">
+    <div class="tm-line"><i class="tm-fill"></i><span class="tm-car"></span></div>
+    <div class="tm-stop tm-stop--up" role="listitem" style="--i:0"><span class="y">2015</span><p><b>OECD</b>Az IKT-ba sokat befektető országokban nem javult érdemben az olvasás, matek, természettudomány.</p><i class="d"></i></div>
+    <div class="tm-stop tm-stop--dn" role="listitem" style="--i:1"><i class="d"></i><span class="y">2023 · ápr.</span><p><b>Karolinska Intézet</b>„A digitális eszközök a tanulást inkább ronthatják, mint javíthatják.”</p></div>
+    <div class="tm-stop tm-stop--up" role="listitem" style="--i:2"><span class="y">2023</span><p><b>Svédország</b>685 M SEK tankönyvekre, a digitalizációs stratégia leállítva.</p><i class="d"></i></div>
+    <div class="tm-stop tm-stop--dn" role="listitem" style="--i:3"><i class="d"></i><span class="y">2023 · júl.</span><p><b>UNESCO GEM</b>Technológia csak akkor, ha egyértelműen segíti a tanulást.</p></div>
+    <div class="tm-stop tm-stop--up" role="listitem" style="--i:4"><span class="y">2024 · jan.</span><p><b>Hollandia</b>Telefon nélküli osztálytermek.</p><i class="d"></i></div>
+    <div class="tm-stop tm-stop--dn" role="listitem" style="--i:5"><i class="d"></i><span class="y">2024 · febr.–márc.</span><p><b>Dánia</b>12 képernyő-ajánlás + 540 M DKK nyomtatott könyvekre.</p></div>
+    <div class="tm-stop tm-stop--up" role="listitem" style="--i:6"><span class="y">2024 · szept.</span><p><b>Magyarország</b>Okoseszközök korlátozása 1–8. évfolyamon; használat csak céllal és időtartammal.</p><i class="d"></i></div>
+    <div class="tm-stop tm-stop--dn" role="listitem" style="--i:7"><i class="d"></i><span class="y">2025 · júl.</span><p><b>Svédország</b>Óvoda: megszűnt a digitális eszközök követelménye.</p></div>
+    <div class="tm-stop tm-stop--up" role="listitem" style="--i:8"><span class="y">2026 · ápr.</span><p><b>Los Angeles (LAUSD)</b>Képernyőidő-korlátozás az osztálytermekben, papír és toll előnyben.</p><i class="d"></i></div>
+    <div class="tm-stop tm-stop--dn" role="listitem" style="--i:9"><i class="d"></i><span class="y">2026 · aug.</span><p><b>Svédország</b>Egész napos mobilmentes iskola.</p></div>
+  </div>
+  <div class="s-foot"><span>G — A világ · nemzetközi fordulat</span><span class="s-num">22 / 30</span></div>
+</section>
+
+<section id="slide-orszagok" data-n="23" class="slide slide--soft" data-id="orszagok" data-title="Országok" data-chap="g" data-k="G — A világ · országok">
+  <div class="s-k rv">G — A világ · országok</div>
+  <h2 class="s-h2 s-h2--md rv" style="--d:1">Országok, amelyek <span class="pink">már döntöttek.</span></h2>
+  <div class="ct-grid">
+    <button class="ct rv-pop" style="--d:2" data-open="se" type="button"><div class="ci"><img src="assets/img/city-stockholm.webp" alt=""></div><div class="cb"><span class="pill">A legfontosabb precedens</span><h3>Svédország</h3><p>Vissza a tankönyvhöz, az íráshoz, az olvasáshoz. Digitális csak dokumentált többletértékkel.</p></div></button>
+    <button class="ct rv-pop" style="--d:3" data-open="dk" type="button"><div class="ci"><img src="assets/img/city-copenhagen.webp" alt=""></div><div class="cb"><span class="pill">Könyv a képernyő ellen</span><h3>Dánia</h3><p>„Tegyék el a tableteket, amikor nincs rájuk szükség.” 540 millió korona könyvekre.</p></div></button>
+    <button class="ct rv-pop" style="--d:4" data-open="no" type="button"><div class="ci"><img src="assets/img/city-oslo.webp" alt=""></div><div class="cb"><span class="pill">Olvasás papíron</span><h3>Norvégia</h3><p>Képernyőhasználati bizottság, gyakorlatiasabb iskola, több papíralapú olvasás.</p></div></button>
+    <button class="ct rv-pop" style="--d:5" data-open="us" type="button"><div class="ci"><img src="assets/img/city-losangeles.webp" alt=""></div><div class="cb"><span class="pill">2. hullám</span><h3>USA</h3><p>Előbb a telefonok, 2026-tól már az iskolai képernyőidő is: Los Angeles korlátoz.</p></div></button>
+    <button class="ct rv-pop" style="--d:6" data-open="nl" type="button"><div class="ci"><span class="flagtxt">NL</span></div><div class="cb"><span class="pill">Mért hatás</span><h3>Hollandia</h3><p>Telefonmentes órák: a középiskolák 75%-a jobb koncentrációról számol be.</p></div></button>
+    <button class="ct rv-pop" style="--d:7" data-open="uk" type="button"><div class="ci"><span class="flagtxt">UK</span></div><div class="cb"><span class="pill pill--warn">Árnyalat</span><h3>Anglia</h3><p>Szigorú telefonszabály – de nincs általános képernyőtilalom. Ezt is ki kell mondani.</p></div></button>
+    <button class="ct rv-pop" style="--d:8" data-open="hu" type="button"><div class="ci"><span class="flagtxt">HU</span></div><div class="cb"><span class="pill">Itthon</span><h3>Magyarország</h3><p>2024 óta: okoseszköz csak engedéllyel, rögzített céllal és időtartammal.</p></div></button>
+    <button class="ct rv-pop" style="--d:9" data-open="unesco" type="button"><div class="ci"><span class="flagtxt">79</span></div><div class="cb"><span class="pill">Globális keret</span><h3>UNESCO</h3><p>79 oktatási rendszer korlátozza a telefont. Elv: technológia csak, ha egyértelműen segít.</p></div></button>
+  </div>
+  <p class="s-hint rv" style="--d:10">Kattints egy országra – a döntés, a számok és a források.</p>
+  <div class="s-foot"><span>G — A világ · országok</span><span class="s-num">23 / 30</span></div>
+</section>
+
+<section id="slide-teszt" data-n="24" class="slide slide--pink" data-id="teszt" data-title="Teszt" data-chap="h" data-chapname="Teszt" data-k="H — Teszt · 10 kérdés">
+  <div class="qz-grid">
+    <div class="qz-side">
+      <div class="s-k rv">H — Teszt</div>
+      <h2 class="s-h2 s-h2--md rv" style="--d:1">Mennyire ismered a kutatásokat?</h2>
+      <p class="qz-lead rv" style="--d:2">Néhány válasz meg fog lepni – mindkét irányban. Pont ettől lesz hiteles, amit utána mondasz.</p>
+      <div class="qz-blob hand rv-pop" style="--d:4" aria-hidden="true">10 kérdés,<br>0 jelvény.</div>
+    </div>
+    <div class="quiz rv-pop" style="--d:2" id="quiz" aria-live="polite"></div>
+  </div>
+  <div class="s-foot"><span>H — Teszt · 10 kérdés</span><span class="s-num">24 / 30</span></div>
+</section>
+
+<section id="slide-tegyel" data-n="25" class="slide" data-id="tegyel" data-title="Mit tehetsz?" data-chap="i" data-chapname="Teendők" data-k="I — Mit tehetsz?">
+  <div class="s-k rv">I — Mit tehetsz?</div>
+  <div class="tt-head">
+    <h2 class="s-h2 rv" style="--d:1">Ne tiltást kérj.<br><span class="pink">Kérdezz jól.</span></h2>
+    <p class="tt-lead rv" style="--d:2">Az iskola nem tudja bebizonyítani, hogy „a tablet nem káros” – ez megválaszolhatatlan. Azt viszont meg tudja mondani, <b>mit vált ki, mennyi ideig, milyen céllal és milyen bizonyíték alapján</b>.</p>
+  </div>
+  <div class="au-grid">
+    <article class="au rv-pop" style="--d:3">
+      <div class="au-img"><img src="assets/img/homework.webp" alt="Szülő és gyerek nevetve közösen matekoznak papíron a konyhaasztalnál"></div>
+      <div class="au-b"><span class="pill">Szülőknek</span><h3>Levélgenerátor</h3><p>Válaszd ki, mit kérdeznél az iskolától – és elkészül a levél. Kilenc kérdés, forrásokkal.</p>
+        <div class="au-act"><button class="btn btn--blue btn--sm" data-goto="level" type="button">Levél készítése <span class="arr">→</span></button><button class="btn btn--ghost btn--sm" data-open="c-szulo" type="button">A kérdések</button></div></div>
+    </article>
+    <article class="au rv-pop" style="--d:4">
+      <div class="au-img"><img src="assets/img/teacher.webp" alt="Tanár magyaráz egy geometriai feladatot gyerekek kis csoportjának" style="object-position:50% 40%"></div>
+      <div class="au-b"><span class="pill">Pedagógusoknak</span><h3>A játék nem ellenség</h3><p><b>A képernyős, gyűjtögetős jutalomhurok az.</b> Hat bevált, analóg módszer, amely játékos, mégis a megértést jutalmazza.</p>
+        <div class="au-act"><button class="btn btn--blue btn--sm" data-open="c-tanar" type="button">A hat módszer <span class="arr">→</span></button></div></div>
+    </article>
+    <article class="au rv-pop" style="--d:5">
+      <div class="au-img"><img src="assets/img/classroom.webp" alt="Osztályterem" style="object-position:50% 40%"></div>
+      <div class="au-b"><span class="pill">Döntéshozóknak</span><h3>„Analóg először”</h3><p>Egy védhető szakpolitikai keret 7–14 éves korra: hét pont az alapértelmezéstől a kiértékelt pilotig.</p>
+        <div class="au-act"><button class="btn btn--blue btn--sm" data-open="c-dontes" type="button">A hét pont <span class="arr">→</span></button></div></div>
+    </article>
+  </div>
+  <a class="pdf-card rv" style="--d:7" href="osszefoglalo.pdf" target="_blank" rel="noopener"><span class="pdf-ico">PDF</span><span><b>Kétoldalas összefoglaló – nyomtatható</b><small>A lényeg 8 pontban, forrásokkal. Szülői értekezletre, tanári kezdeményezéshez.</small></span><span class="pdf-go">Megnyitás ↗</span></a>
+  <div class="s-foot"><span>I — Mit tehetsz?</span><span class="s-num">25 / 30</span></div>
+</section>
+
+<section id="slide-level" data-n="26" class="slide slide--soft" data-id="level" data-title="Levél az iskolának" data-chap="i" data-k="I — Mit tehetsz? · levélgenerátor">
+  <div class="s-k rv">I — Mit tehetsz? · levélgenerátor</div>
+  <h2 class="s-h2 s-h2--md rv" style="--d:1">A levél, amit elküldhetsz <span class="pink">az iskolának.</span></h2>
+  <div class="lt-grid">
+    <div class="lt-q rv" style="--d:2">
+      <p class="lt-p">Válaszd ki, mit kérdeznél az iskolától:</p>
+      <div class="qlist" id="qlist">
+<label><input type="checkbox" checked value="Pontosan hány percet használják hetente az alkalmazást, és várható-e otthoni használat is?"><span>Hány perc hetente, és lesz-e otthoni használat?<small>A dózis nélkül a kockázat és a haszon nem értékelhető.</small></span></label>
+            <label><input type="checkbox" checked value="Mit vált ki ez az idő: kevesebb lesz-e a kézzel írt matematikai munka, a tárgyi eszközös feladat vagy a tanári magyarázat?"><span>Mit vált ki ez az idő?<small>A kiszorítás a legfontosabb kérdés.</small></span></label>
+            <label><input type="checkbox" checked value="Milyen konkrét, mérhető tanulási eredményt várnak az alkalmazástól, és hogyan mérik 6–12 hét után, hogy ez megvalósult-e?"><span>Milyen mérhető eredményt várnak, és hogyan mérik?<small>A „motiváló” önmagában nem pedagógiai cél.</small></span></label>
+            <label><input type="checkbox" checked value="Milyen független, kontrollcsoportos vizsgálat mutatja, hogy ennél a korosztálynál jobb eredményt ad, mint ugyanennyi jól vezetett papíralapú gyakorlás?"><span>Van-e független, kontrollált bizonyíték?<small>Az „előtte–utána javultak” nem összehasonlítás.</small></span></label>
+            <label><input type="checkbox" checked value="Használják-e a metajátékot, avatárokat, ládákat, csillagokat, ranglistát – és kikapcsolható-e minden, a matematikához nem tartozó jutalmazási elem?"><span>Kikapcsolhatók-e az avatárok, ládák, ranglisták?<small>A tartalom és a metajáték szétválasztható-e?</small></span></label>
+            <label><input type="checkbox" value="Mennyi a gyermekem teljes heti iskolai képernyőideje, minden tantárgyat összeadva?"><span>Mennyi a teljes heti iskolai képernyőidő?<small>A gyerek teljes expozíciója számít.</small></span></label>
+            <label><input type="checkbox" value="Milyen tanulói adatokat továbbítanak a szolgáltatónak, mi a jogalap, hol tárolják, meddig őrzik és hogyan törölhetők?"><span>Milyen adatokat kap a szolgáltató?<small>Jogalap, tárolás, megőrzés, törlés.</small></span></label>
+            <label><input type="checkbox" value="Van-e egyenértékű papíralapú alternatíva azoknak a családoknak, akik ezt kérik?"><span>Van-e papíralapú alternatíva?<small>Lehetővé teszi az összehasonlítást is.</small></span></label>
+            <label><input type="checkbox" value="A 245/2024. (VIII. 8.) Korm. rendelet szellemében hogyan rögzítik az eszközhasználat célját és időtartamát?"><span>Hogyan rögzítik a célt és időtartamot (245/2024. Korm. rend.)?<small>A jogszabály célhoz és időhöz köti az engedélyt.</small></span></label>
+      </div>
+    </div>
+    <div class="lt-paper rv-pop" style="--d:3" id="letter-form">
+      <div class="fields">
+        <input type="text" id="l-name" placeholder="A te neved" aria-label="A te neved">
+        <input type="text" id="l-kid" placeholder="Gyermeked neve" aria-label="Gyermeked neve">
+        <input type="text" id="l-class" placeholder="Osztály (pl. 5.b)" aria-label="Osztály">
+        <input type="text" id="l-school" placeholder="Iskola neve" aria-label="Iskola neve">
+      </div>
+      <pre id="letter-out" tabindex="0" aria-label="A levél szövege"></pre>
+      <div class="acts"><button class="btn btn--blue btn--sm" id="l-copy" type="button">Másolás</button><button class="btn btn--ghost btn--sm" id="l-mail" type="button">Megnyitás e-mailben</button><button class="btn btn--ghost btn--sm" id="l-print" type="button">Nyomtatás</button></div>
+      <p class="s-note">A levél a böngésződben készül, semmit nem küldünk el és nem tárolunk.</p>
+    </div>
+  </div>
+  <div class="s-foot"><span>I — Mit tehetsz? · levélgenerátor</span><span class="s-num">26 / 30</span></div>
+</section>
+
+<section id="slide-vita" data-n="27" class="slide" data-id="vita" data-title="Amit nem állítunk" data-chap="j" data-chapname="Vita" data-k="J — Tisztességes vita">
+  <div class="s-k rv">J — Tisztességes vita</div>
+  <div class="vt-head">
+    <h2 class="s-h2 rv" style="--d:1">Amit <span class="pink">nem</span> állítunk.</h2>
+    <p class="vt-lead rv" style="--d:2">A túlzás a legrövidebb út ahhoz, hogy egy jó ügyet elutasítsanak. Ezek azok a mondatok, amelyeket mi is kerülünk – és amit helyettük mondunk.</p>
+  </div>
+  <div class="claims">
+    <div class="h">Kerülendő</div><div class="h g">Védhető változat</div>
+    <div class="bad" style="--i:0">„A képernyő károsítja a gyerek agyát.”</div><div class="good" style="--i:0">A kézírás és a gépelés eltérő mozgásos és észlelési folyamatokat mozgósít; nincs alap a kézírás teljes lecserélésére.</div>
+    <div class="bad" style="--i:1">„A tablettől butább lesz a gyerek.”</div><div class="good" style="--i:1">A túlzott vagy figyelemelvonó használat rosszabb eredménnyel társul; a mérsékelt, célzott használat nem feltétlenül.</div>
+    <div class="bad" style="--i:2">„A gamifikált app függőséget okoz.”</div><div class="good" style="--i:2">Tudatosan alkalmaz játékokból ismert jutalmazási elemeket – a kérdés, kell-e ilyen külső jutalmazás az iskolában.</div>
+    <div class="bad" style="--i:3">„A gamifikáció rossz.”</div><div class="good" style="--i:3">Növelheti a teljesítményt, de külön kérdés, hogy belső vagy külső motivációt épít.</div>
+    <div class="bad" style="--i:4">„Svédország betiltotta az iPadeket.”</div><div class="good" style="--i:4">Svédország tudatosan visszafordította a túlzott digitalizációt, és megerősítette a tankönyvet, kézírást, olvasást.</div>
+    <div class="bad" style="--i:5">„A kék fény tönkreteszi a szemet.”</div><div class="good" style="--i:5">A képernyőidő és a rövidlátás között dózisfüggő összefüggés van; a szabadban töltött idő védő tényező.</div>
+  </div>
+  <div class="s-foot"><span>J — Tisztességes vita</span><span class="s-num">27 / 30</span></div>
+</section>
+
+<section id="slide-ellenervek" data-n="28" class="slide slide--soft" data-id="ellenervek" data-title="Ellenérvek – és válaszaink" data-chap="j" data-k="J — Tisztességes vita · ellenérvek">
+  <div class="s-k rv">J — Tisztességes vita · ellenérvek</div>
+  <div class="vt-head">
+    <h2 class="s-h2 rv" style="--d:1">Ellenérvek –<br><span class="pink">és válaszaink.</span></h2>
+    <p class="vt-lead rv" style="--d:2">A hiteles érvelés nem hallgatja el, ami nem illik bele. Hét kérdés, amit biztosan megkapsz – kattints, és olvasd el a válaszunkat.</p>
+  </div>
+  <div class="ca-list">
+    <button class="ca rv" style="--d:3" data-open="a-1" type="button"><span class="n">01</span><b>„De hát a gamifikáció bizonyítottan hatásos!”</b><i aria-hidden="true">→</i></button>
+    <button class="ca rv" style="--d:4" data-open="a-2" type="button"><span class="n">02</span><b>„Az alkalmazásnak vannak eredményességi vizsgálatai.”</b><i aria-hidden="true">→</i></button>
+    <button class="ca rv" style="--d:5" data-open="a-3" type="button"><span class="n">03</span><b>„Az USA oktatási minisztériuma 2026-ban kiállt az EdTech mellett.”</b><i aria-hidden="true">→</i></button>
+    <button class="ca rv" style="--d:6" data-open="a-4" type="button"><span class="n">04</span><b>„Angliában nincs általános képernyőlimit.”</b><i aria-hidden="true">→</i></button>
+    <button class="ca rv" style="--d:7" data-open="a-5" type="button"><span class="n">05</span><b>„Speciális nevelési igényű gyerekeknek a tablet segíthet.”</b><i aria-hidden="true">→</i></button>
+    <button class="ca rv" style="--d:8" data-open="a-6" type="button"><span class="n">06</span><b>„A holland telefontilalom az általános iskolákban alig hozott változást.”</b><i aria-hidden="true">→</i></button>
+    <button class="ca rv" style="--d:9" data-open="a-7" type="button"><span class="n">07</span><b>„A Karolinska-nyilatkozatot is bírálták.”</b><i aria-hidden="true">→</i></button>
+    <button class="ca ca--more rv" style="--d:10" data-goto="forrasok" type="button"><span class="n">✓</span><b>Minden válasz forrásokkal – a Források dián</b><i aria-hidden="true">→</i></button>
+  </div>
+  <div class="s-foot"><span>J — Tisztességes vita · ellenérvek</span><span class="s-num">28 / 30</span></div>
+</section>
+
+<section id="slide-forrasok" data-n="29" class="slide" data-id="forrasok" data-title="Források" data-chap="j" data-k="J — Források">
+  <div class="s-k rv">J — Források</div>
+  <div class="vt-head">
+    <h2 class="s-h2 rv" style="--d:1">Forrásmegjelölt<br><span class="pink">állítások.</span></h2>
+    <p class="vt-lead rv" style="--d:2">Kormányzati dokumentumok, metaanalízisek, lektorált tanulmányok – és a gyártó saját leírásai. A felugró ablakokban lévő kis számokra kattintva ide ugrasz.</p>
+  </div>
+  <div class="sr-grid">
+    <div class="sr-total rv-pop" style="--d:3"><b><span data-count="45">45</span></b><span>forrás összesen</span><button class="btn btn--pink btn--sm" data-open="forrasok" type="button">A teljes lista <span class="arr">→</span></button></div>
+    <button class="sr rv-pop" style="--d:4" data-open="forrasok" data-filter="policy" type="button"><b><span data-count="20">20</span></b><span>Oktatáspolitika</span><em>kormányzati és nemzetközi dokumentumok</em></button>
+    <button class="sr rv-pop" style="--d:5" data-open="forrasok" data-filter="learning" type="button"><b><span data-count="15">15</span></b><span>Tanulás</span><em>metaanalízisek, lektorált kutatások</em></button>
+    <button class="sr rv-pop" style="--d:6" data-open="forrasok" data-filter="motivation" type="button"><b><span data-count="8">8</span></b><span>Motiváció &amp; gamifikáció</span><em>jutalom, loot box, szokásformálás</em></button>
+    <button class="sr rv-pop" style="--d:7" data-open="forrasok" data-filter="health" type="button"><b><span data-count="5">5</span></b><span>Egészség</span><em>szem, alvás, figyelem</em></button>
+    <button class="sr rv-pop" style="--d:8" data-open="forrasok" data-filter="product" type="button"><b><span data-count="3">3</span></b><span>Termék</span><em>a gyártó saját leírásai</em></button>
+  </div>
+  <p class="s-note rv" style="--d:9">Egy forrás több témába is tartozhat, ezért a témák összege nagyobb az összesnél. Hibát találtál egy forrásban? Írd meg nekünk – javítjuk. Az oldal képei mesterséges intelligenciával készültek, illusztrációs céllal.</p>
+  <div class="s-foot"><span>J — Források</span><span class="s-num">29 / 30</span></div>
+</section>
+
+<section id="slide-zaras" data-n="30" class="slide slide--blue" data-id="zaras" data-title="Végszó" data-chap="j" data-k="Végszó">
+  <div class="zr-grid">
+    <div class="zr-copy">
+      <div class="s-k s-k--pink rv">Végszó</div>
+      <p class="zr-quote rv" style="--d:1">„A gyerekkor nem technológiai tesztlabor. Az általános iskolában a könyv, a papír, a kézírás, a tárgyi tapasztalat, a tanár és a társak legyenek az alap. Képernyő csak akkor vegyen el ebből az időből, ha <span class="pink">bizonyíthatóan többet ad</span>.”</p>
+      <p class="zr-p rv" style="--d:3">Ez nem technológiaellenesség. Ez <b>bizonyítékalapú óvatosság</b> – ugyanaz az elv, amely felé Svédország, Dánia, Norvégia és az UNESCO is elmozdult.</p>
+      <div class="s-actions rv" style="--d:4">
+        <button class="btn btn--pink" data-share type="button">Oszd meg szülőtársaiddal <span class="arr">→</span></button>
+        <a class="btn btn--ghost btn--light" href="osszefoglalo.pdf" target="_blank" rel="noopener">📄 PDF összefoglaló</a>
+        <button class="btn btn--ghost btn--light" data-goto="level" type="button">Írj levelet az iskolának</button>
+      </div>
+    </div>
+    <div class="zr-side rv-pop" style="--d:2">
+      <figure class="photo zr-photo"><img src="assets/img/homework.webp" alt="Szülő és gyerek nevetve közösen matekoznak papíron a konyhaasztalnál"><figcaption class="cap">több valódi pillanat együtt</figcaption></figure>
+      <a class="zr-qr" href="https://iskolatablet.darwinai.hu/app/" target="_blank" rel="noopener"><span class="zr-qr__svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" shape-rendering="crispEdges"><path stroke="#1b2bc9" d="M0 0.5h7m2 0h2m1 0h2m4 0h3m1 0h7M0 1.5h1m5 0h1m4 0h5m2 0h1m3 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m1 0h1m1 0h1m3 0h2m4 0h1m1 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h2m2 0h1m2 0h3m4 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h2m1 0h3m2 0h1m2 0h2m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h1m2 0h5m1 0h2m3 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h1m1 0h1m2 0h1m1 0h1m2 0h3M0 8.5h1m1 0h5m2 0h1m2 0h1m1 0h4m1 0h1m2 0h5M0 9.5h2m1 0h1m8 0h1m3 0h1m2 0h1m1 0h4m3 0h1M1 10.5h2m2 0h2m1 0h2m1 0h2m2 0h3m4 0h2M1 11.5h1m1 0h1m3 0h1m1 0h1m2 0h1m1 0h2m4 0h2m1 0h1m1 0h1m1 0h1M1 12.5h2m1 0h1m1 0h1m4 0h2m2 0h1m1 0h1m2 0h1m4 0h2M4 13.5h1m3 0h3m2 0h2m1 0h9m3 0h1M0 14.5h1m1 0h2m2 0h1m1 0h2m2 0h5m1 0h1m1 0h2m1 0h1m1 0h2M0 15.5h1m1 0h3m2 0h1m1 0h3m1 0h1m2 0h1m3 0h1m6 0h1M0 16.5h2m4 0h3m1 0h3m1 0h1m2 0h1m7 0h2M0 17.5h1m6 0h4m6 0h4m1 0h3m1 0h1m1 0h1M0 18.5h1m2 0h1m2 0h1m2 0h1m1 0h2m2 0h3m5 0h1m2 0h1M0 19.5h1m1 0h2m6 0h1m1 0h1m1 0h3m1 0h1m1 0h2m2 0h1m2 0h1M0 20.5h1m2 0h1m2 0h1m2 0h1m2 0h1m2 0h3m1 0h6m1 0h3M8 21.5h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h1m3 0h5M0 22.5h7m3 0h2m1 0h3m2 0h3m1 0h1m1 0h3M0 23.5h1m5 0h1m1 0h1m4 0h1m1 0h1m3 0h2m3 0h1M0 24.5h1m1 0h3m1 0h1m1 0h3m3 0h1m2 0h1m2 0h5m1 0h1M0 25.5h1m1 0h3m1 0h1m1 0h1m2 0h2m3 0h3m1 0h1m2 0h1m1 0h4M0 26.5h1m1 0h3m1 0h1m1 0h1m6 0h1m2 0h1m2 0h7M0 27.5h1m5 0h1m5 0h2m2 0h1m3 0h2m1 0h3m1 0h1M0 28.5h7m1 0h2m1 0h1m5 0h3m6 0h1"/></svg></span><span><b>Vidd magaddal</b><small>Olvasd be a telefonoddal: a teljes tartalom mobilappként, offline is.</small><em>iskolatablet.darwinai.hu</em></span></a>
+    </div>
+  </div>
+  <div class="s-foot"><span>Végszó</span><span class="s-num">30 / 30</span></div>
+</section>
+  </div>
+</main>
+
+<div class="deck-nav">
+  <span class="deck-topbar__title" id="deckTitle"></span>
+  <button class="deck-arrow" id="prevBtn" type="button" aria-label="Előző dia"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <span class="deck-count"><b id="curNum">1</b> / <span id="totNum">1</span></span>
+  <button class="deck-arrow" id="nextBtn" type="button" aria-label="Következő dia"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  <span class="deck-hint">← → lapoz · O áttekintés · F teljes képernyő · B üres kép</span>
+</div>
+
+<div class="overview" id="overview" role="dialog" aria-label="Áttekintő nézet">
+  <div class="overview__head"><span>Minden dia egy helyen – kattints a megnyitáshoz</span><button class="deck-btn" id="ovClose" type="button">Bezárás (Esc)</button></div>
+  <div class="overview__grid" id="ovGrid"></div>
+</div>
+
+<div class="gate" id="gate">
+  <div class="gate__box">
+    <div class="gate__brand">A papír <b>jobb, mint</b> a tablet.</div>
+    <p class="gate__k">Vezetett bemutató · <span id="gateCount">30</span> dia</p>
+    <h1>Miért az analóg az alap, és a digitális a kivétel?</h1>
+    <p class="gate__lead">Lapozz a nyilakkal (← →), kattints a csempékre a részletekért és a forrásokért. A bemutató végigvezet a weboldal teljes tartalmán – bárki végigkattinthatja.</p>
+    <div class="gate__btns">
+      <button class="gate__btn gate__btn--full" id="gateFull" type="button">Indítás teljes képernyőn</button>
+      <button class="gate__btn" id="gateWin" type="button">Indítás ablakban</button>
+    </div>
+    <p class="gate__hint">Enter: teljes képernyő · Esc: ablakban · a dián kattintható csempék nyitják a részleteket</p>
+  </div>
+</div>
+
+<dialog class="dlg" id="dlg" aria-label="Részletek">
+  <div class="dlg__box">
+    <div class="dlg__bar"><button class="dlg__back" id="dlgBack" type="button" hidden>← Vissza</button><button class="dlg__x" id="dlgX" type="button" aria-label="Bezárás">✕</button></div>
+    <div class="dlg__body" id="dlgBody"></div>
+  </div>
+</dialog>
+
+<!-- A weboldal részletező ablakai és forráslistája: generált tartalom (tools/build-deck.mjs) -->
+<template id="m-analog">
+<div class="eyebrow">1 · Az analóg az alap</div><h3>Nem tiltás – bizonyítási teher.</h3>
+  <p>A svéd kormány 2023 óta azt az elvet követi, hogy az alapkészségek elsajátításának alapját analóg tevékenységek adják, és digitális taneszköz csak ott jelenjen meg, ahol dokumentáltan segíti a tanulást.<sup class="c" data-s="swe1"></sup></p>
+  <ul><li>2023-ban 685 millió, 2024-ben 658 millió SEK nyomtatott tankönyvekre (kb. 1,3 millió könyv 2024-ben).<sup class="c" data-s="swe1,swe2"></sup></li><li>Az alsós országos teszteket nem digitalizálják; a tervezett digitalizációs stratégiát nem viszik tovább.<sup class="c" data-s="swe1"></sup></li><li>2025. július 1-jétől az óvodában nincs követelmény a digitális eszközök használatára; az óvoda alapvetően képernyőmentes.<sup class="c" data-s="swe3"></sup></li></ul>
+  <div class="k-box">Dánia iskoláknak szóló ajánlásai: „Tegyék el a tableteket és számítógépeket, amikor nem használják őket a tanításban”, „Csak akkor használjanak képernyőt, ha didaktikailag indokolt”, „Adjanak teret az analóg tanulásnak”.<sup class="c" data-s="dk2"></sup></div>
+  <p>Ez a szemlélet <b>megfordítja a bizonyítási terhet</b>: nem a könyvnek kell igazolnia, miért marad – hanem a képernyőnek, miért jön.</p>
+</template>
+<template id="m-figyelem">
+<div class="eyebrow">2 · Figyelem</div><h3>A legjobban dokumentált probléma.</h3>
+  <p>A PISA 2022 adatai szerint a 15 évesek 59%-ának legalább néhány matekórán eltereli a figyelmét, hogy társai digitális eszközt használnak; 65% a saját eszközét említi. Akiket a társak eszközhasználata gyakran zavar, átlagosan 15 ponttal gyengébben teljesítettek.<sup class="c" data-s="pisa22"></sup></p>
+  <p>A PISA 2025-ben minden negyedik diák arról számolt be, hogy a természettudományos órák többségén vagy mindegyikén a társak az eszközükkel foglalkoznak.<sup class="c" data-s="pisa25"></sup></p>
+  <div class="k-box blue">Árnyalat: ugyanezekben az adatokban a napi legfeljebb ~1 órás, tanulási célú használat jobb eredménnyel járt együtt, mint a semmi. A probléma a <b>túl sok</b> és a <b>figyelemelvonó</b> használat. Ezek megfigyeléses adatok.</div>
+  <p>Egy gamifikált felület – mozgó figurák, jutalom-animációk, felugró értesítések – pont az a fajta inger, amely a figyelmet a feladatról a felületre tereli.</p>
+</template>
+<template id="m-jutalom">
+<div class="eyebrow">3 · Jutalom és motiváció</div><h3>Amit jutalomért csinálunk, azt kevésbé csináljuk magáért.</h3>
+  <p>Deci, Koestner és Ryan 128 kísérletet összesítő metaanalízise szerint a várt, kézzelfogható jutalmak csökkentették a belső motivációt (d = −0,36). <b>Gyerekeknél a hatás erősebb volt</b> (d = −0,39), mint egyetemistáknál (−0,27).<sup class="c" data-s="deci"></sup></p>
+  <div class="k-box"><b>Ami a jelvényekhez a legközelebb áll:</b> gyerekeknél a szimbolikus jutalmak, például oklevelek ugyanúgy csökkentették a belső motivációt (d = −0,42), mint a játékok vagy édességek (d = −0,44).<sup class="c" data-s="deci"></sup></div>
+  <p>Fontos: ez nem jelenti, hogy minden visszajelzés káros. A tájékoztató, a munkára vonatkozó visszajelzés más, mint egy gyűjthető, előre beígért virtuális tárgy. A digitális csillag, láda és avatár-tárgy viszont jellemzően az utóbbi kategória.</p>
+</template>
+<template id="m-kez">
+<div class="eyebrow">4 · Kéz és papír</div><h3>Miért nem mindegy, mivel ír a gyerek?</h3>
+  <p>A kézírás látást, finommotorikát, testérzékelést és nyelvet kapcsol össze. Minden betűhöz saját mozgásprogram kell; a gépelés egyforma ujjmozdulatokra redukálja ezt.</p>
+  <ul><li>3–5 éveseknél a kézzel gyakorolt betűket jobban ismerték fel, mint a gépelve gyakoroltakat – főleg az idősebbeknél.<sup class="c" data-s="longcamp"></sup></li><li>Ötéveseknél az olvasáshoz kapcsolódó agyi hálózat csak a kézírásos gyakorlás után aktiválódott, gépelés vagy betűkövetés után nem.<sup class="c" data-s="james"></sup></li><li>Papíron a hosszabb, információs szövegeket átlagosan jobban értjük meg.<sup class="c" data-s="delgado,clinton"></sup></li></ul>
+  <div class="k-box blue">Egy 10 évesnél nem állítjuk, hogy heti fél óra tablet „tönkreteszi” az írást. A kérdés az, hogy <b>kiváltja-e</b> a kézzel végzett gyakorlást.</div>
+</template>
+<template id="m-kiszoritas">
+<div class="eyebrow">5 · Kiszorítás</div><h3>A legerősebb érv: a véges idő.</h3>
+  <p>Az általános iskola legszűkösebb erőforrása a gyerek figyelme és a tanítási idő. Ha 30 perc a tableten történik, az a 30 perc nem:</p>
+  <ul><li>kézzel írt és rajzolt matematikai munka,</li><li>tárgyi manipuláció,</li><li>tanár–gyerek párbeszéd,</li><li>társas problémamegoldás a táblánál,</li><li>hosszabb, külső jutalom nélküli koncentrált munka.</li></ul>
+  <p>Az OECD 2015-ös elemzése szerint azokban az országokban, amelyek sokat fektettek az oktatási IKT-ba, nem volt érdemi javulás az olvasás, a matematika és a természettudomány eredményeiben.<sup class="c" data-s="oecd15"></sup> Andreas Schleicher megfogalmazásában: a technológia felerősítheti a nagyszerű tanítást, de a nagyszerű technológia nem pótolja a gyenge tanítást.</p>
+</template>
+<template id="m-varratio">
+<div class="eyebrow">Mechanizmus</div><h3>A kiszámíthatatlan jutalom ereje.</h3>
+  <p>A viselkedéslélektan régóta ismeri: a <b>változó arányú</b> jutalmazás – amikor nem tudni, mikor és mennyi jár – tartja fenn a legerősebben és a legtartósabban egy viselkedést. Ezen alapul a nyerőgép, és ezen a videojátékok „loot box”-a, a véletlen tartalmú láda.</p>
+  <p>Felnőtt játékosoknál a loot boxokra költés összefüggött a problémás szerencsejáték súlyosságával (n = 7 422)<sup class="c" data-s="zendle"></sup>, 16–18 éveseknél ez a kapcsolat még erősebbnek mutatkozott.<sup class="c" data-s="zendle19"></sup> A kutatók külön tárgyalják a játékokba épített, a visszatérést és a költést ösztönző „ragadozó” mechanikákat.<sup class="c" data-s="king"></sup></p>
+  <div class="k-box">Egy oktatási app ládája nem kér pénzt – ez fontos különbség. De a mechanika, amit begyakoroltat („nyisd ki, hátha most jobb lesz”), ugyanaz. Az oldal bal alsó sarkában ki is próbálhattad.</div>
+  <p class="note">Nem állítjuk, hogy egy oktatási láda szerencsejáték-függőséget okoz. Azt kérdezzük: miért kell ezt a mintát az iskolának tanítania?</p>
+</template>
+<template id="m-overjust">
+<div class="eyebrow">Mechanizmus</div><h3>Túligazolás: amikor a jutalom lesz az ok.</h3>
+  <p>Ha egy eredetileg érdekes tevékenységért előre beígért jutalom jár, a gyerek „átírja” magában, miért csinálja: <i>„a csillagért”</i> a <i>„mert érdekes”</i> helyett. Amikor a jutalom elmarad, a tevékenység vonzereje is csökken.</p>
+  <p>A klasszikus filctollas kísérletben az előre jutalmat ígért óvodások két héttel később szabad játékidőben kb. feleannyit rajzoltak, mint társaik.<sup class="c" data-s="lepper"></sup> A 128 kísérletet összesítő metaanalízis szerint a hatás gyerekeknél erősebb, és a szimbolikus jutalmakra (oklevél) is érvényes.<sup class="c" data-s="deci"></sup></p>
+  <div class="k-box blue">A dicséret és a tájékoztató visszajelzés más: gyerekeknél a szóbeli dicséret nem csökkentette a belső motivációt.<sup class="c" data-s="deci"></sup> A tanári szó tehát nem ugyanaz, mint egy gyűjthető virtuális tárgy.</div>
+</template>
+<template id="m-seductive">
+<div class="eyebrow">Mechanizmus</div><h3>Csábító részletek: ami érdekes, de nem lényeges.</h3>
+  <p>A tananyaghoz nem tartozó érdekes képek, figurák, történetek és animációk átlagosan rontják a tanulást: 58 vizsgálat, 68 hatás, több mint 7 500 diák alapján g = −0,33.<sup class="c" data-s="sundararajan"></sup></p>
+  <p>Ezért a jó kérdés egy matekappnál nem az, hogy „digitális-e?”, hanem: <b>minden animáció, figura és jutalom a matematikai fogalmat szolgálja – vagy egy metajátékot épít a matematika köré?</b></p>
+  <p>Az óvodás vizsgálatban már a dekorált falak is több figyelmen kívüli időt és gyengébb tesztpontosságot jelentettek (38,6% vs. 28,4%; 42% vs. 55%).<sup class="c" data-s="fisher"></sup></p>
+</template>
+<template id="m-habit">
+<div class="eyebrow">Mechanizmus</div><h3>Jel → rutin → jutalom.</h3>
+  <p>A napi célok, sorozatok („streak”), szintlépések és értesítések célja, hogy a felhasználó rendszeresen visszatérjen. Ez a szórakoztató appok tervezésének alapeszköztára.</p>
+  <p>Iskolai környezetben ez kétélű: a rendszeres gyakorlás jó – de ha a visszatérés motorja a sorozat megtartása és a következő jutalom, akkor a gyerek <b>a mechanikára</b> szokik rá, nem a tárgyra.</p>
+  <div class="k-box">Ráadásul az iskola tekintélyt ad: ha a tanár osztja ki, a gyerek (és a szülő) azt tanulja, hogy a pont- és jutalomrendszer a tanulás természetes része.</div>
+</template>
+<template id="m-matific">
+<div class="eyebrow">Konkrét példa</div><h3>Mit tartalmaz egy tipikus gamifikált matekapp?</h3>
+  <p>Példaként a magyar nyelven is elérhető Matificot mutatjuk be – <b>kizárólag a gyártó saját leírásai alapján</b>:</p>
+  <table><tr><th>Elem</th><th>A gyártó leírása szerint</th></tr>
+    <tr><td>Metajáték</td><td>„Rich, Engaging Meta-Game” – a matematika köré épített játék<sup class="c" data-s="matific-feat"></sup></td></tr>
+    <tr><td>Avatar</td><td>a diákok tárgyakat oldanak fel, amelyekkel az avatárjukat személyre szabják<sup class="c" data-s="matific-feat"></sup></td></tr>
+    <tr><td>Célok, achievementek</td><td>„a helyes viselkedést ösztönző” célok és teljesítmények<sup class="c" data-s="matific-feat"></sup></td></tr>
+    <tr><td>Ládák</td><td>„3 tier chest reward system” – háromszintű ládajutalmazás, amely az újrajátszást ösztönzi<sup class="c" data-s="matific-feat"></sup></td></tr>
+    <tr><td>Csillagok, ranglista</td><td>teljesítmény alapján gyűjthető csillagok; osztályszintű ranglista<sup class="c" data-s="matific-stars"></sup></td></tr>
+  </table>
+  <div class="k-box blue"><b>A tisztesség kedvéért:</b> a gyártó szerint a gyerekek nem léphetnek kapcsolatba idegenekkel, a szolgáltatás reklámmentes, és 25+ eredményességi vizsgálatra hivatkozik.<sup class="c" data-s="matific-valid"></sup> A javasolt használat a gyártó oldalain heti 15–30 perc.</div>
+  <p>A kritika tehát nem az, hogy „rossz termék”. Hanem az, hogy egy ilyen eszköz <b>szándékosan</b> épít játékmechanikára – és az iskolának kell eldöntenie, akarja-e ezt a mintát adni, ha ugyanez a matematika papíron, tárgyakkal és tanári visszajelzéssel is tanítható.</p>
+</template>
+<template id="m-eeg">
+<div class="eyebrow">Fontos árnyalat</div><h3>A sokat idézett EEG-kutatás – és a kritikája.</h3>
+  <p>2024-ben nagy visszhangot kapott egy 256 csatornás EEG-vizsgálat: 36 egyetemistánál kézírás közben kiterjedtebb agyi kapcsolódási mintázatot mértek, mint gépelésnél.<sup class="c" data-s="vanderweel"></sup></p>
+  <p>Egy 2025-ös szakmai kommentár jogosan bírálta: <b>felnőttek</b> vettek részt, a tanulást magát nem mérték, a gépelés egy ujjal, életszerűtlen módon történt.<sup class="c" data-s="pinet"></sup></p>
+  <div class="k-box">Ezért mi nem mondjuk, hogy „a gépelés rosszat tesz az agynak”. Azt mondjuk: a kézírás más folyamatokat mozgósít, és a korai betűtanulásban erre jó bizonyíték van – így nincs alap a kézírás kiváltására.</div>
+</template>
+<template id="m-reading">
+<div class="eyebrow">Papír vs. képernyő</div><h3>Miért értjük jobban papíron?</h3>
+  <p>A kutatók több lehetséges okot vizsgálnak:</p>
+  <ul><li><b>Térbeli fogódzók:</b> a lapon az információnak „helye” van (bal oldal, lap alja), ami segíti az emlékezést; görgetésnél ez elmosódik.</li><li><b>Sekélyebb feldolgozás:</b> képernyőn hajlamosabbak vagyunk átfutni, szkennelni.</li><li><b>Túlbecslés:</b> képernyőn az olvasók többnek ítélik a megértésüket, mint amennyi valójában.<sup class="c" data-s="clinton"></sup></li></ul>
+  <p>A különbség az évek során nem tűnt el, pedig a fiatalabb generációk egyre több képernyőt használnak.<sup class="c" data-s="delgado"></sup> A norvég kormány képernyő-bizottsága és iskolastratégiája is foglalkozik a papíralapú olvasás szerepével.<sup class="c" data-s="no1,no2"></sup></p>
+</template>
+<template id="m-pisa">
+<div class="eyebrow">OECD PISA</div><h3>Figyelemelvonás számokban.</h3>
+  <table><tr><th>Adat</th><th>Érték</th></tr>
+  <tr><td>Saját eszköz elvonja a figyelmet (legalább néhány matekórán)</td><td>65%</td></tr>
+  <tr><td>Társak eszköze elvonja a figyelmet</td><td>59%</td></tr>
+  <tr><td>Teljesítménykülönbség a gyakran zavart diákoknál</td><td>−15 pont</td></tr>
+  <tr><td>Napi ≤1 óra tanulási célú használat</td><td>+14 pont a nem használókhoz képest</td></tr>
+  <tr><td>Szabadidős használat az iskolában</td><td>1 óra felett negatív kapcsolat</td></tr></table>
+  <p class="note">PISA 2022, Volume II.<sup class="c" data-s="pisa22"></sup> Megfigyeléses adatok – összefüggést mutatnak, nem okot.</p>
+  <p>Az amerikai iskolaigazgatók 53%-a szerint a telefonok rontják a tanulmányi teljesítményt; a közoktatási iskolák 77%-a, az általános iskolák 86%-a tiltja a telefont tanórán.<sup class="c" data-s="nces"></sup></p>
+</template>
+<template id="m-adhd">
+<div class="eyebrow">Figyelem</div><h3>Képernyő és figyelemzavar: kétirányú kapcsolat.</h3>
+  <p>28 longitudinális vizsgálat áttekintése szerint a digitális média (különösen a gaming és a közösségi média) és az ADHD-tünetek között <b>kétirányú</b> kapcsolat van: a figyelemzavarral küzdő gyerekek hajlamosabbak a problémás használatra, és a problémás használat később több figyelmi tünetet jelezhet előre. A kapcsolat a problémás használatnál erősebb, mint a puszta képernyőidőnél.<sup class="c" data-s="thorell"></sup></p>
+  <div class="k-box blue">Ez nem bizonyítja, hogy heti fél óra matekapp ADHD-t okoz. Azt viszont alátámasztja, hogy <b>a figyelemre érzékeny gyerekeknél</b> különösen indokolt az óvatosság az erős vizuális és jutalmazó ingerekkel.</div>
+</template>
+<template id="m-myopia">
+<div class="eyebrow">Szem</div><h3>Rövidlátás és képernyőidő.</h3>
+  <p>A 2025-ös dózis–hatás metaanalízis (45 vizsgálat, 335 524 résztvevő) szerint minden további napi képernyőóra kb. 21%-kal magasabb eséllyel járt együtt; a kapcsolat nem lineáris: 1 óránál OR 1,05, 4 óránál már OR 1,97.<sup class="c" data-s="ha2025"></sup></p>
+  <p>A szerzők a bizonyosságot alacsonynak ítélték (megfigyeléses vizsgálatok, heterogenitás). A lehetséges mechanizmus a sok közeli fókuszálás, és hogy a képernyő a szabadban töltött időt is elveheti – a kültéri idő a rövidlátás egyik ismert védő tényezője.</p>
+  <div class="k-box">Amit kerülünk: „a kék fény tönkreteszi a szemet”. Erre nincs meggyőző bizonyíték.</div>
+</template>
+<template id="m-sleep">
+<div class="eyebrow">Alvás</div><h3>Az esti képernyő a legerősebb kapcsolat.</h3>
+  <p>20 vizsgálat, 125 198 gyerek: a lefekvés körüli eszközhasználat elégtelen alvással (OR 2,17), rosszabb alvásminőséggel (1,46) és nappali álmossággal (2,72) járt együtt. Már az eszköz <b>hálószobai elérhetősége</b> is (OR 1,79).<sup class="c" data-s="carter"></sup></p>
+  <div class="k-box blue">Ez az esti használatról szól, nem a délelőtti iskolai tabletről. De ha az iskola digitális házi feladatot is ad, a képernyő este is ott lehet – és az iskolai szokás otthoni szokássá válhat.</div>
+</template>
+<template id="m-phone12">
+<div class="eyebrow">Teljes expozíció</div><h3>Miért említjük a telefont, ha a téma az iskolai tablet?</h3>
+  <p>A 10 588 gyereket követő ABCD-vizsgálatban a 12 évesen saját okostelefonnal rendelkezőknél magasabb volt a depresszió (OR 1,31), az elhízás (1,40) és az elégtelen alvás (1,62) esélye; minden korábbi évvel kapott telefon tovább növelte az elhízás és az alváshiány esélyét.<sup class="c" data-s="barzilay"></sup></p>
+  <p>Ez <b>nem</b> iskolai tabletvizsgálat, és nem is használjuk közvetlen bizonyítékként. Azért említjük, mert a gyerek napja egy egész: ami az iskolában „csak 30 perc”, az egy egyre képernyősebb nap része – és az iskola példát ad arról, hogy a tanulás is képernyőn, jutalomért zajlik.</p>
+</template>
+<template id="m-se">
+<div class="eyebrow">Svédország</div><h3>A legfontosabb precedens.</h3>
+  <p>Svédország az egyik legdigitalizáltabb iskolarendszer volt. 2023 óta tudatosan fordít:</p>
+  <ul><li>685 M SEK (2023) és 658 M SEK (2024) nyomtatott tankönyvekre.<sup class="c" data-s="swe1,swe2"></sup></li><li>Az alsós országos tesztek nem lesznek digitálisak; a digitalizációs stratégia leállítva.<sup class="c" data-s="swe1"></sup></li><li>2025. júl. 1-től az óvoda alapvetően képernyőmentes, a taneszközök főleg analógok.<sup class="c" data-s="swe3"></sup></li><li>2026. aug. 1-től egész napos mobilmentes iskola az általános iskolában.<sup class="c" data-s="swe4"></sup></li></ul>
+  <div class="k-box">A Karolinska Intézet véleménye a kormánynak (2023): egyértelmű tudományos alátámasztása van annak, hogy a digitális eszközök kockázatot jelentenek – inkább ronthatják, mint javíthatják a tanulók tanulását.<sup class="c" data-s="ki"></sup></div>
+  <p class="note">Svédország nem tiltott be minden képernyőt – a fordulat lényege a bizonyítási teher megfordítása.</p>
+</template>
+<template id="m-dk">
+<div class="eyebrow">Dánia</div><h3>Könyv a képernyő ellensúlyaként.</h3>
+  <p>A 2024. márciusi közoktatási megállapodás 540 millió koronát különített el fizikai könyvekre, kifejezetten a képernyőalapú tanítás ellensúlyaként.<sup class="c" data-s="dk1"></sup></p>
+  <p>Az oktatási hatóság 12 ajánlása többek között:<sup class="c" data-s="dk2"></sup></p>
+  <ul><li>8. Tegyék el a tableteket és számítógépeket, amikor nem használják őket a tanításban.</li><li>10. Csak akkor használjanak képernyőt, ha didaktikailag és pedagógiailag indokolt.</li><li>11. Adjanak teret az analóg tanulásnak.</li></ul>
+</template>
+<template id="m-no">
+<div class="eyebrow">Norvégia</div><h3>Gyakorlatiasabb iskola, több papír.</h3>
+  <p>A norvég kormány „Gyakorlatiasabb iskola” stratégiája (Meld. St. 34, 2024) és a képernyőhasználati bizottság jelentése (NOU 2024:20) egyaránt foglalkozik a digitalizáció előnyeivel és hátrányaival, a papíralapú olvasással és az órai figyelemelvonással.<sup class="c" data-s="no1,no2"></sup></p>
+  <p>A norvég parlament illetékes bizottsága úgy fogalmazott: sok minden utal arra, hogy a tanulóknak többet kellene papíron olvasniuk.</p>
+  <p class="note">Norvégia sem tiltja az oktatási technológiát – elismeri, hogy jól alkalmazva hasznos lehet, de a digitális alapállapotot újragondolja.</p>
+</template>
+<template id="m-us">
+<div class="eyebrow">Egyesült Államok</div><h3>A második hullám: már nem csak a telefon.</h3>
+  <p>2025-re a közoktatási iskolák 77%-a, az általános iskolák 86%-a tiltotta a telefont tanórán.<sup class="c" data-s="nces"></sup></p>
+  <p>2026 áprilisában a Los Angeles-i tankerület (LAUSD, az ország egyik legnagyobb) határozatot fogadott el: óvodában és 1. osztályban nincs eszköz, ebédszünetben és szünetben sincs, és ösztönzik a papír–toll alapú munkát; az EdTech-szerződéseket felülvizsgálják.<sup class="c" data-s="lausd"></sup></p>
+  <div class="k-box blue">Ellenpont: a szövetségi oktatási minisztérium 2026. augusztusi útmutatója az EdTech-et a tanulási eredmények alapján kéri megítélni, nem a képernyőidő alapján.<sup class="c" data-s="used"></sup> Mi is ezt kérjük: mutassák meg az eredményt.</div>
+</template>
+<template id="m-nl">
+<div class="eyebrow">Hollandia</div><h3>Telefonmentes órák – mérve.</h3>
+  <p>2024 januárjától a középiskolákban, a 2024/25-ös tanévtől az általános iskolákban is megállapodás szerint nincs telefon az órán. Az értékelés szerint a középiskolák 75%-a jobb koncentrációt, 59%-a jobb társas légkört, 28%-a jobb tanulmányi eredményt tapasztalt.<sup class="c" data-s="nl"></sup></p>
+  <p class="note">Az általános iskoláknak csak 23%-a látott pozitív hatást – ott a telefon eleve nem volt nagy probléma. Ez is tanulság: ahol nincs eszköz, ott nem kell bevezetni.</p>
+</template>
+<template id="m-uk">
+<div class="eyebrow">Anglia</div><h3>Fontos korrekció.</h3>
+  <p>Angliát gyakran hibásan úgy említik, mint ahol „kivezetik az iPadet”. Valójában:</p>
+  <ul><li>az iskolák alapértelmezésben telefonmentesek, és ezt törvényi szintre emelik;<sup class="c" data-s="eng1"></sup></li><li>a kormány 2026-os útmutatója az 5–16 évesek képernyőhasználatáról kerüli az általános szabályokat, és a családok tájékozott döntését támogatja.<sup class="c" data-s="eng1"></sup></li></ul>
+  <p>Ezt <b>önként</b> feltüntetjük – mert egy hiteles érvelés nem hallgatja el, ami nem illik bele.</p>
+</template>
+<template id="m-hu">
+<div class="eyebrow">Magyarország</div><h3>Már a hazai szabály is célhoz köti.</h3>
+  <p>2024. szeptember 1-jétől a 245/2024. (VIII. 8.) Korm. rendelet szerint az általános iskola 1–8. évfolyamán az okoseszközöket a tanítási nap kezdetén le kell adni. A pedagógus vagy az igazgató tanulmányi célból engedélyezheti a használatot – az engedélyben rögzíteni kell <b>a célt, az időtartamot és az eszközt</b>.<sup class="c" data-s="hu245"></sup></p>
+  <div class="k-box blue">Ez a rendelet nem tiltja az iskola által biztosított tabletet. De jól mutatja az elvet: a digitális eszköz használata <b>célhoz és időhöz kötött pedagógiai döntés</b>, nem alapállapot.</div>
+</template>
+<template id="m-unesco">
+<div class="eyebrow">UNESCO</div><h3>Egy mondatban a nemzetközi elv.</h3>
+  <p>2023 végén 60, 2024 végén már 79 oktatási rendszerben (az országok kb. 40%-ában) volt valamilyen iskolai okostelefon-korlátozás.<sup class="c" data-s="unesco-blog"></sup></p>
+  <div class="k-box">A UNESCO 2023-as Globális Oktatásmonitoring Jelentése szerint a technológiát csak akkor kellene az osztályteremben használni, ha az a tanulási eredményeket támogatja – nem azért, mert rendelkezésre áll.<sup class="c" data-s="unesco-gem,unesco-blog"></sup></div>
+  <p>A UNESCO nem technológiaellenes. Pont ezért erős ez az elv: <b>a technológiának kell igazolnia magát.</b></p>
+</template>
+<template id="m-c-szulo">
+<div class="eyebrow">Szülőknek · levélgenerátor</div><h3>Mit kérdezz az iskolától?</h3>
+  <p>Ezeket a kérdéseket érdemes feltenni egy tabletes, gamifikált alkalmazás bevezetése előtt. A „Levél az iskolának” dián ki is választhatod őket, és elkészül a levél.</p>
+  <ol class="q-ol"><li><b>Hány perc hetente, és lesz-e otthoni használat?</b><small>A dózis nélkül a kockázat és a haszon nem értékelhető.</small></li><li><b>Mit vált ki ez az idő?</b><small>A kiszorítás a legfontosabb kérdés.</small></li><li><b>Milyen mérhető eredményt várnak, és hogyan mérik?</b><small>A „motiváló” önmagában nem pedagógiai cél.</small></li><li><b>Van-e független, kontrollált bizonyíték?</b><small>Az „előtte–utána javultak” nem összehasonlítás.</small></li><li><b>Kikapcsolhatók-e az avatárok, ládák, ranglisták?</b><small>A tartalom és a metajáték szétválasztható-e?</small></li><li><b>Mennyi a teljes heti iskolai képernyőidő?</b><small>A gyerek teljes expozíciója számít.</small></li><li><b>Milyen adatokat kap a szolgáltató?</b><small>Jogalap, tárolás, megőrzés, törlés.</small></li><li><b>Van-e papíralapú alternatíva?</b><small>Lehetővé teszi az összehasonlítást is.</small></li><li><b>Hogyan rögzítik a célt és időtartamot (245/2024. Korm. rend.)?</b><small>A jogszabály célhoz és időhöz köti az engedélyt.</small></li></ol>
+</template>
+<template id="m-c-tanar">
+<div class="eyebrow">Pedagógusoknak</div><h3>A játék nem ellenség.</h3>
+  <p><b>A képernyős, gyűjtögetős jutalomhurok az.</b> Íme hat bevált, analóg módszer, amely játékos, mégis a megértést jutalmazza.</p>
+  <div class="idea-grid"><div class="idea"><div class="em">🎲</div><h4>Kártya és kocka</h4><p>Szorzó-kártyacsata, „Kinek lesz közelebb 100-hoz?”, dominós törtpárosítás. Van benne izgalom – de a nyeremény a gondolkodás.</p></div><div class="idea"><div class="em">🗣️</div><h4>Számbeszélgetés</h4><p>„Hányféleképpen számoltad ki?” – 10 perc fejszámolás után a stratégiák összevetése a táblánál. Minden megoldás érték.</p></div><div class="idea"><div class="em">📓</div><h4>Matekfüzet mint napló</h4><p>A hibák maradjanak benne. A gyerek látja a saját fejlődését – ez a legerősebb, belső „jelvény”.</p></div><div class="idea"><div class="em">🧱</div><h4>Tárgyi eszközök</h4><p>Rudak, törtkorongok, játékpénz, mérőszalag. A törteknél és a megtartásnál a legnagyobb a hatásuk.</p></div><div class="idea"><div class="em">📏</div><h4>Matek a valóságban</h4><p>Az udvar lemérése, recept átszámolása, becslés és ellenőrzés. A „miért kell ez?” kérdésre a világ válaszol.</p></div><div class="idea"><div class="em">🤝</div><h4>Páros és csapatmunka</h4><p>Egy feladat, két ceruza, egy papír. A magyarázás a legjobb tanulás – és a társas élmény a legjobb motiváció.</p></div></div>
+  <div class="k-box blue"><b>Visszajelzés:</b> A konkrét, a munkára vonatkozó tanári visszajelzés („Itt jól választottad a közös nevezőt”) a teljesítményről és a stratégiáról szól – nem egy virtuális tárgyról. Ez építi a kompetenciaélményt, ami a belső motiváció egyik alapja.</div>
+</template>
+<template id="m-c-dontes">
+<div class="eyebrow">Döntéshozóknak</div><h3>„Analóg először – digitális kivételként”</h3>
+  <p>Egy védhető szakpolitikai keret 7–14 éves korra:</p>
+  <ol class="q-ol q-ol--num"><li><b>Alapértelmezés:</b> könyv, füzet, ceruza, fejszámolás, kézzel rajzolt ábra, tárgyi manipuláció, tanár és társas interakció.</li><li><b>Digitális eszköz csak akkor,</b> ha olyan funkciót ad, amit az analóg módszer ésszerűen nem tud (pl. dinamikus geometria, gyors diagnosztika).</li><li><b>Előre rögzített, rövid időkeret</b> – és a teljes heti iskolai képernyőidő nyilvántartása, minden tantárgyat összeadva.</li><li><b>Nem válthatja ki</b> a kézírást, a hosszabb papíralapú olvasást, az alapműveletek önálló elvégzését, a közös gondolkodást.</li><li><b>Jutalomréteg kikapcsolva:</b> avatárok, ládák, ranglisták, sorozatok nélkül; csak a fogalom megértését szolgáló interakció maradjon.</li><li><b>Kiértékelt pilot,</b> nem visszafordíthatatlan döntés: előzetes cél, 6–12 hetes mérés, összevetés analóg csoporttal.</li><li><b>Átláthatóság és választás:</b> adatkezelési tájékoztató, papíralapú alternatíva, otthoni használat elvárása nélkül.</li></ol>
+</template>
+<template id="m-a-1">
+<div class="eyebrow">Ellenérv és válaszunk</div><h3>„De hát a gamifikáció bizonyítottan hatásos!”</h3><p>Átlagosan igen, kis–közepes mértékben (kognitív g = 0,49, motivációs 0,36, viselkedéses 0,25). Csakhogy a szigorúbb módszertanú vizsgálatokban csak a kognitív hatás maradt stabil.<sup class="c" data-s="sailer"></sup> Egy K–12 metaanalízisben az általános iskolában a motivációs hatás kisebb volt (g = 0,31), mint idősebbeknél.<sup class="c" data-s="kurnaz"></sup></p><p>A válaszunk: nem az a kérdés, hogy egy jutalom rövid távon <i>mozgat-e</i> – hanem hogy mit tanít hosszú távon arról, miért érdemes tanulni.</p>
+</template>
+<template id="m-a-2">
+<div class="eyebrow">Ellenérv és válaszunk</div><h3>„Az alkalmazásnak vannak eredményességi vizsgálatai.”</h3><p>Igen, és ezt tisztességes elmondani. Például a Matific saját oldala 25+ vizsgálatra hivatkozik, köztük egy 8 iskolás ausztrál, előtte–utána vizsgálatra 34%-os javulással.<sup class="c" data-s="matific-valid"></sup></p><p>A kérdés viszont: <b>milyen kontrollcsoporthoz képest?</b> Egy előtte–utána mérés nem mondja meg, hogy ugyanennyi jól vezetett, papíralapú gyakorlás nem hozott volna-e ugyanennyit vagy többet.</p>
+</template>
+<template id="m-a-3">
+<div class="eyebrow">Ellenérv és válaszunk</div><h3>„Az USA oktatási minisztériuma 2026-ban kiállt az EdTech mellett.”</h3><p>Igaz: a 2026. augusztusi útmutató szerint a szabadidős és az oktatási technológiahasználat nem azonos, és az EdTech-et tanulási eredmények alapján kell megítélni, nem képernyőidő alapján.<sup class="c" data-s="used"></sup></p><p>Ezzel egyetértünk – pont ezért kérjük a <b>tanulási eredményt igazoló, kontrollált bizonyítékot</b>, és a jutalomréteg szétválasztását a tartalomtól.</p>
+</template>
+<template id="m-a-4">
+<div class="eyebrow">Ellenérv és válaszunk</div><h3>„Angliában nincs általános képernyőlimit.”</h3><p>Így van. A brit kormány 2026-os útmutatója kerüli az általános szabályokat, a telefonokra viszont alapértelmezett tilalmat ír elő.<sup class="c" data-s="eng1"></sup> Mi sem kérünk mindenhol érvényes percszámot – hanem célhoz és időhöz kötött, indokolt használatot.</p>
+</template>
+<template id="m-a-5">
+<div class="eyebrow">Ellenérv és válaszunk</div><h3>„Speciális nevelési igényű gyerekeknek a tablet segíthet.”</h3><p>Igen, egyes esetekben a digitális eszköz kifejezetten hasznos segédeszköz (pl. diszgráfia, látássérülés, kommunikációs nehézség). Ez pontosan az a „dokumentált pedagógiai többletérték”, amit az „analóg először” elv megenged. Ez egyéni döntés – nem indok arra, hogy egy egész osztály matekóráját gamifikált appra építsük.</p>
+</template>
+<template id="m-a-6">
+<div class="eyebrow">Ellenérv és válaszunk</div><h3>„A holland telefontilalom az általános iskolákban alig hozott változást.”</h3><p>Az értékelés szerint az általános iskolák 23%-a látott pozitív hatást – de ott a telefon eleve nem volt nagy probléma. A középiskolák 75%-a jobb koncentrációról számolt be.<sup class="c" data-s="nl"></sup> Ebből az következik: ahol nincs eszköz, nem kell kivezetni. <b>Ne vezessük be</b> oda, ahol eddig nem volt.</p>
+</template>
+<template id="m-a-7">
+<div class="eyebrow">Ellenérv és válaszunk</div><h3>„A Karolinska-nyilatkozatot is bírálták.”</h3><p>Jogosan: a gyakran idézett angol változat („a digitális eszközök rontják a tanulást”) erősebb, mint az eredeti. A svéd szöveg úgy fogalmaz, hogy egyértelmű tudományos alátámasztása van annak, hogy a digitális eszközök <b>kockázatot jelentenek</b>: inkább ronthatják, mint javíthatják a tanulók tanulását.<sup class="c" data-s="ki"></sup> Más kutatók szerint a kép árnyaltabb.<sup class="c" data-s="bokhove"></sup> Mi ezért a kockázat–haszon mérlegelés mellett érvelünk, nem tilalom mellett.</p>
+</template>
+<ol id="srcList" hidden>
+<li id="s-swe1" data-t="policy"><b>Svéd kormány (2024, frissítve 2025):</b> Regeringen satsar på ökad lästid och minskad skärmtid. <a href="https://www.regeringen.se/artiklar/2024/01/regeringen-satsar-pa-okad-lastid-och-minskad-skarmtid/" target="_blank" rel="noopener">regeringen.se</a></li>
+<li id="s-swe2" data-t="policy"><b>Svéd kormány (2024):</b> 658 millió SEK tankönyvek beszerzésére. <a href="https://regeringen.se/pressmeddelanden/2024/02/regeringen-avsatter-658-miljoner-for-inkop-av-larobocker/" target="_blank" rel="noopener">regeringen.se</a></li>
+<li id="s-swe3" data-t="policy"><b>Svéd kormány (2025):</b> Barnen i förskolan ska mötas av fler böcker och färre skärmar. <a href="https://regeringen.se/pressmeddelanden/2025/02/barnen-i-forskolan-ska-motas-av-fler-bocker-och-farre-skarmar/" target="_blank" rel="noopener">regeringen.se</a></li>
+<li id="s-swe4" data-t="policy"><b>Svéd Riksdag (2026):</b> Mobilfri skola – döntés 2026. június 3., hatályos 2026. augusztus 1. <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/_hd01ubu22/" target="_blank" rel="noopener">riksdagen.se</a></li>
+<li id="s-ki" data-t="policy learning"><b>Karolinska Institutet (2023):</b> Remissvar, dnr 1-322/2023 (Thorell, Klingberg, Herlitz, Olsson, Ådén). <a href="https://www.regeringen.se/contentassets/d818e658071b49cbb1a75a6b11fa725d/karolinskainstitutet.pdf" target="_blank" rel="noopener">PDF</a></li>
+<li id="s-bokhove" data-t="policy learning"><b>Bokhove, C. (Tes):</b> Do digital tools impair learning? – kritikai elemzés a Karolinska-nyilatkozatról. <a href="https://www.tes.com/magazine/teaching-learning/general/do-digital-tools-impair-learning" target="_blank" rel="noopener">tes.com</a></li>
+<li id="s-dk1" data-t="policy"><b>Dán Oktatási Minisztérium (2024):</b> Aftale om folkeskolens kvalitetsprogram – 540 mio. kr. fizikai könyvekre. <a href="https://uvm.dk/media/wtsfhcrl/240320-aftale-om-folkeskolens-kvalitetsprogram-frihed-og-fordybelse.pdf" target="_blank" rel="noopener">PDF</a></li>
+<li id="s-dk2" data-t="policy"><b>STUK / UVM (2024):</b> 12 anbefalinger om skærmbrug i grundskolen. <a href="https://uvm.dk/media/0zfnyiyy/240205anbefalinger-grundskole-final.pdf" target="_blank" rel="noopener">PDF</a></li>
+<li id="s-no1" data-t="policy"><b>Norvég kormány (2024):</b> Meld. St. 34 (2023–2024) En mer praktisk skole. <a href="https://www.regjeringen.no/no/dokumenter/meld.-st.-34-20232024/id3052898/" target="_blank" rel="noopener">regjeringen.no</a></li>
+<li id="s-no2" data-t="policy health"><b>Norvég képernyőbizottság (2024):</b> NOU 2024:20 Det digitale (i) livet. <a href="https://www.regjeringen.no/contentassets/c252947398de4fb0aea9349f011eb410/no/pdfs/nou202420240020000dddpdfs.pdf" target="_blank" rel="noopener">PDF</a></li>
+<li id="s-eng1" data-t="policy"><b>UK DfE (2026):</b> New guidance on screen use for children aged 5–16. <a href="https://www.gov.uk/government/news/newguidance-on-screen-use-for-children-aged-5-16" target="_blank" rel="noopener">gov.uk</a></li>
+<li id="s-lausd" data-t="policy"><b>NBC Los Angeles (2026. ápr. 21.):</b> LAUSD board votes to limit device screen time. <a href="https://www.nbclosangeles.com/education/lausd-ipads-device-screen-time/3879160/" target="_blank" rel="noopener">nbclosangeles.com</a></li>
+<li id="s-used" data-t="policy"><b>K-12 Dive (2026):</b> Education Department goes to ed tech's defense in new guidance (US ED, Dear Colleague, 2026. aug. 20.). <a href="https://www.k12dive.com/news/education-department-goes-to-ed-techs-defense-in-new-guidance/828425/" target="_blank" rel="noopener">k12dive.com</a></li>
+<li id="s-nces" data-t="policy"><b>NCES (2025):</b> School Pulse Panel – a közoktatási iskolák 77%-a (általános iskolák 86%-a) tiltja a telefont órán. <a href="https://nces.ed.gov/learn/press-release/more-half-public-school-leaders-say-cell-phones-hurt-academic-performance" target="_blank" rel="noopener">nces.ed.gov</a></li>
+<li id="s-nl" data-t="policy"><b>Kohnstamm Instituut / Oberon (2025):</b> Evaluatie mobiele telefoons in de klas – factsheet. <a href="https://open.overheid.nl/documenten/54c01e11-5a20-4779-9243-f4ed5fda1c9f/file" target="_blank" rel="noopener">open.overheid.nl</a></li>
+<li id="s-fr" data-t="policy"><b>Francia Oktatási Minisztérium:</b> Portable en pause – telefontilalom és „digitális szünet”. <a href="https://www.education.gouv.fr/interdiction-du-telephone-portable-dans-les-ecoles-et-les-colleges-et-pause-numerique-455181" target="_blank" rel="noopener">education.gouv.fr</a></li>
+<li id="s-hu245" data-t="policy"><b>245/2024. (VIII. 8.) Korm. rendelet</b> – okoseszközök az általános iskolában. <a href="https://njt.jog.gov.hu/jogszabaly/2024-245-20-22" target="_blank" rel="noopener">njt.jog.gov.hu</a></li>
+<li id="s-unesco-gem" data-t="policy"><b>UNESCO (2023):</b> Global Education Monitoring Report – Technology in education: A tool on whose terms? <a href="https://www.unesco.org/gem-report/en/technology" target="_blank" rel="noopener">unesco.org</a></li>
+<li id="s-unesco-blog" data-t="policy"><b>UNESCO GEM (2025):</b> To ban or not to ban? Monitoring countries' regulations on smartphone use in school. <a href="https://world-education-blog.org/2025/01/23/to-ban-or-not-to-ban-monitoring-countries-regulations-on-smartphone-use-in-school/" target="_blank" rel="noopener">world-education-blog.org</a></li>
+<li id="s-oecd15" data-t="policy learning"><b>OECD (2015):</b> Students, Computers and Learning: Making the Connection. <a href="https://doi.org/10.1787/9789264239555-en" target="_blank" rel="noopener">doi.org/10.1787/9789264239555-en</a></li>
+<li id="s-pisa22" data-t="learning"><b>OECD (2023):</b> PISA 2022 Results (Volume II): Learning During – and From – Disruption. <a href="https://doi.org/10.1787/a97db61c-en" target="_blank" rel="noopener">doi.org/10.1787/a97db61c-en</a></li>
+<li id="s-pisa25" data-t="learning"><b>OECD (2026):</b> PISA 2025 eredmények – sajtóközlemény. <a href="https://educationnewscanada.com/article/organization/39536/1217108/Students-reading-and-mathematics-performance-declined-sharply-across-the-OECD.htm" target="_blank" rel="noopener">educationnewscanada.com</a></li>
+<li id="s-delgado" data-t="learning"><b>Delgado, Vargas, Ackerman &amp; Salmerón (2018):</b> Don't throw away your printed books: A meta-analysis on the effects of reading media on reading comprehension. Educational Research Review, 25, 23–38. <a href="https://doi.org/10.1016/j.edurev.2018.09.003" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-clinton" data-t="learning"><b>Clinton (2019):</b> Reading from paper compared to screens: A systematic review and meta-analysis. Journal of Research in Reading, 42(2). <a href="https://doi.org/10.1111/1467-9817.12269" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-longcamp" data-t="learning"><b>Longcamp, Zerbato-Poudou &amp; Velay (2005):</b> The influence of writing practice on letter recognition in preschool children: A comparison between handwriting and typing. Acta Psychologica, 119, 67–79. <a href="https://doi.org/10.1016/j.actpsy.2004.10.019" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-james" data-t="learning"><b>James &amp; Engelhardt (2012):</b> The effects of handwriting experience on functional brain development in pre-literate children. Trends in Neuroscience and Education, 1, 32–42. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4274624/" target="_blank" rel="noopener">PMC</a></li>
+<li id="s-vanderweel" data-t="learning"><b>Van der Weel &amp; Van der Meer (2024):</b> Handwriting but not typewriting leads to widespread brain connectivity: a high-density EEG study. Frontiers in Psychology, 14. <a href="https://doi.org/10.3389/fpsyg.2023.1219945" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-pinet" data-t="learning"><b>Pinet &amp; Longcamp (2025):</b> Commentary – módszertani kritika a fenti EEG-vizsgálatról. Frontiers in Psychology. <a href="https://doi.org/10.3389/fpsyg.2024.1517235" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-carbonneau" data-t="learning"><b>Carbonneau, Marley &amp; Selig (2013):</b> A meta-analysis of the efficacy of teaching mathematics with concrete manipulatives. Journal of Educational Psychology, 105(2), 380–400. <a href="https://doi.org/10.1037/a0031084" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-fisher" data-t="learning"><b>Fisher, Godwin &amp; Seltman (2014):</b> Visual environment, attention allocation, and learning in young children. Psychological Science, 25(7). <a href="https://www.cmu.edu/news/stories/archives/2014/may/may27_decoratedclassrooms.html" target="_blank" rel="noopener">CMU összefoglaló</a></li>
+<li id="s-sundararajan" data-t="learning motivation"><b>Sundararajan &amp; Adesope (2020):</b> Keep it coherent: A meta-analysis of the seductive details effect. Educational Psychology Review, 32, 707–734. <a href="https://doi.org/10.1007/s10648-020-09522-4" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-sailer" data-t="motivation"><b>Sailer &amp; Homner (2020):</b> The gamification of learning: a meta-analysis. Educational Psychology Review, 32, 77–112. <a href="https://doi.org/10.1007/s10648-019-09498-w" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-kurnaz" data-t="motivation"><b>Kurnaz &amp; Koçtürk (2025):</b> K–12 gamifikációs metaanalízis a motivációról. Psychology in the Schools, 62(12). <a href="https://doi.org/10.1002/pits.70056" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-deci" data-t="motivation"><b>Deci, Koestner &amp; Ryan (1999):</b> A meta-analytic review of experiments examining the effects of extrinsic rewards on intrinsic motivation. Psychological Bulletin, 125(6), 627–668. <a href="https://doi.org/10.1037/0033-2909.125.6.627" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-lepper" data-t="motivation"><b>Lepper, Greene &amp; Nisbett (1973):</b> Undermining children's intrinsic interest with extrinsic reward. Journal of Personality and Social Psychology, 28(1), 129–137. <a href="https://doi.org/10.1037/h0035519" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-zendle" data-t="motivation"><b>Zendle &amp; Cairns (2018):</b> Video game loot boxes are linked to problem gambling. PLoS ONE. <a href="https://doi.org/10.1371/journal.pone.0206767" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-zendle19" data-t="motivation"><b>Zendle, Meyer &amp; Over (2019):</b> Adolescents and loot boxes. Royal Society Open Science, 6, 190049. <a href="https://doi.org/10.1098/rsos.190049" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-king" data-t="motivation"><b>King &amp; Delfabbro (2018):</b> Predatory monetization schemes in video games and internet gaming disorder. Addiction. <a href="https://doi.org/10.1111/add.14286" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-ha2025" data-t="health"><b>Ha et al. (2025):</b> Digital screen time and myopia: a systematic review and dose-response meta-analysis. JAMA Network Open, 8(2), e2460026. <a href="https://doi.org/10.1001/jamanetworkopen.2024.60026" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-carter" data-t="health"><b>Carter et al. (2016):</b> Association between portable screen-based media device access or use and sleep outcomes. JAMA Pediatrics, 170, 1202–1208. <a href="https://doi.org/10.1001/jamapediatrics.2016.2341" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-thorell" data-t="health learning"><b>Thorell et al. (2022):</b> Longitudinal associations between digital media use and ADHD symptoms. European Child &amp; Adolescent Psychiatry. <a href="https://doi.org/10.1007/s00787-022-02130-3" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-barzilay" data-t="health"><b>Barzilay et al. (2025):</b> Smartphone ownership at age 12 and health outcomes (ABCD Study). Pediatrics, 157(1). <a href="https://doi.org/10.1542/peds.2025-072941" target="_blank" rel="noopener">DOI</a></li>
+<li id="s-matific-feat" data-t="product"><b>Matific:</b> Product features (meta-game, avatar, achievements, 3 tier chest reward system). <a href="https://www.matific.com/us/en-us/home/product-features/" target="_blank" rel="noopener">matific.com</a></li>
+<li id="s-matific-stars" data-t="product"><b>Matific Help Center:</b> Stars, StarMaster osztály-ranglista. <a href="https://help.matific.com/en-us/articles/15485851" target="_blank" rel="noopener">help.matific.com</a></li>
+<li id="s-matific-valid" data-t="product"><b>Matific:</b> Validation – eredményességi vizsgálatok (a gyártó összefoglalója). <a href="https://www.matific.com/home/why-matific/validation" target="_blank" rel="noopener">matific.com</a></li>
+</ol>
+
+<script src="js/data.js"></script>
+<script src="prezentacio/deck.js"></script>
+<script src="prezentacio/demos.js"></script>
+</body>
+</html>

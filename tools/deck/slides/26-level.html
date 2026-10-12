@@ -1,0 +1,23 @@
+<section class="slide slide--soft" data-id="level" data-title="Levél az iskolának" data-chap="i" data-k="I — Mit tehetsz? · levélgenerátor">
+  <div class="s-k rv">I — Mit tehetsz? · levélgenerátor</div>
+  <h2 class="s-h2 s-h2--md rv" style="--d:1">A levél, amit elküldhetsz <span class="pink">az iskolának.</span></h2>
+  <div class="lt-grid">
+    <div class="lt-q rv" style="--d:2">
+      <p class="lt-p">Válaszd ki, mit kérdeznél az iskolától:</p>
+      <div class="qlist" id="qlist">
+<!--@LETTERQS@-->
+      </div>
+    </div>
+    <div class="lt-paper rv-pop" style="--d:3" id="letter-form">
+      <div class="fields">
+        <input type="text" id="l-name" placeholder="A te neved" aria-label="A te neved">
+        <input type="text" id="l-kid" placeholder="Gyermeked neve" aria-label="Gyermeked neve">
+        <input type="text" id="l-class" placeholder="Osztály (pl. 5.b)" aria-label="Osztály">
+        <input type="text" id="l-school" placeholder="Iskola neve" aria-label="Iskola neve">
+      </div>
+      <pre id="letter-out" tabindex="0" aria-label="A levél szövege"></pre>
+      <div class="acts"><button class="btn btn--blue btn--sm" id="l-copy" type="button">Másolás</button><button class="btn btn--ghost btn--sm" id="l-mail" type="button">Megnyitás e-mailben</button><button class="btn btn--ghost btn--sm" id="l-print" type="button">Nyomtatás</button></div>
+      <p class="s-note">A levél a böngésződben készül, semmit nem küldünk el és nem tárolunk.</p>
+    </div>
+  </div>
+</section>

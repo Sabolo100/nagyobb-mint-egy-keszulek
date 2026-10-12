@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A papír jobb, mint a tablet – prezentáció</title>
+<meta name="description" content="Vezetett, lapozható bemutató: miért legyen az általános iskolában a könyv, a papír, a kézírás és a tanár az alap – kutatásokkal alátámasztva.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#121a7a">
+<link rel="icon" href="app/icons/favicon-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="prezentacio/deck.css">
+<link rel="stylesheet" href="prezentacio/slides-a.css">
+<link rel="stylesheet" href="prezentacio/slides-b.css">
+</head>
+<body class="deck-body">
+
+<div class="deck-topbar">
+  <a class="deck-brand" href="index.html" title="Vissza a weboldalra">A papír <b>jobb, mint</b> a tablet.</a>
+  <nav class="deck-chap" id="deckChap" aria-label="Fejezetek"></nav>
+  <div class="deck-topbar__actions">
+    <button class="deck-btn" id="ovBtn" type="button" title="Áttekintő nézet (O)">Áttekintés</button>
+    <button class="deck-btn" id="fsBtn" type="button" title="Teljes képernyő (F)">Teljes képernyő</button>
+    <a class="deck-btn deck-btn--accent" href="index.html">Weboldal</a>
+  </div>
+</div>
+<div class="deck-progress"><div class="deck-progress__bar" id="deckBar"></div></div>
+
+<main class="deck" id="deck">
+  <button id="edgePrev" class="deck-edge deck-edge--left" type="button" aria-label="Előző dia"></button>
+  <button id="edgeNext" class="deck-edge deck-edge--right" type="button" aria-label="Következő dia"></button>
+  <div class="stage" id="stage">
+<!--@SLIDES@-->
+  </div>
+</main>
+
+<div class="deck-nav">
+  <span class="deck-topbar__title" id="deckTitle"></span>
+  <button class="deck-arrow" id="prevBtn" type="button" aria-label="Előző dia"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <span class="deck-count"><b id="curNum">1</b> / <span id="totNum">1</span></span>
+  <button class="deck-arrow" id="nextBtn" type="button" aria-label="Következő dia"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  <span class="deck-hint">← → lapoz · O áttekintés · F teljes képernyő · B üres kép</span>
+</div>
+
+<div class="overview" id="overview" role="dialog" aria-label="Áttekintő nézet">
+  <div class="overview__head"><span>Minden dia egy helyen – kattints a megnyitáshoz</span><button class="deck-btn" id="ovClose" type="button">Bezárás (Esc)</button></div>
+  <div class="overview__grid" id="ovGrid"></div>
+</div>
+
+<div class="gate" id="gate">
+  <div class="gate__box">
+    <div class="gate__brand">A papír <b>jobb, mint</b> a tablet.</div>
+    <p class="gate__k">Vezetett bemutató · <span id="gateCount">30</span> dia</p>
+    <h1>Miért az analóg az alap, és a digitális a kivétel?</h1>
+    <p class="gate__lead">Lapozz a nyilakkal (← →), kattints a csempékre a részletekért és a forrásokért. A bemutató végigvezet a weboldal teljes tartalmán – bárki végigkattinthatja.</p>
+    <div class="gate__btns">
+      <button class="gate__btn gate__btn--full" id="gateFull" type="button">Indítás teljes képernyőn</button>
+      <button class="gate__btn" id="gateWin" type="button">Indítás ablakban</button>
+    </div>
+    <p class="gate__hint">Enter: teljes képernyő · Esc: ablakban · a dián kattintható csempék nyitják a részleteket</p>
+  </div>
+</div>
+
+<dialog class="dlg" id="dlg" aria-label="Részletek">
+  <div class="dlg__box">
+    <div class="dlg__bar"><button class="dlg__back" id="dlgBack" type="button" hidden>← Vissza</button><button class="dlg__x" id="dlgX" type="button" aria-label="Bezárás">✕</button></div>
+    <div class="dlg__body" id="dlgBody"></div>
+  </div>
+</dialog>
+
+<!-- A weboldal részletező ablakai és forráslistája: generált tartalom (tools/build-deck.mjs) -->
+<!--@TEMPLATES@-->
+<ol id="srcList" hidden>
+<!--@SOURCES@-->
+</ol>
+
+<script src="js/data.js"></script>
+<script src="prezentacio/deck.js"></script>
+<script src="prezentacio/demos.js"></script>
+</body>
+</html>

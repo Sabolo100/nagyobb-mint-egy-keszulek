@@ -23,6 +23,8 @@ jobs:
           node-version: 20
       - name: App-adatok generálása a weboldalból
         run: node tools/build-app-data.mjs
+      - name: Prezentáció generálása a weboldalból
+        run: node tools/build-deck.mjs
       - name: Service worker verzió (offline cache frissítése)
         run: sed -i "s/__BUILD__/${GITHUB_SHA::8}/" site/app/sw.js
       - uses: actions/configure-pages@v5
