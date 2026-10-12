@@ -18,6 +18,8 @@
 
 /* ------------------------------------------------------------ keret: felső sáv, haladás, alsó navigáció */
 .deck-topbar { position: fixed; top: 0; left: 0; right: 0; height: 56px; z-index: 40; display: flex; align-items: center; gap: 22px; padding: 0 20px; background: rgba(18, 26, 122, .97); color: #fff; border-bottom: 1px solid rgba(255, 255, 255, .12); transition: opacity .4s, transform .4s; }
+.deck-back { flex: none; display: inline-flex; align-items: center; font: 800 13px/1 var(--f-body); color: var(--ink); background: var(--pink); border-radius: 999px; padding: 9px 15px; text-decoration: none; transition: background .15s, transform .15s; }
+.deck-back:hover { background: #fff; transform: translateX(-2px); }
 .deck-brand { flex: none; font: 500 17px/1 var(--f-display); letter-spacing: -.02em; color: #fff; text-decoration: none; white-space: nowrap; }
 .deck-brand b { font-weight: 800; color: var(--pink); }
 .deck-chap { flex: 1 1 auto; min-width: 0; display: flex; gap: 2px; justify-content: center; overflow: hidden; }
@@ -44,7 +46,8 @@
 .deck-body.is-idle .deck-progress { opacity: 0; }
 @media (max-width: 1290px) { .deck-chap { display: none; } .deck-topbar__actions { margin-left: auto; } }
 @media (max-width: 900px) { .deck-hint, .deck-topbar__title { display: none; } }
-@media (max-width: 640px) { .deck-btn:not(.deck-btn--accent) { display: none; } .deck-brand { font-size: 14px; } }
+@media (max-width: 900px) { .deck-brand { display: none; } }
+@media (max-width: 640px) { .deck-btn { display: none; } }
 
 /* ------------------------------------------------------------ vászon */
 .deck { position: fixed; top: 59px; bottom: 68px; left: 0; right: 0; z-index: 10; }
@@ -146,6 +149,8 @@ sup.c a:hover { background: var(--pink); }
 .gate__btn:hover { transform: translateY(-2px); background: #fff; color: var(--blue); }
 .gate__btn--full { background: var(--pink); border-color: var(--pink); color: var(--ink); }
 .gate__btn--full:hover { background: #fff; border-color: #fff; color: var(--ink); }
+.gate__back { margin-top: 6px; font: 700 14px/1 var(--f-body); color: #fff; text-decoration: underline; text-underline-offset: 4px; opacity: .85; }
+.gate__back:hover { opacity: 1; color: var(--pink); }
 .gate__hint { margin: 10px 0 0; font: 600 11.5px/1.5 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: rgba(255, 255, 255, .6); }
 
 /* ------------------------------------------------------------ felugró ablak (a weboldal részletező ablakainak tartalma) */
